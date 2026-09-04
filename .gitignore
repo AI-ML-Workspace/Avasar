@@ -1,4 +1,4 @@
-﻿# ─── Environment & Secrets ────────────────────────────────────────────────────
+# ─── Environment & Secrets ────────────────────────────────────────────────────
 .env
 .env.local
 .env.*.local
@@ -63,6 +63,8 @@ frontend/.vite/
 vector_store/*.index
 vector_store/*.pkl
 vector_store/*.bin
+vector_store/*.faiss
+vector_store/*.json
 *.faiss
 *.npy
 
@@ -72,6 +74,8 @@ data/raw/*.csv
 data/raw/*.json
 data/processed/*.pkl
 data/processed/*.bin
+data/processed/*.json
+data/processed/*.jsonl
 
 # ─── IDE & Editor ─────────────────────────────────────────────────────────────
 .vscode/settings.json

@@ -1,4 +1,4 @@
-﻿# Core runtime
+# Core runtime
 fastapi==0.111.0
 uvicorn[standard]==0.30.1
 python-dotenv==1.0.1
@@ -6,8 +6,15 @@ python-dotenv==1.0.1
 # HTTP client (for LLM API calls later)
 httpx==0.27.0
 
-# Future: Sentence Transformers, FAISS, translation
-# sentence-transformers==3.0.1
-# faiss-cpu==1.8.0
+# Multilingual embeddings & FAISS vector store
+sentence-transformers>=3.0.0
+faiss-cpu>=1.8.0
+
+# LLM Provider SDKs
+groq>=0.11.0
+google-genai>=1.0.0
+openai>=1.50.0
+
+# Future: Language detection & translation
 # langdetect==1.0.9
 # deep-translator==1.11.4

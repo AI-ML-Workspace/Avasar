@@ -1,32 +1,28 @@
-﻿from pathlib import Path
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from dotenv import load_dotenv
-import os
-
-# Load .env from the project root (one level above backend/)
-load_dotenv(dotenv_path=Path(__file__).resolve().parents[2] / ".env")
+from app.core.config import settings
+from app.api.chat import router as chat_router
 
 app = FastAPI(
-    title="Avasar API",
-    description="Language Agnostic Chatbot for Government Schemes",
-    version="0.1.0",
+    title=settings.api_title,
+    description=settings.api_description,
+    version=settings.api_version,
 )
 
-# CORS — allow the Next.js dev server during development.
-# Set CORS_ORIGINS in .env for production (comma-separated URLs).
-origins = os.getenv("CORS_ORIGINS", "http://localhost:3000").split(",")
-
+# CORS middleware configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[o.strip() for o in origins],
+    allow_origins=settings.cors_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+# Register API routers
+app.include_router(chat_router, prefix="/api")
+
 
 @app.get("/api/health", tags=["health"])
 async def health_check():
-    """Health check endpoint — confirms the API is running."""
+    """Health check endpoint — confirms the API server is operational."""
     return {"status": "ok", "service": "avasar-api"}
