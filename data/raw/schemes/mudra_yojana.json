@@ -1,0 +1,31 @@
+{
+  "scheme_name": "Pradhan Mantri MUDRA Yojana (PMMY)",
+  "category": "Micro-Enterprise & Business Credit",
+  "description": "Pradhan Mantri MUDRA Yojana (PMMY) provides collateral-free loans up to ₹10 lakh (extended up to ₹20 lakh under Tarun Plus for past successful borrowers) to non-corporate, non-farm small and micro-enterprises to enable income generation in manufacturing, trading, services, and agriculture-allied sectors.",
+  "eligibility": "Any Indian citizen who has a non-farm business plan for an income-generating activity such as manufacturing, processing, trading, or service sector, and whose credit requirement is up to the specified loan limits.",
+  "benefits": [
+    "Collateral-free business credit provided across three categories:",
+    "Shishu: Loans up to ₹50,000 for early-stage micro enterprises.",
+    "Kishore: Loans above ₹50,000 and up to ₹5 lakh for expanding micro enterprises.",
+    "Tarun: Loans above ₹5 lakh and up to ₹10 lakh (with Tarun Plus up to ₹20 lakh for qualified repeat borrowers).",
+    "No processing fee for Shishu and Kishore category loans."
+  ],
+  "application_process": "Applicants can apply online through the JanSamarth or UdyamiMitra portal, or directly at commercial banks, Regional Rural Banks (RRBs), Small Finance Banks, MFIs, or NBFCs by submitting the MUDRA loan application form.",
+  "documents_required": [
+    "Identity proof (Aadhaar Card, Voter ID, PAN Card, Driving License, Passport)",
+    "Residence proof (Utility bill, Aadhaar Card, Passport)",
+    "Business identity and address proof (Registration certificate, license, tax registration)",
+    "Proof of ownership / tenancy of business premises",
+    "Passbook / Bank statements for the last 6 months",
+    "Quotations of machinery / equipment to be purchased (if applicable)"
+  ],
+  "provider": "Micro Units Development & Refinance Agency Ltd. (MUDRA) / Department of Financial Services, Ministry of Finance",
+  "official_source": "MUDRA Official Website",
+  "official_source_url": "https://www.mudra.org.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Loans are provided through partner lending institutions (commercial banks, RRBs, SFBs, MFIs, NBFCs); MUDRA itself does not directly disburse loans to individuals.",
+    "No collateral security is required.",
+    "Repayment terms range up to 5 years depending on the loan structure and cash flows."
+  ]
+}

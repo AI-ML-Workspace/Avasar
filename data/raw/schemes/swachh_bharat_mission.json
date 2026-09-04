@@ -1,0 +1,27 @@
+{
+  "scheme_name": "Swachh Bharat Mission – Grameen (SBM-G / Phase II)",
+  "category": "Sanitation & Public Health (National Mission)",
+  "description": "Swachh Bharat Mission – Grameen Phase II focuses on sustaining the Open Defecation Free (ODF) status of rural India and managing solid and liquid waste (ODF Plus status) to maintain cleanliness in rural areas.",
+  "eligibility": "Rural households in need of an Individual Household Latrine (IHHL), particularly Below Poverty Line (BPL) families and identified Above Poverty Line (APL) families (SC/ST, small/marginal farmers, landless laborers, physically handicapped, female-headed households).",
+  "benefits": [
+    "Financial incentive of ₹12,000 for the construction of Individual Household Latrine (IHHL) to eligible rural households (including central and state shares).",
+    "Community Sanitary Complexes (CSC) established at village level for public hygiene.",
+    "Solid and Liquid Waste Management (SLWM) infrastructure created across Gram Panchayats."
+  ],
+  "application_process": "Eligible rural residents can apply online through the SBM-G portal (swachhbharatmission.ddws.gov.in) or submit an application through their respective Gram Panchayat / Village Sanitation Committee.",
+  "documents_required": [
+    "Aadhaar Card",
+    "Bank Account passbook/details linked with Aadhaar",
+    "BPL Card / Category proof document",
+    "Photograph of applicant and constructed/proposed toilet site"
+  ],
+  "provider": "Department of Drinking Water and Sanitation, Ministry of Jal Shakti, Government of India",
+  "official_source": "Swachh Bharat Mission – Grameen Portal",
+  "official_source_url": "https://swachhbharatmission.ddws.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Financial incentive is disbursed upon verification of constructed toilet facility (geotagging).",
+    "Priority is given to uncovered BPL households and vulnerable APL categories.",
+    "Overall mission execution is coordinated through Gram Panchayats and District Water and Sanitation Missions (DWSM)."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "scheme_name": "PM Young Achievers Scholarship Award Scheme for Vibrant India (PM YASASVI)",
+  "category": "Education & Student Scholarships",
+  "description": "PM YASASVI is a Central Sector Scheme providing top-class education scholarships and financial assistance to meritorious students belonging to OBC, EBC, and DNT categories to pursue secondary and higher education.",
+  "eligibility": "Students belonging to Other Backward Classes (OBC), Economically Backward Classes (EBC), and Denotified, Nomadic & Semi-Nomadic Tribes (DNT) whose parental/family annual income from all sources does not exceed ₹2.5 lakh per annum, studying in identified Top Class Schools or Colleges.",
+  "benefits": [
+    "Top Class School Education: Scholarship up to ₹75,000 per annum for Class 9 and 10, and up to ₹1,25,000 per annum for Class 11 and 12, covering tuition fees and hostel fees.",
+    "Top Class College Education: Full tuition fee reimbursement up to prescribed limits along with living allowance, book allowance, and computer hardware grant for students in designated top institutions.",
+    "Funds disbursed directly via Direct Benefit Transfer (DBT) into bank accounts."
+  ],
+  "application_process": "Eligible students must apply online via the National Scholarship Portal (NSP) at scholarships.gov.in during the designated application period.",
+  "documents_required": [
+    "Aadhaar Card",
+    "OBC / EBC / DNT Category Certificate issued by competent authority",
+    "Income Certificate showing annual family income up to ₹2.5 lakh",
+    "Marksheet of previous qualifying class",
+    "Bonafide Student Certificate / Admission proof from school or college",
+    "Active Aadhaar-seeded Bank Account details"
+  ],
+  "provider": "Ministry of Social Justice and Empowerment, Government of India",
+  "official_source": "National Scholarship Portal / AICTE PM YASASVI Portal",
+  "official_source_url": "https://yashasvi.aicte.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Students must belong to OBC, EBC, or DNT categories with family annual income <= ₹2.5 lakh.",
+    "Selection for top class school/college scholarships is based on merit criteria as notified on the National Scholarship Portal.",
+    "Institutional verification on NSP is mandatory for scheme processing."
+  ]
+}

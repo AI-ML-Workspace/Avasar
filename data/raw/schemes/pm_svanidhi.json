@@ -1,0 +1,30 @@
+{
+  "scheme_name": "PM Street Vendor's AtmaNirbhar Nidhi (PM SVANidhi)",
+  "category": "Urban Poverty Alleviation & Micro-Credit",
+  "description": "PM SVANidhi is a Special Micro-Credit Facility launched to provide affordable working capital loans to street vendors affected by the COVID-19 pandemic, enabling them to resume their livelihoods and transition into the formal financial system.",
+  "eligibility": "Urban street vendors engaged in vending in urban areas on or before March 24, 2020, possessing a Certificate of Vending / Identity Card, or identified in urban local body (ULB) surveys, or recommendation letter from ULB/TVC.",
+  "benefits": [
+    "Initial working capital loan up to ₹10,000 with a 1-year tenure.",
+    "Second tranche loan up to ₹20,000 on timely repayment of the first loan.",
+    "Third tranche loan up to ₹50,000 on timely repayment of the second loan.",
+    "Interest subsidy of 7% per annum credited to beneficiary bank accounts quarterly.",
+    "Cashback incentive up to ₹1,200 per annum for performing digital transaction transitions."
+  ],
+  "application_process": "Street vendors can apply online via the PM SVANidhi portal (pmsvanidhi.mohua.gov.in) or mobile app with assistance from Common Service Centres (CSCs), ULB officials, or lending institution branches.",
+  "documents_required": [
+    "Aadhaar Card",
+    "Voter ID / Driving License / Ration Card",
+    "Certificate of Vending / ID Card issued by Urban Local Body (ULB) or Letter of Recommendation (LoR)",
+    "Bank Account passbook / details",
+    "Active mobile number linked with Aadhaar"
+  ],
+  "provider": "Ministry of Housing and Urban Affairs (MoHUA), Government of India",
+  "official_source": "PM SVANidhi Portal",
+  "official_source_url": "https://pmsvanidhi.mohua.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "No collateral is required for loans under this scheme.",
+    "Interest subsidy applies to timely or early repayment.",
+    "Digital transaction performance unlocks monthly cashback benefits directly into the vendor's account."
+  ]
+}

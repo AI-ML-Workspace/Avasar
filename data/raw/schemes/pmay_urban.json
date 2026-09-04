@@ -1,0 +1,31 @@
+{
+  "scheme_name": "Pradhan Mantri Awas Yojana – Urban (PMAY-U / PMAY-U 2.0)",
+  "category": "Urban Housing & Social Welfare",
+  "description": "Pradhan Mantri Awas Yojana – Urban aims to address urban housing shortage among Economically Weaker Section (EWS), Low Income Group (LIG), and Middle Income Group (MIG) categories by providing all-weather pucca houses with basic civic amenities.",
+  "eligibility": "Urban families belonging to EWS, LIG, or MIG categories who do not own a pucca house in their name or any family member's name anywhere in India.",
+  "benefits": [
+    "Financial assistance and interest subsidy for construction, enhancement, or purchase of houses across various verticals:",
+    "In-situ Slum Redevelopment (ISSR)",
+    "Credit Linked Subsidy Scheme (CLSS) / Interest Subsidy Scheme (ISS)",
+    "Affordable Housing in Partnership (AHP)",
+    "Beneficiary-led Individual House Construction / Enhancement (BLC)"
+  ],
+  "application_process": "Eligible urban residents can apply online through the PMAY-Urban portal (pmay-urban.gov.in), mobile app, via designated Common Service Centres (CSCs), or through local Urban Local Bodies (ULBs).",
+  "documents_required": [
+    "Aadhaar Card of all family members",
+    "Proof of income (Income Certificate, Salary Slips, Form 16, Bank statements)",
+    "Proof of identity and residential address",
+    "Land ownership documents / land record details (for BLC component)",
+    "Affidavit/undertaking stating the family does not own a pucca house in India",
+    "Active bank account details linked with Aadhaar"
+  ],
+  "provider": "Ministry of Housing and Urban Affairs (MoHUA), Government of India",
+  "official_source": "PMAY-Urban Portal",
+  "official_source_url": "https://pmay-urban.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Beneficiary family must not own a pucca house in any part of India.",
+    "House ownership or co-ownership must be mandated in the name of female head of household or joint ownership with spouse (in EWS/LIG categories).",
+    "Carpet area limitations apply based on the specific income category guidelines."
+  ]
+}

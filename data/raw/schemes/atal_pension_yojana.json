@@ -1,0 +1,28 @@
+{
+  "scheme_name": "Atal Pension Yojana (APY)",
+  "category": "Social Security & Pension",
+  "description": "Atal Pension Yojana is a government-backed voluntary pension scheme focused mainly on unorganized sector workers, providing a guaranteed monthly pension after attaining 60 years of age.",
+  "eligibility": "Indian citizens aged between 18 and 40 years having a savings bank account or post office account, who are not income tax payers.",
+  "benefits": [
+    "Guaranteed minimum monthly pension of ₹1,000, ₹2,000, ₹3,000, ₹4,000, or ₹5,000 per month starting at age 60, depending on the subscriber's contribution amount.",
+    "Same pension amount paid to the spouse upon the subscriber's death.",
+    "Return of accumulated pension corpus to the nominee upon the death of both subscriber and spouse."
+  ],
+  "application_process": "Eligible individuals can join APY by submitting an APY registration form to their bank or post office branch where they hold a savings account, or online via bank netbanking / auto-debit registration facilities.",
+  "documents_required": [
+    "Savings Bank Account / Post Office Account details",
+    "Aadhaar Card",
+    "Active mobile number",
+    "Nominee details"
+  ],
+  "provider": "Pension Fund Regulatory and Development Authority (PFRDA) / Ministry of Finance, Government of India",
+  "official_source": "myScheme - APY / PFRDA",
+  "official_source_url": "https://www.myscheme.gov.in/schemes/apy",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Subscriber must be between 18 and 40 years of age at the time of joining.",
+    "From October 1, 2022, any citizen who is or has been an income tax payer is not eligible to join APY.",
+    "Contributions are automatically debited from the subscriber's bank account monthly, quarterly, or half-yearly.",
+    "Premature exit is permitted only under exceptional circumstances such as terminal illness or death of the subscriber."
+  ]
+}

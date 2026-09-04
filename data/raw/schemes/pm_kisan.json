@@ -1,0 +1,26 @@
+{
+  "scheme_name": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
+  "category": "Agriculture & Farmer Welfare",
+  "description": "PM-KISAN is a Central Sector Scheme providing income support to all landholding farmer families across the country to supplement their financial needs for procuring various inputs related to agriculture and allied activities as well as domestic needs.",
+  "eligibility": "All landholding farmer families who own cultivable land in their names, subject to specific exclusion criteria (e.g., institutional landholders, high-income individuals, serving or retired government employees, taxpayers).",
+  "benefits": [
+    "Financial benefit of ₹6,000 per year transferred directly into the bank accounts of beneficiary farmer families.",
+    "Payable in three equal installments of ₹2,000 every four months."
+  ],
+  "application_process": "Farmers can self-register through the PM-KISAN web portal under 'Farmers Corner', via the PM-KISAN mobile app, or by visiting a local Common Service Centre (CSC) or state nodal officer.",
+  "documents_required": [
+    "Aadhaar Card",
+    "Proof of landownership / land holding documents",
+    "Savings bank account details linked with Aadhaar",
+    "Active mobile number"
+  ],
+  "provider": "Ministry of Agriculture & Farmers Welfare, Government of India",
+  "official_source": "PM-KISAN Portal",
+  "official_source_url": "https://pmkisan.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "e-KYC is mandatory for registered farmers to receive scheme installments.",
+    "Bank accounts must be seeded with Aadhaar and enabled for Direct Benefit Transfer (DBT).",
+    "Excludes institutional landholders, former/present constitutional post holders, ministers, MPs, MLAs, municipal corporation mayors, chairpersons of district panchayats, serving/retired government employees, retirees receiving monthly pension >= ₹10,000, persons who paid income tax in the last assessment year, and professionals like doctors, engineers, lawyers, and chartered accountants."
+  ]
+}

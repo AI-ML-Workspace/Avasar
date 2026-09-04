@@ -1,0 +1,30 @@
+{
+  "scheme_name": "PM Vishwakarma Scheme",
+  "category": "Skill Development & Traditional Artisan Support",
+  "description": "PM Vishwakarma is a Central Sector Scheme launched to provide holistic end-to-end support to traditional artisans and craftspeople ('Vishwakarmas') who work with their hands and tools, enhancing their product quality, market reach, and economic standing.",
+  "eligibility": "Artisans or craftspeople working with hands and tools in one of the 18 covered traditional trades (e.g., Carpenter, Boat Maker, Armourer, Blacksmith, Locksmith, Goldsmith, Potter, Sculptor, Cobbler, Mason, Basket/Mat/Broom Maker, Doll & Toy Maker, Barber, Garland Maker, Washerman, Tailor, Fishing Net Maker). Minimum age of beneficiary is 18 years. Limited to one member per family.",
+  "benefits": [
+    "Recognition: PM Vishwakarma Certificate and ID Card.",
+    "Skill Upgradation: Basic training of 5-7 days and Advanced training of 15 days or more, with a stipend of ₹500 per day.",
+    "Toolkit Incentive: Digital e-voucher of up to ₹15,000 for purchasing modern tools.",
+    "Credit Support: Collateral-free enterprise development loan of up to ₹1,00,000 (1st tranche) and up to ₹2,00,000 (2nd tranche) at a concessional interest rate of 5%.",
+    "Incentive for Digital Transactions: ₹1 per digital transaction for up to 100 transactions monthly.",
+    "Marketing Support: Quality certification, branding, e-commerce onboarding, and trade fair linkage."
+  ],
+  "application_process": "Artisans can register online through the PM Vishwakarma Portal (pmvishwakarma.gov.in) at nearest Common Service Centres (CSCs), followed by a 3-stage verification process (Gram Panchayat/ULB level, District Implementation Committee level, and Screening Committee level).",
+  "documents_required": [
+    "Aadhaar Card",
+    "Active Mobile Number",
+    "Bank Account details (Aadhaar linked)",
+    "Ration Card (for family verification)"
+  ],
+  "provider": "Ministry of Micro, Small and Medium Enterprises (MoMSME), Ministry of Skill Development and Entrepreneurship, and Ministry of Finance",
+  "official_source": "PM Vishwakarma Official Portal",
+  "official_source_url": "https://pmvishwakarma.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Beneficiary should be engaged in the trade concerned on the date of registration.",
+    "Only one member of the family (husband, wife, and unmarried children) is eligible to get benefits under the scheme.",
+    "Beneficiary should not have availed loans under similar credit-based schemes (e.g., PMEGP, PM SVANidhi, MUDRA) in the last 5 years."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "scheme_name": "Ayushman Bharat – Pradhan Mantri Jan Arogya Yojana (PM-JAY)",
+  "category": "Healthcare & Health Insurance",
+  "description": "PM-JAY is the world's largest government-funded health assurance scheme, offering cashless secondary and tertiary inpatient medical care coverage to vulnerable socio-economic families and senior citizens aged 70 and above.",
+  "eligibility": "Families identified based on deprivation and occupational criteria in SECC 2011 data, active state health insurance scheme databases, and all senior citizens aged 70 years and above (Ayushman Vaya Vandana Card).",
+  "benefits": [
+    "Cashless health insurance coverage up to ₹5,00,000 per family per year for secondary and tertiary care hospitalization.",
+    "Covers medical examination, treatment, consultations, pre-hospitalization (up to 3 days), post-hospitalization (up to 15 days), diagnostics, medicine, and ICU charges.",
+    "No restriction on family size, age, or gender.",
+    "Portability of benefits across empaneled public and private hospitals across India."
+  ],
+  "application_process": "Eligible individuals can check their status online at pmjay.gov.in or beneficiary.nha.gov.in, and generate/download their Ayushman Card through the portal, mobile app, or at empaneled hospitals / CSCs via Ayushman Mitra verification.",
+  "documents_required": [
+    "Aadhaar Card",
+    "Ration Card / PM-JAY letter / Family ID proof",
+    "Active mobile number for OTP authentication"
+  ],
+  "provider": "National Health Authority (NHA) & Ministry of Health and Family Welfare, Government of India",
+  "official_source": "National Health Authority - PM-JAY Portal",
+  "official_source_url": "https://pmjay.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Pre-existing medical conditions are covered from day one of enrollment.",
+    "Treatment is cashless and paperless at all empaneled public and private healthcare providers.",
+    "Senior citizens aged 70+ receive a dedicated Ayushman Vaya Vandana Card regardless of income level."
+  ]
+}
