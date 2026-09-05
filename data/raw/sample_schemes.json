@@ -1,0 +1,45 @@
+[
+  {
+    "__comment": "SAMPLE DATASET FOR PIPELINE VALIDATION ONLY - Replace with Member 3's official government scheme dataset.",
+    "id": "pm_kisan",
+    "title": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
+    "ministry": "Ministry of Agriculture & Farmers Welfare",
+    "source_name": "Government of India",
+    "url": "https://pmkisan.gov.in/",
+    "language": "en",
+    "description": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN) is a central sector scheme launched to provide income support to all landholding farmer families across the country to enable them to take care of expenses related to agriculture and allied activities as well as domestic needs.",
+    "eligibility": "All landholding farmer families having cultivable land in their names are eligible. Exclusions apply to institutional landholders, farmer families holding constitutional posts, serving or retired officers and employees of state/central government, professionals like doctors, engineers, lawyers, and income tax payees.",
+    "benefits": "Under the scheme, a financial benefit of ₹6,000 per year is transferred directly into the bank accounts of the beneficiary farmer families in three equal four-monthly installments of ₹2,000 each through Direct Benefit Transfer (DBT).",
+    "application_process": "Eligible farmers can enroll through the PM-KISAN online portal (pmkisan.gov.in) under the 'Farmer Corner' tab using Aadhaar card details, land records, and active bank account details, or visit the nearest Common Service Centre (CSC) or local agriculture office.",
+    "category": "Agriculture & Rural Development",
+    "target_beneficiaries": ["Small and marginal farmers", "Landholding farming families"]
+  },
+  {
+    "id": "pmay_urban",
+    "title": "Pradhan Mantri Awas Yojana - Urban (PMAY-U)",
+    "ministry": "Ministry of Housing and Urban Affairs",
+    "source_name": "Government of India",
+    "url": "https://pmaymis.gov.in/",
+    "language": "en",
+    "description": "Pradhan Mantri Awas Yojana - Urban (PMAY-U) is a flagship mission of the Government of India designed to provide all-weather pucca houses to all eligible urban households including slum dwellers.",
+    "eligibility": "The beneficiary family should not own a pucca house in any part of India. Beneficiaries are categorized into Economically Weaker Section (EWS) with annual income up to ₹3 Lakh, Low Income Group (LIG) with annual income between ₹3 to ₹6 Lakh, and Middle Income Groups (MIG). Female head of family is preferred as owner or co-owner.",
+    "benefits": "Provides central financial assistance across four verticals: In-Situ Slum Redevelopment (ISSR), Credit Linked Subsidy Scheme (CLSS) offering interest subsidy on home loans, Affordable Housing in Partnership (AHP), and Beneficiary-led Individual House Construction/Enhancement (BLC). Assistance ranges up to ₹2.67 Lakh depending on the vertical.",
+    "application_process": "Applications can be submitted online via pmaymis.gov.in with Aadhaar verification, or through local municipal corporations and Common Service Centres (CSCs). Applicants must submit proof of identity, income certificate, and land/residence documentation.",
+    "category": "Housing & Urban Poverty Alleviation",
+    "target_beneficiaries": ["Urban poor", "EWS / LIG families", "Slum dwellers"]
+  },
+  {
+    "id": "ayushman_bharat_pmjay",
+    "title": "Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana (AB-PMJAY)",
+    "ministry": "Ministry of Health and Family Welfare",
+    "source_name": "National Health Authority (NHA)",
+    "url": "https://pmjay.gov.in/",
+    "language": "en",
+    "description": "Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana (PM-JAY) is the world's largest government-funded health assurance scheme, providing healthcare cover for secondary and tertiary care hospitalization to over 12 crore vulnerable families.",
+    "eligibility": "Households included based on deprivation and occupational criteria of the Socio-Economic and Caste Census (SECC 2011) for rural and urban areas respectively. There is no cap on family size, age, or gender. Senior citizens aged 70 and above are also eligible for expanded cover.",
+    "benefits": "Provides health insurance coverage of up to ₹5,00,000 per eligible family per year for secondary and tertiary care hospitalization. Covers medical examination, consultation, pre- and post-hospitalization expenses, medicines, diagnostics, and intensive care across empanelled public and private hospitals nationwide cashless and paperless.",
+    "application_process": "Citizens can verify their eligibility on the portal (mera.pmjay.gov.in) or Ayushman App using mobile number, Aadhaar, or Ration Card. Once verified, the Ayushman Card (Golden Card) can be generated at any empanelled hospital (Arogya Mitra) or Common Service Centre.",
+    "category": "Health & Healthcare Assurance",
+    "target_beneficiaries": ["Vulnerable families", "Low-income rural and urban households", "Elderly citizens 70+"]
+  }
+]
