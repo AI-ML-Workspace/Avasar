@@ -42,7 +42,7 @@ class Settings(BaseModel):
         default_factory=lambda: os.getenv("LLM_PROVIDER", "groq").lower()
     )
     groq_model: str = Field(
-        default_factory=lambda: os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
+        default_factory=lambda: os.getenv("GROQ_MODEL", "openai/gpt-oss-20b")
     )
     gemini_model: str = Field(
         default_factory=lambda: os.getenv("GEMINI_MODEL", "gemini-flash-latest")
@@ -91,6 +91,65 @@ class Settings(BaseModel):
     chunk_overlap: int = Field(
         default_factory=lambda: int(os.getenv("CHUNK_OVERLAP", "100"))
     )
+
+    # Official Source Registry configuration
+    sources_config_path: Optional[str] = Field(
+        default_factory=lambda: os.getenv("SOURCES_CONFIG_PATH")
+    )
+
+    # Official Source Ingestion Engine settings
+    ingestion_timeout: float = Field(
+        default_factory=lambda: float(os.getenv("INGESTION_TIMEOUT", "15.0"))
+    )
+    ingestion_max_documents: int = Field(
+        default_factory=lambda: int(os.getenv("INGESTION_MAX_DOCUMENTS", "50"))
+    )
+    ingestion_max_response_bytes: int = Field(
+        default_factory=lambda: int(os.getenv("INGESTION_MAX_RESPONSE_BYTES", str(5 * 1024 * 1024)))
+    )
+    ingestion_user_agent: str = Field(
+        default_factory=lambda: os.getenv(
+            "INGESTION_USER_AGENT",
+            "AvasarGovBot/1.0 (+https://github.com/jaiyansh-4n6/Avasar; citizen-welfare-assistant)",
+        )
+    )
+    ingestion_data_dir: str = Field(
+        default_factory=lambda: os.getenv("INGESTION_DATA_DIR", str(ROOT_DIR / "data" / "ingested"))
+    )
+
+    @property
+    def resolved_ingestion_data_dir(self) -> Path:
+        """Resolve directory for fetched official government data."""
+        p = Path(self.ingestion_data_dir)
+        if p.is_absolute():
+            return p
+        return (ROOT_DIR / p).resolve()
+
+    @property
+    def resolved_sources_config_path(self) -> Path:
+        """Resolve sources registry config path reliably."""
+        if self.sources_config_path:
+            p = Path(self.sources_config_path)
+            if p.is_absolute():
+                return p
+            return (ROOT_DIR / p).resolve()
+        return Path(__file__).resolve().parent / "sources.json"
+
+    @property
+    def resolved_processed_data_dir(self) -> Path:
+        """Resolve directory for processed canonical corpus data."""
+        p = Path(self.processed_data_dir)
+        if p.is_absolute():
+            return p
+        return (ROOT_DIR / p).resolve()
+
+    @property
+    def resolved_raw_data_dir(self) -> Path:
+        """Resolve directory for raw scheme data."""
+        p = Path(self.raw_data_dir)
+        if p.is_absolute():
+            return p
+        return (ROOT_DIR / p).resolve()
 
     @property
     def resolved_vector_store_path(self) -> Path:

@@ -3,7 +3,7 @@ from pydantic import BaseModel, Field
 
 
 class SchemeDocument(BaseModel):
-    """Normalized representation of a raw government scheme document."""
+    """Normalized representation of a raw government scheme document with provenance."""
 
     id: str = Field(..., description="Unique scheme identifier")
     title: str = Field(..., description="Official scheme name / title")
@@ -11,9 +11,45 @@ class SchemeDocument(BaseModel):
         default=None,
         description="Official government scheme portal or application link",
     )
+    source_id: Optional[str] = Field(
+        default=None,
+        description="Identifier of the registered OfficialSource (e.g. 'pm_kisan', 'myscheme')",
+    )
     source_name: str = Field(
         default="Government of India",
         description="Publisher, ministry, or department name",
+    )
+    official_source_url: Optional[str] = Field(
+        default=None,
+        description="Base authoritative URL of the official source portal",
+    )
+    source_type: Optional[str] = Field(
+        default=None,
+        description="Type/nature of official source (e.g. 'scheme_portal', 'aggregator')",
+    )
+    trust_level: Optional[str] = Field(
+        default=None,
+        description="Trust priority level (e.g. 'primary_authoritative')",
+    )
+    retrieved_at: Optional[str] = Field(
+        default=None,
+        description="ISO 8601 timestamp when this document was fetched from the official source",
+    )
+    published_at: Optional[str] = Field(
+        default=None,
+        description="Date/timestamp when document was published or updated by the government",
+    )
+    content_hash: Optional[str] = Field(
+        default=None,
+        description="Deterministic SHA-256 hash of normalized content for deduplication",
+    )
+    document_type: str = Field(
+        default="scheme_overview",
+        description="Classification of document content (e.g. 'scheme_overview', 'guidelines', 'faq')",
+    )
+    version: int = Field(
+        default=1,
+        description="Revision number for tracking updates to the scheme content",
     )
     language: Optional[str] = Field(
         default="en",
@@ -48,9 +84,45 @@ class ProcessedChunk(BaseModel):
         default=None,
         description="Official source portal URL for citation",
     )
+    source_id: Optional[str] = Field(
+        default=None,
+        description="Identifier of the originating registered OfficialSource",
+    )
     source_name: str = Field(
         default="Government of India",
         description="Ministry or department source name",
+    )
+    official_source_url: Optional[str] = Field(
+        default=None,
+        description="Base authoritative URL of the official source portal",
+    )
+    source_type: Optional[str] = Field(
+        default=None,
+        description="Source classification type (e.g. 'scheme_portal', 'aggregator')",
+    )
+    trust_level: Optional[str] = Field(
+        default=None,
+        description="Authority level of the source",
+    )
+    retrieved_at: Optional[str] = Field(
+        default=None,
+        description="Timestamp when source content was retrieved",
+    )
+    published_at: Optional[str] = Field(
+        default=None,
+        description="Timestamp when document was officially published/updated",
+    )
+    content_hash: Optional[str] = Field(
+        default=None,
+        description="SHA-256 hash of parent document content",
+    )
+    document_type: str = Field(
+        default="scheme_overview",
+        description="Classification of document content",
+    )
+    version: int = Field(
+        default=1,
+        description="Document version number",
     )
     language: Optional[str] = Field(
         default="en",

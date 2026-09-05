@@ -1,3 +1,4 @@
+import hashlib
 import json
 import logging
 import re
@@ -7,6 +8,7 @@ from typing import Any, Dict, List, Optional, Union
 from app.core.config import settings
 from app.models.document import ProcessedChunk, SchemeDocument
 from app.services.chunking import chunk_document
+from app.services.source_registry import get_source_registry
 
 logger = logging.getLogger(__name__)
 
@@ -96,13 +98,39 @@ class DocumentIngestionService:
             # Fallback to json dump of values if no standard fields match
             full_content = title
 
+        # Provenance attribution
+        content_hash = hashlib.sha256(full_content.strip().encode("utf-8")).hexdigest()
+        official_source_url = data.get("official_source_url") or url
+        source_id = data.get("source_id")
+        source_type = data.get("source_type")
+        trust_level = data.get("trust_level")
+
+        if not source_id and official_source_url:
+            try:
+                reg = get_source_registry()
+                matched_source = reg.get_source_for_url(official_source_url)
+                if matched_source:
+                    source_id = matched_source.source_id
+                    source_type = matched_source.source_type.value
+                    trust_level = matched_source.trust_level.value
+                    official_source_url = matched_source.base_url
+            except Exception as err:
+                logger.debug("Could not resolve source from registry: %s", err)
+
+        published_at = data.get("source_date") or data.get("published_at")
+        retrieved_at = data.get("retrieved_at")
+        document_type = data.get("document_type") or "curated_summary"
+        version = int(data.get("version") or 1)
+
         # Preserve extra metadata (excluding primary extracted fields)
         primary_keys = {
             "id", "scheme_id", "title", "scheme_name", "name", "url", "link",
             "official_url", "official_source_url", "source_name", "ministry", "department",
             "provider", "official_source", "language", "content", "description",
             "eligibility", "benefits", "application_process", "how_to_apply",
-            "documents_required", "important_conditions"
+            "documents_required", "important_conditions", "source_id", "source_type",
+            "trust_level", "published_at", "retrieved_at", "content_hash", "document_type",
+            "version"
         }
         preserved_metadata = {k: v for k, v in data.items() if k not in primary_keys}
 
@@ -110,7 +138,16 @@ class DocumentIngestionService:
             id=doc_id,
             title=title,
             url=url,
+            source_id=source_id,
             source_name=source_name,
+            official_source_url=official_source_url,
+            source_type=source_type,
+            trust_level=trust_level,
+            retrieved_at=retrieved_at,
+            published_at=published_at,
+            content_hash=content_hash,
+            document_type=document_type,
+            version=version,
             language=language,
             content=full_content,
             metadata=preserved_metadata,
