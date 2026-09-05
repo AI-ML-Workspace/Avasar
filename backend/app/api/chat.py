@@ -132,6 +132,20 @@ async def chat_endpoint(
         logger.warning(f"RAG retrieval encountered an error, falling back to empty sources: {err}")
         sources = []
 
+    if not sources and retrieval_query != contextualized_query:
+        try:
+            sources = await rag.retrieve(query=contextualized_query)
+        except Exception as err:
+            logger.warning(f"Secondary RAG retrieval encountered an error: {err}")
+            sources = []
+
+    if not sources:
+        try:
+            sources = await rag.retrieve_featured(top_k=4)
+        except Exception as err:
+            logger.warning(f"Featured schemes retrieval encountered an error: {err}")
+            sources = []
+
     # 7. Generate grounded answer via LLM with conversation history
     try:
         raw_answer = await llm.generate_answer(

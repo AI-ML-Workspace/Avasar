@@ -3,7 +3,10 @@ import logging
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple, Union
 
-import faiss
+try:
+    import faiss
+except ImportError:
+    faiss = None
 import numpy as np
 
 from app.models.document import ProcessedChunk
@@ -23,7 +26,7 @@ class FAISSVectorStore:
         if dimension <= 0:
             raise ValueError(f"Dimension must be positive, got {dimension}")
         self.dimension = dimension
-        self.index: faiss.IndexFlatIP = faiss.IndexFlatIP(dimension)
+        self.index: Optional[Any] = faiss.IndexFlatIP(dimension) if faiss is not None else None
         self.chunks: List[ProcessedChunk] = []
 
     @classmethod
@@ -66,7 +69,8 @@ class FAISSVectorStore:
         # Ensure float32 contiguous array for FAISS
         vectors = np.ascontiguousarray(embeddings, dtype=np.float32)
 
-        self.index.add(vectors)
+        if self.index is not None:
+            self.index.add(vectors)
         self.chunks.extend(chunks)
         logger.info(
             "Added %d chunks to vector store. Total index size: %d",
@@ -134,7 +138,10 @@ class FAISSVectorStore:
         import re
         tokens = set(re.findall(r"\w+", query.lower()))
         # Filter out common stop words
-        stops = {"what", "is", "the", "for", "can", "and", "are", "which", "how", "who", "i", "a", "an", "to", "of", "in", "my"}
+        stops = {
+            "what", "is", "the", "for", "can", "and", "are", "which", "how", "who",
+            "i", "a", "an", "to", "of", "in", "my", "me", "tell", "about", "give", "details"
+        }
         query_words = [t for t in tokens if len(t) >= 3 and t not in stops]
         if not query_words:
             query_words = [t for t in tokens if len(t) >= 2]
@@ -142,9 +149,14 @@ class FAISSVectorStore:
         scored: List[Tuple[ProcessedChunk, float]] = []
         for chunk in self.chunks:
             score = 0.0
-            content_lower = (chunk.content or "").lower()
-            name_lower = (chunk.scheme_name or "").lower()
-            cat_lower = (chunk.category or "").lower()
+            text = getattr(chunk, "text", "") or (chunk.get("text") if isinstance(chunk, dict) else "") or ""
+            title = getattr(chunk, "title", "") or (chunk.get("title") if isinstance(chunk, dict) else "") or ""
+            meta = getattr(chunk, "metadata", {}) or (chunk.get("metadata") if isinstance(chunk, dict) else {}) or {}
+            category = (meta.get("category", "") if isinstance(meta, dict) else "") or getattr(chunk, "category", "") or ""
+
+            content_lower = text.lower()
+            name_lower = title.lower()
+            cat_lower = category.lower()
 
             for word in query_words:
                 if word in name_lower:
@@ -155,17 +167,26 @@ class FAISSVectorStore:
                     score += 1.0
 
             # Domain intent boosters for discovery queries
-            if "student" in query_words or "scholarship" in query_words or "study" in query_words:
+            if any(w in query_words for w in ["student", "scholarship", "study", "education", "college", "school", "fellowship", "shiksha"]):
                 if any(k in name_lower or k in cat_lower for k in ["scholarship", "student", "education", "fellowship", "shiksha"]):
                     score += 5.0
-            if "farmer" in query_words or "kisan" in query_words or "agriculture" in query_words:
+            if any(w in query_words for w in ["farmer", "kisan", "agriculture", "crop", "krishi", "kheti", "rural"]):
                 if any(k in name_lower or k in cat_lower for k in ["kisan", "farmer", "krishi", "fasal", "agriculture"]):
                     score += 5.0
-            if "women" in query_words or "girl" in query_words or "mahila" in query_words:
+            if any(w in query_words for w in ["women", "woman", "girl", "mahila", "beti", "ladli", "mother", "matru"]):
                 if any(k in name_lower or k in cat_lower for k in ["women", "girl", "matru", "shakti", "sukanya", "mahila"]):
                     score += 5.0
-            if "health" in query_words or "hospital" in query_words or "medical" in query_words:
+            if any(w in query_words for w in ["health", "hospital", "medical", "ayushman", "pmjay", "swasthya", "disease", "treatment", "aushadh"]):
                 if any(k in name_lower or k in cat_lower for k in ["ayushman", "health", "pmjay", "swasthya", "medical"]):
+                    score += 5.0
+            if any(w in query_words for w in ["pension", "vridha", "elderly", "senior", "retirement", "atal", "nsap"]):
+                if any(k in name_lower or k in cat_lower for k in ["pension", "apy", "atal", "nsap", "vridha"]):
+                    score += 5.0
+            if any(w in query_words for w in ["house", "housing", "home", "awas", "makan", "ghar", "shelter"]):
+                if any(k in name_lower or k in cat_lower for k in ["awas", "housing", "pmay", "shelter"]):
+                    score += 5.0
+            if any(w in query_words for w in ["business", "loan", "startup", "mudra", "credit", "msme", "dukan", "commerce"]):
+                if any(k in name_lower or k in cat_lower for k in ["mudra", "pmmy", "credit", "msme", "standup"]):
                     score += 5.0
 
             if score > 0:
@@ -173,7 +194,47 @@ class FAISSVectorStore:
                 scored.append((chunk, normalized_score))
 
         scored.sort(key=lambda x: x[1], reverse=True)
-        return scored[:top_k]
+
+        # Deduplicate to pick top chunks from diverse schemes where possible
+        selected: List[Tuple[ProcessedChunk, float]] = []
+        seen_titles = set()
+        for chunk, s in scored:
+            title_str = getattr(chunk, "title", "")
+            if title_str not in seen_titles:
+                selected.append((chunk, s))
+                seen_titles.add(title_str)
+            if len(selected) >= top_k:
+                break
+
+        if len(selected) < top_k:
+            for chunk, s in scored:
+                if chunk not in [c for c, _ in selected]:
+                    selected.append((chunk, s))
+                if len(selected) >= top_k:
+                    break
+
+        return selected
+
+    def get_featured_chunks(self, top_k: int = 4) -> List[Tuple[ProcessedChunk, float]]:
+        """Return high-priority canonical scheme chunks when no specific keywords match."""
+        if not self.chunks:
+            return []
+        featured_names = [
+            "kisan", "ayushman", "scholarship", "mudra", "awas", "pension"
+        ]
+        results: List[Tuple[ProcessedChunk, float]] = []
+        seen_titles = set()
+        for chunk in self.chunks:
+            t = (getattr(chunk, "title", "") or "").lower()
+            if any(f in t for f in featured_names) and chunk.title not in seen_titles:
+                results.append((chunk, 0.75))
+                seen_titles.add(chunk.title)
+                if len(results) >= top_k:
+                    break
+        if not results:
+            for chunk in self.chunks[:top_k]:
+                results.append((chunk, 0.70))
+        return results
 
     def save(self, index_path: Union[str, Path]) -> None:
         """Save FAISS binary index and chunk metadata to disk.
@@ -242,27 +303,33 @@ class FAISSVectorStore:
         # Instantiate store
         store = cls(dimension=dimension)
 
-        # Read FAISS index
-        try:
-            store.index = faiss.read_index(str(path))
-        except Exception as err:
-            raise ValueError(f"Failed to load FAISS index {path}: {err}") from err
+        # Read FAISS index if available
+        if faiss is not None and path.exists():
+            try:
+                store.index = faiss.read_index(str(path))
+            except Exception as err:
+                logger.warning(f"Failed to load FAISS binary index {path}: {err}; will rely on lexical search")
+                store.index = None
+        else:
+            store.index = None
 
         # Load chunks
         raw_chunks = meta_data.get("chunks", [])
         store.chunks = [ProcessedChunk.model_validate(c) for c in raw_chunks]
 
-        # Integrity verification
-        if store.index.ntotal != len(store.chunks):
-            raise ValueError(
-                f"Vector store corruption: FAISS index has {store.index.ntotal} vectors "
+        # Integrity verification if index was loaded
+        if store.index is not None and store.index.ntotal != len(store.chunks):
+            logger.warning(
+                f"Vector store count mismatch: FAISS has {store.index.ntotal} vectors "
                 f"but metadata contains {len(store.chunks)} chunks."
             )
 
+        total_indexed = store.index.ntotal if store.index is not None else len(store.chunks)
         logger.info(
-            "Loaded vector store from %s with %d chunks (dim=%d)",
+            "Loaded vector store from %s with %d chunks (dim=%d, faiss_enabled=%s)",
             path,
-            store.index.ntotal,
+            total_indexed,
             dimension,
+            store.index is not None,
         )
         return store

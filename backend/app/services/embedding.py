@@ -9,8 +9,9 @@ from app.core.config import settings
 logger = logging.getLogger(__name__)
 
 # Ensure serverless environments cache models/tokens in /tmp, not the deployment bundle
-os.environ.setdefault("HF_HOME", "/tmp/huggingface")
-os.environ.setdefault("TORCH_HOME", "/tmp/torch")
+if os.name != "nt":
+    os.environ.setdefault("HF_HOME", "/tmp/huggingface")
+    os.environ.setdefault("TORCH_HOME", "/tmp/torch")
 
 
 class EmbeddingService:

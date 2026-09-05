@@ -91,29 +91,27 @@ class RAGService:
 
         # If semantic search returned nothing or embedding failed, fall back to lexical ranking over canonical chunks
         if not results:
-            results = self.vector_store.search_lexical(query.strip(), top_k=top_k)
+            try:
+                results = self.vector_store.search_lexical(query.strip(), top_k=top_k)
+            except Exception as err:
+                logger.warning("Lexical search encountered error: %s", err)
+                results = []
+
+        # If still no results, fallback to featured canonical scheme chunks
+        if not results:
+            try:
+                results = self.vector_store.get_featured_chunks(top_k=top_k)
+            except Exception as err:
+                logger.warning("Featured chunks fallback encountered error: %s", err)
+                results = []
 
         return results
 
-    async def retrieve(
+    def _format_source_items(
         self,
-        query: str,
-        top_k: int = 4,
+        chunk_results: List[Tuple[ProcessedChunk, float]],
     ) -> List[SourceItem]:
-        """Retrieve top-k scheme sources formatted as SourceItem for API responses.
-
-        Enriches every citation with verified domain integrity, trust level,
-        government classification, and synchronization freshness timestamps.
-
-        Args:
-            query: The citizen search query.
-            top_k: Number of relevant scheme contexts to return.
-
-        Returns:
-            List of SourceItem references with scheme name, URL, snippet, relevance score,
-            and complete citation trust metadata.
-        """
-        chunk_results = self.retrieve_chunks(query=query, top_k=top_k)
+        """Format chunk search results into enriched SourceItem citation models."""
         registry = self._registry or get_source_registry()
 
         if self._health_cache is None:
@@ -185,3 +183,29 @@ class RAGService:
             )
 
         return source_items
+
+    async def retrieve(
+        self,
+        query: str,
+        top_k: int = 4,
+    ) -> List[SourceItem]:
+        """Retrieve top-k scheme sources formatted as SourceItem for API responses.
+
+        Enriches every citation with verified domain integrity, trust level,
+        government classification, and synchronization freshness timestamps.
+
+        Args:
+            query: The citizen search query.
+            top_k: Number of relevant scheme contexts to return.
+
+        Returns:
+            List of SourceItem references with scheme name, URL, snippet, relevance score,
+            and complete citation trust metadata.
+        """
+        chunk_results = self.retrieve_chunks(query=query, top_k=top_k)
+        return self._format_source_items(chunk_results)
+
+    async def retrieve_featured(self, top_k: int = 4) -> List[SourceItem]:
+        """Retrieve high-priority canonical government schemes."""
+        featured = self.vector_store.get_featured_chunks(top_k=top_k)
+        return self._format_source_items(featured)

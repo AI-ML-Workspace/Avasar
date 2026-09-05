@@ -165,6 +165,37 @@ class TestVectorStore(unittest.TestCase):
             with self.assertRaises(ValueError):
                 FAISSVectorStore.load(index_path)
 
+    def test_search_lexical_fallback(self):
+        c1 = _create_sample_chunk("s1#0", "INSPIRE Scholarship", "Financial aid and fellowship for science students")
+        c2 = _create_sample_chunk("s2#0", "PM Kisan Samman Nidhi", "Income support for small and marginal landholder farmers")
+        c3 = _create_sample_chunk("s3#0", "Ayushman Bharat PMJAY", "Health insurance cover for secondary and tertiary hospitalization")
+        self.store.chunks = [c1, c2, c3]
+
+        # Search for scholarship
+        results = self.store.search_lexical("scholarship", top_k=2)
+        self.assertGreater(len(results), 0)
+        self.assertEqual(results[0][0].title, "INSPIRE Scholarship")
+
+        # Search for farmer
+        results_farmer = self.store.search_lexical("farmer", top_k=2)
+        self.assertGreater(len(results_farmer), 0)
+        self.assertEqual(results_farmer[0][0].title, "PM Kisan Samman Nidhi")
+
+        # Empty or whitespace query
+        self.assertEqual(self.store.search_lexical(""), [])
+        self.assertEqual(self.store.search_lexical("   "), [])
+
+    def test_get_featured_chunks(self):
+        c1 = _create_sample_chunk("s1#0", "PM Kisan", "Farmers support")
+        c2 = _create_sample_chunk("s2#0", "Ayushman Bharat", "Healthcare")
+        self.store.chunks = [c1, c2]
+
+        featured = self.store.get_featured_chunks(top_k=2)
+        self.assertEqual(len(featured), 2)
+        titles = [c.title for c, _ in featured]
+        self.assertIn("PM Kisan", titles)
+        self.assertIn("Ayushman Bharat", titles)
+
 
 class TestRAGServiceIntegration(unittest.IsolatedAsyncioTestCase):
     """Integration tests for RAGService connecting embeddings to FAISS retrieval."""
