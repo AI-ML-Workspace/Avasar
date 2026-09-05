@@ -1,0 +1,26 @@
+{
+  "scheme_name": "Pradhan Mantri Sahaj Bijli Har Ghar Yojana (Saubhagya)",
+  "category": "Energy & Rural Infrastructure",
+  "description": "The Saubhagya scheme was launched by the Ministry of Power to achieve universal household electrification across India by providing electricity connections to all willing un-electrified rural households and poor households in urban areas. Rural Electrification Corporation (REC) is the nodal agency.",
+  "eligibility": "All un-electrified rural households identified via SECC 2011 data. Economically poor households in urban areas. Non-poor rural households are also eligible for connection on payment of a nominal fee of Rs 500 (recoverable in 10 installments through monthly electricity bills).",
+  "benefits": [
+    "Free last-mile electricity service connection including service cable, smart/electronic electricity meter, single light point with LED bulb, and mobile charging point for all identified poor households.",
+    "For un-electrified households located in remote and inaccessible areas where grid extension is not feasible, Solar Photovoltaic (SPV) based standalone systems (including battery bank, 5 LED lights, 1 DC fan, and 1 DC power plug) are provided with 5-year repair and maintenance support.",
+    "Elimination of indoor kerosene pollution and improvement in health, education, and quality of life."
+  ],
+  "application_process": "Discoms (power distribution utilities) conduct door-to-door camps in villages and wards. Beneficiaries register on the spot using mobile apps deployed by local discom officials by submitting identification proof and address.",
+  "documents_required": [
+    "Aadhaar Card or Voter ID Card",
+    "Proof of residence / address proof",
+    "Passport size photograph"
+  ],
+  "provider": "Ministry of Power, Government of India & Rural Electrification Corporation (REC)",
+  "official_source": "Saubhagya Portal / Ministry of Power",
+  "official_source_url": "https://powermin.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "The connection infrastructure and installation are subsidized/free, but ongoing monthly electricity consumption charges must be paid by the consumer according to state DISCOM tariff schedules.",
+    "Solar standalone systems are restricted to habitations where grid connection is techno-economically unfeasible.",
+    "Households with illegal connections can regularize their connections under the scheme."
+  ]
+}

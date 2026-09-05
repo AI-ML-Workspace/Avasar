@@ -1,11 +1,15 @@
 import logging
 from pathlib import Path
 from typing import List, Optional, Tuple, Union
+from urllib.parse import urlparse
 
 from app.core.config import settings
 from app.models.chat import SourceItem
 from app.models.document import ProcessedChunk
+from app.models.source import is_authorized_government_domain
 from app.services.embedding import EmbeddingService, get_embedding_service
+from app.services.source_registry import SourceRegistry, get_source_registry
+from app.services.source_sync import SourceSyncService
 from app.services.vector_store import FAISSVectorStore
 
 logger = logging.getLogger(__name__)
@@ -23,6 +27,7 @@ class RAGService:
         vector_store: Optional[FAISSVectorStore] = None,
         embedding_service: Optional[EmbeddingService] = None,
         vector_store_path: Optional[Union[str, Path]] = None,
+        registry: Optional[SourceRegistry] = None,
     ):
         self._vector_store = vector_store
         self._embedding_service = embedding_service
@@ -31,6 +36,8 @@ class RAGService:
             if vector_store_path
             else settings.resolved_vector_store_path
         )
+        self._registry = registry
+        self._health_cache = None
 
     @property
     def embedding_service(self) -> EmbeddingService:
@@ -84,23 +91,85 @@ class RAGService:
     ) -> List[SourceItem]:
         """Retrieve top-k scheme sources formatted as SourceItem for API responses.
 
+        Enriches every citation with verified domain integrity, trust level,
+        government classification, and synchronization freshness timestamps.
+
         Args:
             query: The citizen search query.
             top_k: Number of relevant scheme contexts to return.
 
         Returns:
-            List of SourceItem references with scheme name, URL, snippet, and relevance score.
+            List of SourceItem references with scheme name, URL, snippet, relevance score,
+            and complete citation trust metadata.
         """
         chunk_results = self.retrieve_chunks(query=query, top_k=top_k)
+        registry = self._registry or get_source_registry()
+
+        if self._health_cache is None:
+            try:
+                self._health_cache = SourceSyncService().load_health()
+            except Exception:
+                self._health_cache = {}
 
         source_items: List[SourceItem] = []
         for chunk, score in chunk_results:
+            source_url = chunk.url or chunk.official_source_url
+            domain = None
+            is_official = False
+
+            if source_url:
+                parsed = urlparse(source_url)
+                domain = (parsed.hostname or parsed.netloc.split(":")[0]).lower()
+                is_official = is_authorized_government_domain(domain)
+
+            # Match registered source entry
+            source = None
+            if chunk.source_id:
+                source = registry.get_source(chunk.source_id)
+            elif source_url:
+                source = registry.get_source_for_url(source_url)
+
+            resolved_source_id = chunk.source_id or (source.source_id if source else None)
+
+            # Resolve authority trust level
+            if chunk.trust_level:
+                trust_level = chunk.trust_level
+            elif source:
+                trust_level = source.trust_level.value
+            elif is_official:
+                trust_level = "primary_authoritative"
+            else:
+                trust_level = "unverified"
+
+            # Resolve government tier classification
+            if chunk.metadata and chunk.metadata.get("classification"):
+                classification = chunk.metadata["classification"]
+            elif source:
+                classification = source.classification.value
+            elif is_official:
+                classification = "central"
+            else:
+                classification = None
+
+            # Resolve synchronization freshness timestamp
+            last_synced_at = chunk.retrieved_at
+            if not last_synced_at and resolved_source_id and self._health_cache:
+                h = self._health_cache.get(resolved_source_id)
+                if h and h.last_synced_at:
+                    last_synced_at = h.last_synced_at
+
             source_items.append(
                 SourceItem(
                     title=chunk.title,
-                    url=chunk.url,
+                    url=source_url,
                     snippet=chunk.text,
                     score=round(float(score), 4),
+                    source_id=resolved_source_id,
+                    is_official=is_official,
+                    trust_level=trust_level,
+                    classification=classification,
+                    official_domain=domain,
+                    last_synced_at=last_synced_at,
                 )
             )
 

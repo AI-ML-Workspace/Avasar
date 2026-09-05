@@ -1,0 +1,29 @@
+{
+  "scheme_name": "PM CARES for Children Scheme",
+  "category": "Child Welfare & Social Security",
+  "description": "Launched in May 2021 by the Prime Minister of India, the PM CARES for Children scheme supports children who lost both parents, legal guardian, adoptive parents, or surviving parent due to the COVID-19 pandemic. It ensures comprehensive care and protection through sustained health insurance, education, boarding support, and financial independence through a corpus of Rs 10 lakh upon reaching 23 years of age.",
+  "eligibility": "All children who lost both parents, surviving parent, or legal guardian/adoptive parents to the COVID-19 pandemic between 11 March 2020 and 28 February 2022, and had not completed 18 years of age at the time of parent's demise.",
+  "benefits": [
+    "Corpus of Rs 10 lakh created in the child's name in a Post Office monthly income scheme, providing monthly stipend from age 18 to 23 for personal needs, and the entire lump-sum Rs 10 lakh handed over on completing 23 years of age.",
+    "Free school education support: admission into nearest Kendriya Vidyalaya or private school with fees provided from PM CARES.",
+    "Higher education support: assistance in obtaining education loans with interest paid by PM CARES, plus scholarship of Rs 20,000 per annum under Central Sector Scholarship.",
+    "Health insurance coverage of Rs 5 lakh under PM-JAY (Ayushman Bharat) with premium paid by PM CARES until the age of 23 years.",
+    "Child care institution (CCI) accommodation or foster care assistance."
+  ],
+  "application_process": "Eligible children are identified and registered by District Magistrates (DM) on the pmcaresforchildren.in portal through Child Welfare Committees (CWC) and district child protection units.",
+  "documents_required": [
+    "Death certificates of both parents mentioning COVID-19 or death during COVID period",
+    "Birth certificate / age proof of the child",
+    "Aadhaar Card of the child",
+    "Joint bank/post office account with District Magistrate as guardian"
+  ],
+  "provider": "Ministry of Women and Child Development & PM CARES Fund",
+  "official_source": "PM CARES for Children Portal",
+  "official_source_url": "https://pmcaresforchildren.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Demise of parents must fall within the designated pandemic timeline window (March 2020 to February 2022).",
+    "The District Magistrate acts as the legal guardian until the child attains 18 years of age.",
+    "Monthly stipend from age 18 to 23 is funded through the interest accrued from the Rs 10 lakh corpus."
+  ]
+}

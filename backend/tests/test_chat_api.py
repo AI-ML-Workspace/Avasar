@@ -85,8 +85,9 @@ class TestChatAPI(unittest.TestCase):
 
         # Confirm services were invoked with expected arguments
         self.mock_pipeline.process_query.assert_called_once()
+        # RAG receives the expansion-enriched query for short scheme queries
         self.mock_rag.retrieve.assert_called_once_with(
-            query="How much financial benefit is given under PM-KISAN?"
+            query="How much financial benefit is given under PM-KISAN? Pradhan Mantri Kisan Samman Nidhi farmer income support"
         )
         self.mock_llm.generate_answer.assert_called_once()
 
@@ -120,9 +121,9 @@ class TestChatAPI(unittest.TestCase):
         self.assertEqual(data["conversation_id"], "conv_hin_456")
         self.assertEqual(len(data["sources"]), 2)
 
-        # RAG should receive the normalized English query
+        # RAG should receive the normalized English query, expanded for PM-KISAN
         self.mock_rag.retrieve.assert_called_once_with(
-            query="How much money is received in PM Kisan?"
+            query="How much money is received in PM Kisan? Pradhan Mantri Kisan Samman Nidhi farmer income support"
         )
         # translate_response should be called with target_language='hi'
         self.mock_pipeline.translate_response.assert_called_once()
@@ -162,7 +163,9 @@ class TestChatAPI(unittest.TestCase):
         }
         resp = self.client.post("/api/chat", json=payload)
         self.assertEqual(resp.status_code, 200)
-        self.assertIsNone(resp.json()["conversation_id"])
+        cid = resp.json()["conversation_id"]
+        self.assertIsNotNone(cid)
+        self.assertTrue(cid.startswith("conv_"))
 
     def test_rag_failure_handled_gracefully(self):
         # When RAG retrieval encounters an unexpected error, sources defaults to empty

@@ -9,7 +9,10 @@ from app.services.source_adapters.base import (
     SafeFetcher,
     SourceAdapter,
 )
+from app.services.source_adapters.nsp import NSPSourceAdapter
 from app.services.source_adapters.pm_kisan import PMKisanSourceAdapter
+from app.services.source_adapters.pm_mudra import PMMudraSourceAdapter
+from app.services.source_adapters.pmay_urban import PMAYUrbanSourceAdapter
 from app.services.source_registry import SourceRegistry, get_source_registry
 
 logger = logging.getLogger(__name__)
@@ -17,6 +20,9 @@ logger = logging.getLogger(__name__)
 # Registry mapping source_id to concrete SourceAdapter implementations
 _ADAPTER_MAP: Dict[str, Type[SourceAdapter]] = {
     "pm_kisan": PMKisanSourceAdapter,
+    "nsp": NSPSourceAdapter,
+    "pmay_urban": PMAYUrbanSourceAdapter,
+    "pm_mudra": PMMudraSourceAdapter,
 }
 
 
@@ -32,7 +38,7 @@ def get_adapter_for_source(
     """Resolve and instantiate the appropriate SourceAdapter for a registered OfficialSource.
 
     Args:
-        source_id: Registered source identifier (e.g., 'pm_kisan', 'myscheme').
+        source_id: Registered source identifier (e.g., 'pm_kisan', 'nsp', 'pmay_urban', 'pm_mudra').
         registry: Optional SourceRegistry instance.
 
     Returns:
@@ -60,6 +66,9 @@ __all__ = [
     "IngestionResult",
     "IngestionSecurityError",
     "PMKisanSourceAdapter",
+    "NSPSourceAdapter",
+    "PMAYUrbanSourceAdapter",
+    "PMMudraSourceAdapter",
     "get_adapter_for_source",
     "register_adapter_class",
 ]

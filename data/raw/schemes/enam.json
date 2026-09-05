@@ -1,0 +1,32 @@
+{
+  "scheme_name": "National Agriculture Market (e-NAM)",
+  "category": "Agriculture & Farmer Welfare",
+  "description": "e-NAM (Electronic National Agriculture Market) is a pan-India electronic trading portal that networks existing Agricultural Produce Market Committees (APMCs) and other market yards to create a unified national market for agricultural commodities. It enables transparent online bidding, better price discovery, reduced post-harvest losses, and prompt payment directly to farmers' bank accounts.",
+  "eligibility": "All farmers registered with their nearest APMC-linked e-NAM market yard are eligible to sell their produce on the e-NAM platform. Traders, FPOs (Farmer Producer Organisations), and commission agents can also register. Buyers can be individuals, traders, processors, or exporters registered on the platform.",
+  "benefits": [
+    "Transparent price discovery through online competitive bidding across multiple buyers.",
+    "Access to a wider market beyond local mandi, enabling farmers to sell to buyers across the country.",
+    "Direct payment to farmer's bank account within 24–48 hours of sale.",
+    "Reduced need for multiple middlemen, improving farmer's net realization.",
+    "Online quality assay facilities at integrated mandis to standardize grading.",
+    "e-NAM mobile app for real-time price information, trade status, and payment updates."
+  ],
+  "application_process": "Farmers must register at their nearest APMC mandi that has been integrated with e-NAM (check enam.gov.in for the list of integrated mandis). Registration requires Aadhaar, bank account, and land/produce details. After registration, farmers can bring their produce to the mandi, get it assayed/graded, and participate in online auction. Proceeds are credited to the registered bank account.",
+  "documents_required": [
+    "Aadhaar Card",
+    "Bank account passbook (linked to Aadhaar)",
+    "Mobile number",
+    "Land records or produce ownership proof",
+    "Photograph"
+  ],
+  "provider": "Small Farmers Agribusiness Consortium (SFAC), Ministry of Agriculture & Farmers Welfare, Government of India",
+  "official_source": "e-NAM Portal",
+  "official_source_url": "https://enam.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "e-NAM is only available at APMC-integrated mandis; check the list of integrated mandis on enam.gov.in.",
+    "Commodities must be among the notified commodities for each mandi.",
+    "The platform does not guarantee a minimum price; price is determined by competitive bidding.",
+    "FPOs (Farmer Producer Organisations) can use e-NAM to sell produce of their member farmers collectively."
+  ]
+}

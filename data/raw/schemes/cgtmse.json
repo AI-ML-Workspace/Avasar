@@ -1,0 +1,30 @@
+{
+  "scheme_name": "Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE)",
+  "category": "MSME Financing & Credit Guarantee",
+  "description": "CGTMSE was set up jointly by the Ministry of MSME and Small Industries Development Bank of India (SIDBI) to facilitate collateral-free credit flow to the micro and small enterprise sector. The trust guarantees loans sanctioned by Member Lending Institutions (MLIs) to new and existing Micro and Small Enterprises (MSEs) without requiring third-party guarantees or collateral security.",
+  "eligibility": "New and existing Micro and Small Enterprises (both manufacturing and service enterprises) as defined under the MSMED Act. Retail trade, educational institutions, training institutes, and self-help groups (SHGs) are also covered up to specified limits. Medium enterprises are excluded.",
+  "benefits": [
+    "Collateral-free and third-party guarantee-free credit facilities (both fund-based term loan/working capital and non-fund-based) up to Rs 5 crore per borrowing unit.",
+    "Guarantee cover up to 85% for micro-enterprises for loans up to Rs 5 lakh.",
+    "Guarantee cover up to 85% for loans to women entrepreneurs, SC/ST entrepreneurs, and units located in NER and UTs of J&K and Ladakh.",
+    "Guarantee cover up to 75% for general category MSE borrowers for credit facilities up to Rs 5 crore.",
+    "Reduced annual guarantee fees starting from 0.37% for micro-enterprises."
+  ],
+  "application_process": "Borrowers do not apply to CGTMSE directly. The entrepreneur approaches a registered Member Lending Institution (Scheduled Commercial Bank, Regional Rural Bank, Small Finance Bank, or NBFC) with a viable project proposal. If the bank sanctions the loan without collateral, the lending institution applies directly to CGTMSE for the guarantee cover.",
+  "documents_required": [
+    "Udyam Registration Certificate",
+    "Detailed Project Report / Business Plan",
+    "KYC documents of promoters (PAN, Aadhaar)",
+    "Financial statements, IT returns, and bank statements of the enterprise",
+    "Quotations for machinery/equipment and working capital assessment"
+  ],
+  "provider": "Ministry of MSME and SIDBI (CGTMSE Trust)",
+  "official_source": "Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE)",
+  "official_source_url": "https://www.cgtmse.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Credit evaluation and sanctioning discretion remains solely with the Member Lending Institution.",
+    "Guarantee cover is revoked if the lending institution charges interest higher than the prescribed cap over their benchmark lending rate.",
+    "Medium enterprises (investment in plant & machinery above Rs 10 crore or turnover above Rs 50 crore) are not eligible."
+  ]
+}

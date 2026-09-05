@@ -1,0 +1,31 @@
+{
+  "scheme_name": "National Social Assistance Programme (NSAP)",
+  "category": "Social Security & Old Age Welfare",
+  "description": "NSAP is a centrally sponsored scheme of the Ministry of Rural Development comprising five sub-schemes aimed at providing social security pensions and financial assistance to destitute elderly, widows, disabled persons, and bereaved BPL families. The key components include Indira Gandhi National Old Age Pension Scheme (IGNOAPS), Indira Gandhi National Widow Pension Scheme (IGNWPS), Indira Gandhi National Disability Pension Scheme (IGNDPS), National Family Benefit Scheme (NFBS), and Annapurna.",
+  "eligibility": "Individuals belonging to households living Below Poverty Line (BPL) according to criteria prescribed by Government of India: For IGNOAPS: age 60 years and above. For IGNWPS: widows aged 40 to 79 years. For IGNDPS: persons aged 18 to 79 years with severe or multiple disabilities (80% disability or dwarfism). For NFBS: BPL household on death of primary breadwinner (aged 18-59 years).",
+  "benefits": [
+    "Old Age Pension (IGNOAPS): Monthly central assistance of Rs 200 per month for persons aged 60-79 years, and Rs 500 per month for persons aged 80 years and above (most state governments add top-ups of Rs 800 to Rs 2,500/month from state funds).",
+    "Widow Pension (IGNWPS): Monthly central assistance of Rs 300 per month (aged 40-79) plus state top-ups.",
+    "Disability Pension (IGNDPS): Monthly central assistance of Rs 300 per month (aged 18-79) plus state top-ups.",
+    "National Family Benefit Scheme (NFBS): One-time lump sum grant of Rs 20,000 to the bereaved BPL household upon death of the primary breadwinner.",
+    "Annapurna Scheme: 10 kg of food grains per month free of cost for eligible destitute senior citizens who remain uncovered under IGNOAPS."
+  ],
+  "application_process": "Applications on prescribed forms are submitted to the local Block Development Office (BDO), Sub-Divisional Magistrate (SDM), Municipal Corporation office, or through the state e-district / NSAP portal (nsap.nic.in). Verification is confirmed by Gram Panchayat / Urban local bodies.",
+  "documents_required": [
+    "Aadhaar Card",
+    "BPL Card / Ration Card demonstrating Below Poverty Line status",
+    "Age proof certificate (birth certificate, voter ID, school certificate)",
+    "Bank account passbook seeded with Aadhaar",
+    "Disability certificate issued by Medical Board (for IGNDPS)",
+    "Death certificate of husband (for IGNWPS) or breadwinner (for NFBS)"
+  ],
+  "provider": "Ministry of Rural Development, Government of India & State Social Welfare Departments",
+  "official_source": "National Social Assistance Programme (NSAP) Portal",
+  "official_source_url": "https://nsap.nic.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "BPL status verification is mandatory as per state guidelines and SECC/BPL lists.",
+    "Beneficiaries must submit annual life certificates (Jeevan Pramaan) or undergo physical verification to continue receiving monthly pensions.",
+    "Combined monthly payouts vary significantly by state due to varying supplementary state top-up amounts."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "scheme_name": "National Pension System - Lite (NPS-Lite / Swavalamban)",
+  "category": "Financial Inclusion & Pension",
+  "description": "NPS-Lite was launched by the Pension Fund Regulatory and Development Authority (PFRDA) to cater specifically to economically disadvantaged individuals and groups in unorganised sectors who cannot afford high transaction fees. Operating on a low-cost, group-based model through aggregators, it helps lower-income groups accumulate small savings systematically towards retirement.",
+  "eligibility": "Indian citizens aged between 18 and 60 years belonging to economically disadvantaged segments, unorganised sectors, or cooperative societies. Must not be covered under any social security or statutory retirement scheme such as EPF or government pension schemes.",
+  "benefits": [
+    "Ultra-low administration and management fee structure designed specifically for low-income savers.",
+    "Flexibility to make micro-contributions (minimum Rs 100 per contribution, with recommended minimum of Rs 1,000 per annum).",
+    "Professional fund management by PFRDA-regulated pension fund managers (PFMs) investing in government securities and fixed income instruments.",
+    "Lump sum withdrawal up to 60% of corpus at age 60, with the remaining 40% utilized to purchase an annuity providing a regular lifetime pension.",
+    "Complete lump sum withdrawal permitted if the total accumulated corpus at age 60 is Rs 2 lakh or less."
+  ],
+  "application_process": "Enrollment is done through accredited aggregators such as Microfinance Institutions (MFIs), NGOs, NBFCs, banks, and state government bodies registered with PFRDA. The aggregator collects KYC documents, opens the PRAN (Permanent Retirement Account Number), and facilitates collection of contributions.",
+  "documents_required": [
+    "Aadhaar Card",
+    "Identity and Address Proof (Voter ID, Ration Card, etc.)",
+    "Bank account details (for electronic payout / ECS mandate)",
+    "Passport size photograph"
+  ],
+  "provider": "Pension Fund Regulatory and Development Authority (PFRDA), Government of India",
+  "official_source": "Pension Fund Regulatory and Development Authority (PFRDA) / NPS Trust",
+  "official_source_url": "https://www.pfrda.org.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "NPS-Lite accounts are managed predominantly through accredited aggregator organizations.",
+    "At least 40% of the accumulated corpus must be annuitized to provide monthly pension upon superannuation (unless total corpus is ≤ Rs 2,00,000).",
+    "Premature exit before age 60 requires 80% of corpus to be annuitized."
+  ]
+}

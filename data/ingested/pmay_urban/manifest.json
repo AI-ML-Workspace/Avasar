@@ -1,0 +1,10 @@
+{
+  "source_id": "pmay_urban",
+  "documents": {
+    "pmay_urban_portal_overview": "bee3c0e50ea0896b5dc7775f37186dbd9f37819ae05a7e7241d5d9bb97eeb92e",
+    "pmay_urban_portal_credit_linked_subsidy_scheme": "760356e73201e705308cf6851eef4eaded96713eb0bdd23798d8a9d01e2bcdf1",
+    "pmay_urban_portal_faq": "507757ae429a83b56ae1b1ed126ca6f7b48c0bfe13af7bb233cf9ab45d4e7fdd"
+  },
+  "last_ingested_at": "2026-09-05T00:41:02.747666+00:00",
+  "total_documents": 3
+}

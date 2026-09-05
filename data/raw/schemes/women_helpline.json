@@ -1,0 +1,26 @@
+{
+  "scheme_name": "Women Helpline Scheme (181)",
+  "category": "Women Safety & Emergency Services",
+  "description": "The Women Helpline (WHL) scheme provides a 24-hour toll-free telephonic emergency response service (short code 181) to women affected by violence or in distress. Operational across all States and UTs, it provides immediate emergency referral services (police, hospital, ambulance) as well as non-emergency counseling, legal aid support, and information regarding government welfare schemes for women.",
+  "eligibility": "Any woman or adolescent girl facing physical violence, sexual abuse, mental or emotional harassment, domestic dispute, dowry harassment, cyberstalking, or distress. Available to any individual calling on behalf of an affected woman.",
+  "benefits": [
+    "24x7 toll-free emergency call response via the 181 shortcode.",
+    "Immediate linkage with Emergency Response Support System (ERSS 112), police PCR vans, ambulance services, and fire stations.",
+    "Direct referral and coordination with One Stop Centres (Sakhi) for medical care, shelter, and legal counseling.",
+    "Telephonic crisis counseling and psychological stabilization.",
+    "Comprehensive guidance on state and central welfare schemes available for women."
+  ],
+  "application_process": "Dial toll-free 181 from any mobile phone or landline in India at any time. The operator logs the call, triages the distress level, and mobilizes field response units or provides telephonic consultation immediately.",
+  "documents_required": [
+    "No documentation required. Emergency access is unconditional."
+  ],
+  "provider": "Ministry of Women and Child Development, Government of India",
+  "official_source": "Ministry of Women and Child Development / Sambal Component of Mission Shakti",
+  "official_source_url": "https://wcd.nic.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "The 181 service operates continuously 365 days a year across the country.",
+    "Integrated directly with One Stop Centres (OSC) in every district.",
+    "Call confidentiality and caller anonymity are protected by operational protocols."
+  ]
+}

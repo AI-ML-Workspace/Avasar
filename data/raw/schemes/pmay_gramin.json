@@ -1,0 +1,30 @@
+{
+  "scheme_name": "Pradhan Mantri Awaas Yojana - Gramin (PMAY-G)",
+  "category": "Housing & Rural Development",
+  "description": "PMAY-G (formerly Indira Awaas Yojana) was revamped in 2016 by the Ministry of Rural Development with the objective of providing 'Housing for All' in rural areas. It provides direct financial assistance to rural houseless households and those living in kutcha and dilapidated houses for construction of pucca houses equipped with basic amenities.",
+  "eligibility": "Rural households with no home (houseless) or living in kutcha houses with zero, one, or two rooms, identified and prioritized using the Socio-Economic and Caste Census (SECC 2011) deprivation parameters and finalized through Gram Sabha verification (Awaas+ survey list). Households owning motorized vehicles, agricultural equipment, or salaried members are excluded.",
+  "benefits": [
+    "Financial unit assistance of Rs 1,20,000 in plain areas and Rs 1,30,000 in hilly, difficult, and Integrated Action Plan (IAP) districts.",
+    "Additional assistance of up to Rs 12,000 for toilet construction through convergence with Swachh Bharat Mission - Gramin (SBM-G).",
+    "90 to 95 person-days of unskilled labor support under MGNREGA (approx Rs 18,000–Rs 25,000 depending on state wage rates).",
+    "Convergence for electricity connection (Saubhagya), clean cooking LPG connection (PM Ujjwala Yojana), and piped drinking water (Jal Jeevan Mission).",
+    "Minimum house size of 25 square meters including a dedicated cooking area."
+  ],
+  "application_process": "Beneficiaries are identified systematically through the SECC 2011 and verified Awaas+ list by the Gram Panchayat. Direct benefit transfer (DBT) installments are disbursed directly to the beneficiary's bank account linked to Aadhaar across 3-4 construction stages (foundation, lintel, roof, and completion), tracked via geo-tagged photos on the AwaasApp.",
+  "documents_required": [
+    "Aadhaar Card of beneficiary and spouse",
+    "Bank account passbook seeded with Aadhaar and NPCI mapper",
+    "Consent form for Aadhaar authentication",
+    "MGNREGA Job Card number",
+    "Land ownership document / certificate of land allotment"
+  ],
+  "provider": "Ministry of Rural Development, Government of India",
+  "official_source": "Pradhan Mantri Awaas Yojana - Gramin Portal (PMAY-G / AwaasSoft)",
+  "official_source_url": "https://pmayg.nic.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Assistance is transferred in progressive installments based strictly on geo-tagged photo verification of construction milestones via AwaasApp.",
+    "House ownership is registered jointly in the name of husband and wife, or exclusively in the name of the female head of the family.",
+    "Contractors or middlemen are prohibited from building the house; construction must be carried out by the beneficiary."
+  ]
+}

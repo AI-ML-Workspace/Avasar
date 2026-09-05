@@ -45,6 +45,7 @@ class IngestionResult:
     documents_unchanged: int = 0
     documents_rejected: int = 0
     chunks_created: int = 0
+    http_status: Optional[int] = None
     errors: List[str] = field(default_factory=list)
     output_files: List[str] = field(default_factory=list)
 
@@ -57,9 +58,45 @@ class IngestionResult:
             "documents_unchanged": self.documents_unchanged,
             "documents_rejected": self.documents_rejected,
             "chunks_created": self.chunks_created,
+            "http_status": self.http_status,
             "errors": self.errors,
             "output_files": self.output_files,
         }
+
+
+from html.parser import HTMLParser
+import re
+
+
+class _HTMLTextExtractor(HTMLParser):
+    """Standard library HTML parser to cleanly extract text content."""
+
+    def __init__(self):
+        super().__init__()
+        self.text_parts: List[str] = []
+        self._ignore_stack: List[str] = []
+
+    def handle_starttag(self, tag: str, attrs):
+        if tag.lower() in ("script", "style", "noscript", "svg", "header", "footer", "nav"):
+            self._ignore_stack.append(tag.lower())
+
+    def handle_endtag(self, tag: str):
+        if self._ignore_stack and self._ignore_stack[-1] == tag.lower():
+            self._ignore_stack.pop()
+
+    def handle_data(self, data: str):
+        if not self._ignore_stack:
+            clean = data.strip()
+            if clean:
+                self.text_parts.append(clean)
+
+
+def extract_clean_text_from_html(html: str) -> str:
+    """Extract clean, readable text from HTML markup, stripping scripts, CSS, and navigation."""
+    parser = _HTMLTextExtractor()
+    parser.feed(html)
+    text = "\n".join(parser.text_parts)
+    return re.sub(r"\n{3,}", "\n\n", text).strip()
 
 
 class SafeFetcher:
@@ -71,6 +108,7 @@ class SafeFetcher:
         timeout: Optional[float] = None,
         max_response_bytes: Optional[int] = None,
         user_agent: Optional[str] = None,
+        verify_ssl: Optional[bool] = None,
     ):
         self.allowed_domains: Set[str] = {d.strip().lower() for d in allowed_domains if d.strip()}
         self.timeout = timeout if timeout is not None else settings.ingestion_timeout
@@ -78,6 +116,9 @@ class SafeFetcher:
             max_response_bytes if max_response_bytes is not None else settings.ingestion_max_response_bytes
         )
         self.user_agent = user_agent if user_agent is not None else settings.ingestion_user_agent
+        self.verify_ssl = (
+            verify_ssl if verify_ssl is not None else getattr(settings, "ingestion_verify_ssl", False)
+        )
 
     def validate_url(self, url: str) -> str:
         """Validate URL protocol and ensure destination domain is allowed.
@@ -137,6 +178,7 @@ class SafeFetcher:
             timeout=self.timeout,
             follow_redirects=True,
             max_redirects=5,
+            verify=self.verify_ssl,
         ) as client:
             resp = await client.get(validated_url, headers=headers)
 
@@ -242,9 +284,12 @@ class SourceAdapter(ABC):
 
         try:
             raw_docs = await self.fetch(max_documents=max_documents)
+            result.http_status = raw_docs[0].status_code if raw_docs else 200
         except Exception as err:
             logger.error(f"Failed to fetch from {self.source.source_id}: {err}")
             result.status = "FAILED"
+            status_code = getattr(getattr(err, "response", None), "status_code", None)
+            result.http_status = status_code
             result.errors.append(str(err))
             return result
 
@@ -303,15 +348,51 @@ class SourceAdapter(ABC):
             doc_file = out_base / "schemes.jsonl"
             chunk_file = out_base / "chunks.jsonl"
 
-            # Save normalized documents
-            with open(doc_file, "a", encoding="utf-8") as f:
-                for d in new_or_updated_docs:
-                    f.write(json.dumps(d.model_dump(), ensure_ascii=False) + "\n")
+            # Load existing docs to cleanly replace updated docs without preserving stale versions
+            existing_docs: Dict[str, Dict[str, Any]] = {}
+            if doc_file.exists():
+                try:
+                    with open(doc_file, "r", encoding="utf-8") as f:
+                        for line in f:
+                            if line.strip():
+                                d = json.loads(line)
+                                existing_docs[d["id"]] = d
+                except Exception as err:
+                    logger.warning("Could not read existing doc_file %s: %s", doc_file, err)
 
-            # Save generated chunks
-            with open(chunk_file, "a", encoding="utf-8") as f:
-                for c in new_or_updated_chunks:
-                    f.write(json.dumps(c.model_dump(), ensure_ascii=False) + "\n")
+            for d in new_or_updated_docs:
+                existing_docs[d.id] = d.model_dump()
+
+            # Rewrite schemes.jsonl atomically
+            temp_doc_file = out_base / "schemes.jsonl.tmp"
+            with open(temp_doc_file, "w", encoding="utf-8") as f:
+                for d_data in existing_docs.values():
+                    f.write(json.dumps(d_data, ensure_ascii=False) + "\n")
+            temp_doc_file.replace(doc_file)
+
+            # Load existing chunks, replace chunks for updated scheme IDs
+            updated_scheme_ids = {d.id for d in new_or_updated_docs}
+            retained_chunks: List[Dict[str, Any]] = []
+            if chunk_file.exists():
+                try:
+                    with open(chunk_file, "r", encoding="utf-8") as f:
+                        for line in f:
+                            if line.strip():
+                                c = json.loads(line)
+                                if c.get("scheme_id") not in updated_scheme_ids:
+                                    retained_chunks.append(c)
+                except Exception as err:
+                    logger.warning("Could not read existing chunk_file %s: %s", chunk_file, err)
+
+            for c in new_or_updated_chunks:
+                retained_chunks.append(c.model_dump())
+
+            # Rewrite chunks.jsonl atomically
+            temp_chunk_file = out_base / "chunks.jsonl.tmp"
+            with open(temp_chunk_file, "w", encoding="utf-8") as f:
+                for c_data in retained_chunks:
+                    f.write(json.dumps(c_data, ensure_ascii=False) + "\n")
+            temp_chunk_file.replace(chunk_file)
 
             manifest["documents"] = doc_registry
             manifest["last_ingested_at"] = datetime.now(timezone.utc).isoformat()

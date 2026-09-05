@@ -1,0 +1,29 @@
+{
+  "scheme_name": "Soil Health Card (SHC) Scheme",
+  "category": "Agriculture & Farmer Welfare",
+  "description": "The Soil Health Card Scheme was launched in 2015 to provide every farmer with a Soil Health Card containing crop-wise soil nutrient status and fertilizer recommendations to help farmers improve soil health and crop productivity through balanced use of nutrients. The card lists 12 soil parameters including macro- and micro-nutrients and recommends appropriate fertilizer and soil amendment dosages.",
+  "eligibility": "All farmers across India owning or cultivating agricultural land are eligible to get their soil tested and receive a Soil Health Card, free of cost. Priority is given to resource-poor farmers, small and marginal farmers, and farmers in nutrient-deficient areas.",
+  "benefits": [
+    "Free soil testing for 12 parameters: pH, Electrical Conductivity, Organic Carbon, Nitrogen, Phosphorus, Potassium, Sulphur, Zinc, Boron, Iron, Manganese, and Copper.",
+    "Crop-wise nutrient recommendations and fertilizer dosage advice to improve yield.",
+    "Identification of soil deficiencies helps reduce unnecessary fertilizer expenditure.",
+    "Card issued every 2 years to track changes in soil health.",
+    "Online access to soil health reports through soilhealth.dac.gov.in."
+  ],
+  "application_process": "Farmers can request soil testing at the nearest Soil Testing Laboratory operated by the State Agriculture Department, or through the Village-Level Soil Testing Facility (STF) or Soil Health Card Camp held by the government. Samples are collected by agriculture department staff or farmers can submit soil samples at the designated collection centre. Results and recommendations are sent to the farmer as a physical card and are available online.",
+  "documents_required": [
+    "Aadhaar Card or any identity proof",
+    "Details of agricultural land (survey number / Khasra number)",
+    "Mobile number for SMS notifications"
+  ],
+  "provider": "Department of Agriculture & Farmers Welfare, Ministry of Agriculture & Farmers Welfare, Government of India",
+  "official_source": "Soil Health Card Portal",
+  "official_source_url": "https://soilhealth.dac.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "One Soil Health Card is issued per plot of land, valid for 2 years.",
+    "Soil sample collection follows the standard grid-based sampling method — ideally one sample per 2.5 hectares.",
+    "The fertilizer recommendation on the card is advisory; farmers are encouraged to follow it for optimal crop productivity.",
+    "The card is available in local languages for ease of use."
+  ]
+}

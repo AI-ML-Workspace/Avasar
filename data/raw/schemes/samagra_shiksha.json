@@ -1,0 +1,35 @@
+{
+  "scheme_name": "Samagra Shiksha Abhiyan",
+  "category": "Education",
+  "description": "Samagra Shiksha is a comprehensive programme for school education extending from pre-school (Balvatikas) to Class 12, launched in 2018 as an integrated scheme merging Sarva Shiksha Abhiyan (SSA), Rashtriya Madhyamik Shiksha Abhiyan (RMSA), and Teachers Education (TE). It aims to ensure inclusive and equitable quality education and promote lifelong learning opportunities, with a holistic approach to school effectiveness from early childhood to senior secondary level.",
+  "eligibility": "All children aged 3–18 years in government and government-aided schools from pre-primary (Balvatika) to Class 12. Special focus on: girls, SC/ST, Persons with Disabilities (PwD), children in difficult circumstances, Educationally Backward Blocks, Left Wing Extremism-affected areas, and aspirational districts.",
+  "benefits": [
+    "Free and compulsory school education from Classes 1–8 under RTE Act, implemented through Samagra Shiksha.",
+    "Free uniforms for girls and boys (2 sets per year) in Classes 1–8 in government schools.",
+    "Free textbooks for students in Classes 1–8 under centrally sponsored norm.",
+    "Stipend/scholarship for girls studying in Classes 9–12 in Kasturba Gandhi Balika Vidyalayas (KGBVs) and residential schools.",
+    "Support for setting up KGBV residential schools for girls from disadvantaged communities at secondary level.",
+    "ICT and digital initiatives: Smart Classrooms, virtual labs, DIKSHA platform for digital learning.",
+    "Inclusive education support for children with special needs (CwSN) including assistive devices, escort allowance, and resource centres.",
+    "Vocational education integration in Classes 9–12.",
+    "Sports and physical education facilities in schools."
+  ],
+  "application_process": "No individual application required. Benefits flow automatically to all students enrolled in government and government-aided schools. Parents should enroll their children in government schools to access scheme benefits. For KGBV residential school admission, contact the district education office. For children with special needs (CwSN), contact the Block Resource Centre.",
+  "documents_required": [
+    "Birth certificate for school enrollment",
+    "Aadhaar Card",
+    "Caste certificate (for priority scholarships and residential schools)",
+    "Disability certificate (for CwSN support)",
+    "Proof of residence"
+  ],
+  "provider": "Department of School Education and Literacy, Ministry of Education, Government of India",
+  "official_source": "Samagra Shiksha Portal",
+  "official_source_url": "https://samagrashiksha.education.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "The scheme covers government and government-aided schools only; private unaided schools are not directly covered.",
+    "RTE provisions (free and compulsory education) apply to all children aged 6–14 years in neighborhood schools.",
+    "Scheme norms and specific entitlements may vary by state as it is a Centrally Sponsored Scheme implemented through State Implementation Societies (SIS).",
+    "KGBV residential schools are available for girls in Classes 6–12 from SC/ST/OBC/Minority communities and BPL families."
+  ]
+}
