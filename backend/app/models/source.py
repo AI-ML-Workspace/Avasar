@@ -217,3 +217,37 @@ class OfficialSource(BaseModel):
                 cleaned_domains.append(base_host.lower())
 
         return cleaned_domains
+
+    def to_public_metadata(
+        self,
+        last_synced_at: Optional[str] = None,
+        sync_status: Optional[str] = None,
+    ) -> "OfficialSourcePublic":
+        """Generate safe, public-facing trust metadata with zero internal paths or secrets."""
+        parsed = urlparse(self.base_url)
+        domain = (parsed.hostname or (self.allowed_domains[0] if self.allowed_domains else "")).lower()
+        status_val = sync_status.lower() if sync_status else "unknown"
+        return OfficialSourcePublic(
+            source_id=self.source_id,
+            name=self.name,
+            official_domain=domain,
+            source_url=self.base_url,
+            trust_level=self.trust_level.value if hasattr(self.trust_level, "value") else str(self.trust_level),
+            classification=self.classification.value if hasattr(self.classification, "value") else str(self.classification),
+            sync_status=status_val,
+            last_synced_at=last_synced_at,
+            is_official=is_authorized_government_domain(domain),
+        )
+
+
+class OfficialSourcePublic(BaseModel):
+    """Safe citizen-facing metadata for an official government source."""
+    source_id: str = Field(..., description="Unique source identifier")
+    name: str = Field(..., description="Official government portal or scheme name")
+    official_domain: str = Field(..., description="Verified primary government domain host")
+    source_url: str = Field(..., description="Authoritative portal entry URL")
+    trust_level: str = Field(..., description="Authority classification level")
+    classification: str = Field(..., description="Government tier (e.g. central, state_ut, national_portal)")
+    sync_status: str = Field(default="unknown", description="Current data synchronization status")
+    last_synced_at: Optional[str] = Field(default=None, description="ISO timestamp of most recent successful sync")
+    is_official: bool = Field(default=True, description="Strict official domain verification flag")

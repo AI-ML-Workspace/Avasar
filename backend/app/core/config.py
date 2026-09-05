@@ -116,6 +116,9 @@ class Settings(BaseModel):
     ingestion_data_dir: str = Field(
         default_factory=lambda: os.getenv("INGESTION_DATA_DIR", str(ROOT_DIR / "data" / "ingested"))
     )
+    ingestion_verify_ssl: bool = Field(
+        default_factory=lambda: os.getenv("INGESTION_VERIFY_SSL", "false").lower() in ("1", "true")
+    )
 
     @property
     def resolved_ingestion_data_dir(self) -> Path:

@@ -1,0 +1,31 @@
+{
+  "scheme_name": "Prime Minister's Employment Generation Programme (PMEGP)",
+  "category": "Business, MSME & Self-Employment",
+  "description": "PMEGP is a flagship credit-linked subsidy programme administered by the Ministry of Micro, Small and Medium Enterprises (MSME) and implemented by Khadi and Village Industries Commission (KVIC) at the national level. It facilitates generation of employment opportunities through the establishment of micro-enterprises in non-farm sectors across rural and urban India.",
+  "eligibility": "Any individual above 18 years of age. For manufacturing projects costing above Rs 10 lakh and service projects costing above Rs 5 lakh, minimum educational qualification of Class 8 pass is required. Self-Help Groups (SHGs), production-based co-operative societies, and charitable trusts are also eligible. Existing units or units already availing government subsidies under other schemes are ineligible.",
+  "benefits": [
+    "Margin money (subsidy) up to 25% of project cost in urban areas and up to 35% in rural areas for special categories (SC/ST/OBC/Women/Ex-servicemen/PH/NER/Hill areas).",
+    "General category receives 15% subsidy in urban areas and 25% in rural areas.",
+    "Maximum admissible project cost is Rs 50 lakh for manufacturing sector and Rs 20 lakh for service/business sector.",
+    "Beneficiary contribution is only 5% of project cost for special categories (10% for general category).",
+    "Second loan of up to Rs 1 crore for manufacturing (Rs 25 lakh for service) available for existing well-performing PMEGP units for expansion."
+  ],
+  "application_process": "Apply online through the PMEGP e-Portal on kviconline.gov.in. Applications are processed by District Industries Centres (DIC) or KVIC/KVIB offices and forwarded to partner financing banks for sanction.",
+  "documents_required": [
+    "Aadhaar Card and PAN Card",
+    "Detailed Project Report (DPR)",
+    "Educational qualification certificate (Class 8 or higher)",
+    "Caste / Category certificate (for SC/ST/OBC/minority subsidy claims)",
+    "Rural area certificate (issued by competent local authority if applying under rural quota)",
+    "EDP (Entrepreneurship Development Programme) training certificate before loan disbursement"
+  ],
+  "provider": "Ministry of Micro, Small and Medium Enterprises (MSME) & KVIC",
+  "official_source": "PMEGP e-Portal / Khadi and Village Industries Commission",
+  "official_source_url": "https://www.kviconline.gov.in/pmegpeportal/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Subsidy is credited as Margin Money in an escrow account and locked for 3 years, after which physical verification determines final adjustment against loan principal.",
+    "Only new micro-enterprises are eligible for the first-time subsidy.",
+    "Mandatory EDP training (can be completed online or offline) is required before bank loan disbursement."
+  ]
+}

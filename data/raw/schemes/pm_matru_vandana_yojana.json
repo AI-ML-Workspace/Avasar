@@ -1,0 +1,31 @@
+{
+  "scheme_name": "Pradhan Mantri Matru Vandana Yojana (PMMVY)",
+  "category": "Women & Child Welfare",
+  "description": "PMMVY is a maternity benefit programme providing partial wage compensation to pregnant women and lactating mothers for the first time they have a child, and for the second child if it is a girl, to help them take adequate rest before and after delivery. The scheme also promotes institutional delivery and provides cash incentives to improve maternal and child health and nutrition.",
+  "eligibility": "Pregnant Women and Lactating Mothers (PW&LM) for the first living child. For the second child: additional benefit if the second child is a girl. Women must be 19 years of age or above. Excludes central/state government employees who are already receiving maternity benefits under law.",
+  "benefits": [
+    "Rs 5,000 in three installments for the first living child: Rs 1,000 on early registration of pregnancy, Rs 2,000 after 6 months of pregnancy on completion of at least one antenatal check-up, Rs 2,000 after child birth registration and completion of first cycle of child's vaccinations.",
+    "For the second child (if a girl): Rs 6,000 in one installment after baby girl's birth registration and completion of full immunization.",
+    "Beneficiaries also receive the cash incentive for institutional delivery under Janani Suraksha Yojana (JSY) — total effective benefit is Rs 6,000 or more."
+  ],
+  "application_process": "Register at the nearest Anganwadi Centre (AWC) or Approved Health Facility (AHF). Applications can also be submitted online at pmmvy.wcd.gov.in (PMMVY-CAS portal). The Anganwadi Worker or ASHA worker can assist with registration. Documents must be submitted at each installment milestone.",
+  "documents_required": [
+    "Mother and Child Protection (MCP) card",
+    "Identity proof of beneficiary (Aadhaar Card)",
+    "Bank account passbook (must be in the name of beneficiary)",
+    "Mobile number",
+    "Institutional delivery certificate (for 3rd installment)",
+    "Child birth registration certificate (for 3rd installment)"
+  ],
+  "provider": "Ministry of Women and Child Development, Government of India",
+  "official_source": "PMMVY Official Portal",
+  "official_source_url": "https://pmmvy.wcd.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Benefits are available only for the first living child and, conditionally, the second child if she is a girl.",
+    "Installment deadlines must be adhered to — benefits cannot be claimed retrospectively beyond the prescribed period.",
+    "The Aadhaar-linked bank account must be in the beneficiary mother's name for direct benefit transfer.",
+    "Central Government employees entitled to paid maternity leave are not eligible.",
+    "Miscarriage or stillbirth: if a first delivery results in a child being stillborn, the woman is eligible for fresh benefits in the next pregnancy."
+  ]
+}

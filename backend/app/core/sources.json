@@ -197,5 +197,33 @@
     "update_frequency": "weekly",
     "ministry": "Centre for e-Governance, Government of Uttar Pradesh",
     "description": "Citizen welfare and scheme delivery portal for Uttar Pradesh."
+  },
+  {
+    "source_id": "pm_fasal_bima",
+    "name": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+    "base_url": "https://pmfby.gov.in",
+    "allowed_domains": ["pmfby.gov.in", "www.pmfby.gov.in"],
+    "classification": "central",
+    "source_type": "scheme_portal",
+    "trust_level": "primary_authoritative",
+    "enabled": true,
+    "ingestion_method": "structured_dataset",
+    "update_frequency": "weekly",
+    "ministry": "Ministry of Agriculture & Farmers Welfare",
+    "description": "Comprehensive crop insurance scheme protecting farmers against yield loss and natural calamities."
+  },
+  {
+    "source_id": "skill_india",
+    "name": "Skill India Digital / PMKVY",
+    "base_url": "https://www.skillindiadigital.gov.in",
+    "allowed_domains": ["skillindiadigital.gov.in", "www.skillindiadigital.gov.in"],
+    "classification": "central",
+    "source_type": "ministry_portal",
+    "trust_level": "primary_authoritative",
+    "enabled": true,
+    "ingestion_method": "structured_dataset",
+    "update_frequency": "weekly",
+    "ministry": "Ministry of Skill Development and Entrepreneurship (MSDE)",
+    "description": "National platform for PMKVY skill certifications, apprenticeship, and digital training."
   }
 ]

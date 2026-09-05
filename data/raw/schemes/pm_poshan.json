@@ -1,0 +1,27 @@
+{
+  "scheme_name": "PM POSHAN (Pradhan Mantri Poshan Shakti Nirman) – Mid-Day Meal Scheme",
+  "category": "Education & Child Nutrition",
+  "description": "PM POSHAN (formerly Mid-Day Meal Scheme) is the world's largest school meal programme providing free, hot, nutritious mid-day meals to students in government and government-aided primary and upper primary schools (Classes 1–8). The scheme aims to improve the nutritional status of school children, increase school enrollment, reduce drop-out rates, address classroom hunger, and boost attendance — particularly among girls, SC/ST, and disadvantaged communities.",
+  "eligibility": "All students enrolled in Classes 1–8 (Primary and Upper Primary) in government, government-aided, and local body schools, as well as Anganwadi Centres for classes under the scheme. Students in Madrasa and Maktabs supported by the Minority Affairs Ministry are also covered. No income or caste restriction — the meal is available to all enrolled students.",
+  "benefits": [
+    "Free, hot, nutritious cooked mid-day meal served on all school days (approximately 200 days per year).",
+    "Caloric and protein entitlements: Primary students (Classes 1–5): 700 Kcal, 20g protein per meal; Upper Primary (Classes 6–8): 1,046 Kcal, 28g protein per meal.",
+    "All ingredients including cereals, pulses, vegetables, oil, condiments, and fuel costs are covered by the scheme.",
+    "Special meals during school events, local festivals, and special occasions.",
+    "Nutritional fortification and local produce integration encouraged."
+  ],
+  "application_process": "No application needed. Students in eligible government schools automatically receive mid-day meals on all school days. Parents and guardians should ensure their children are enrolled in government schools to benefit. For concerns or complaints, contact the School Management Committee (SMC) or local Block Education Officer.",
+  "documents_required": [
+    "No documents required — automatically available to all enrolled students in eligible schools"
+  ],
+  "provider": "Department of School Education & Literacy, Ministry of Education, Government of India",
+  "official_source": "PM POSHAN Portal",
+  "official_source_url": "https://pmposhan.education.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Meals are provided on school days only — no take-home rations under this scheme.",
+    "The scheme covers Classes 1–8 only; pre-primary (Anganwadi) nutrition is handled under ICDS/POSHAN Abhiyan.",
+    "Quality monitoring is conducted through School Management Committees and district-level inspections.",
+    "Private unaided schools are not covered under this scheme."
+  ]
+}

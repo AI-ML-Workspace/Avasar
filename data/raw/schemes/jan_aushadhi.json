@@ -1,0 +1,27 @@
+{
+  "scheme_name": "Pradhan Mantri Bharatiya Janaushadhi Pariyojana (PMBJP) – Jan Aushadhi",
+  "category": "Health",
+  "description": "PM Jan Aushadhi Pariyojana provides quality generic medicines at affordable prices through dedicated Jan Aushadhi Kendras (stores) set up across India. The scheme aims to make quality medicines accessible to all citizens, especially the poor, by selling generic drugs at prices 50–90% cheaper than branded equivalents, without compromising on quality standards (all medicines are sourced from WHO-GMP certified manufacturers).",
+  "eligibility": "All citizens can buy medicines from Jan Aushadhi Kendras at subsidized prices — no means test or eligibility criteria required. Medicines are available to anyone who visits the Kendra. For opening a Jan Aushadhi Kendra: individual, NGO, hospital, trust, or private practitioners can apply with specific requirements.",
+  "benefits": [
+    "Access to over 2,000 medicines and 300 surgical consumables at prices 50–90% below market rates.",
+    "Medicines meet WHO-GMP quality standards — same therapeutic efficacy as branded drugs.",
+    "Jan Aushadhi Kendras open across all districts including rural areas.",
+    "Savings on chronic disease medicines (diabetes, hypertension, cardiac, etc.) which require lifelong medication."
+  ],
+  "application_process": "No application needed to buy from Jan Aushadhi Kendra. Citizens simply visit the nearest Jan Aushadhi Kendra with a doctor's prescription and purchase medicines. To find the nearest Kendra, use the Jan Aushadhi app or search on janaushadhi.gov.in. For opening a Kendra, apply through the PMBI portal at janaushadhi.gov.in/apply-online.",
+  "documents_required": [
+    "Doctor's prescription (for prescription medicines)",
+    "No other documents required for purchasing medicines"
+  ],
+  "provider": "Pharmaceuticals & Medical Devices Bureau of India (PMBI), Department of Pharmaceuticals, Ministry of Chemicals & Fertilizers",
+  "official_source": "Jan Aushadhi Portal",
+  "official_source_url": "https://janaushadhi.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Medicines sold at Jan Aushadhi Kendras are generic equivalents of branded medicines — chemically identical active ingredients, meeting the same quality standards.",
+    "All medicines are tested at NABL-accredited laboratories.",
+    "The Kendra operates as a retail pharmacy on a franchise model — it is privately managed but sells at PMBI-fixed prices.",
+    "Availability of specific medicines may vary by Kendra; citizens can check availability through the Jan Aushadhi app."
+  ]
+}

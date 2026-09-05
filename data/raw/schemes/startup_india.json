@@ -1,0 +1,29 @@
+{
+  "scheme_name": "Startup India Initiative",
+  "category": "Entrepreneurship & Innovation",
+  "description": "Startup India is a flagship initiative of the Government of India, launched in 2016 and spearheaded by the Department for Promotion of Industry and Internal Trade (DPIIT), Ministry of Commerce and Industry. It aims to build a robust ecosystem for nurturing innovation and startups in the country, driving sustainable economic growth and generating large-scale employment opportunities.",
+  "eligibility": "Entities incorporated as Private Limited Companies, Registered Partnership Firms, or Limited Liability Partnerships (LLP) in India within the past 10 years. Annual turnover must not have exceeded Rs 100 crore in any preceding financial year. The entity must be working towards innovation, development, or improvement of products or processes, or have a scalable business model with high potential of employment generation or wealth creation.",
+  "benefits": [
+    "Income tax exemption under Section 80-IAC of the Income Tax Act for 3 consecutive financial years out of the first 10 years of incorporation (subject to Inter-Ministerial Board approval).",
+    "Exemption from Angel Tax under Section 56(2)(viib) upon DPIIT recognition.",
+    "Fast-tracked patent examination and up to 80% rebate on patent filing fees and 50% rebate on trademark filing fees.",
+    "Self-certification compliance under 6 labor laws and 3 environmental laws for a period of up to 5 years.",
+    "Access to the Fund of Funds for Startups (FFS) managed by SIDBI and the Startup India Seed Fund Scheme (SISFS) providing up to Rs 20 lakh for proof of concept and up to Rs 50 lakh for commercialization."
+  ],
+  "application_process": "Founders register their incorporated company on the Startup India portal (startupindia.gov.in) and apply for DPIIT Recognition by providing company incorporation documents, brief description of the innovative product/service, and pitch deck.",
+  "documents_required": [
+    "Certificate of Incorporation / Registration of Partnership",
+    "PAN Card of the company/entity",
+    "Brief write-up and presentation describing innovation, uniqueness, and scalability",
+    "Website link, video, or prototype demonstration link"
+  ],
+  "provider": "Department for Promotion of Industry and Internal Trade (DPIIT), Ministry of Commerce and Industry",
+  "official_source": "Startup India Hub",
+  "official_source_url": "https://www.startupindia.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "An entity formed by splitting up or reconstruction of an existing business already in existence is NOT eligible.",
+    "DPIIT recognition is required before applying for Section 80-IAC tax holiday or seed funding schemes.",
+    "Turnover must remain below Rs 100 crore to maintain startup status during the 10-year period."
+  ]
+}

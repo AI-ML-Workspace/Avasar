@@ -24,6 +24,36 @@ class SourceItem(BaseModel):
         description="Relevance or retrieval similarity score",
         examples=[0.89]
     )
+    source_id: Optional[str] = Field(
+        default=None,
+        description="Identifier of the originating registered OfficialSource (e.g., 'nsp', 'pm_kisan')",
+        examples=["pm_kisan"]
+    )
+    is_official: bool = Field(
+        default=True,
+        description="Strict official government domain verification status",
+        examples=[True]
+    )
+    trust_level: Optional[str] = Field(
+        default=None,
+        description="Authority classification level of the source",
+        examples=["primary_authoritative"]
+    )
+    classification: Optional[str] = Field(
+        default=None,
+        description="Government tier (e.g. central, national_portal, state_ut)",
+        examples=["central"]
+    )
+    official_domain: Optional[str] = Field(
+        default=None,
+        description="Verified primary government domain host",
+        examples=["pmkisan.gov.in"]
+    )
+    last_synced_at: Optional[str] = Field(
+        default=None,
+        description="ISO 8601 timestamp when content was retrieved or last verified",
+        examples=["2026-09-05T00:53:08.874756+00:00"]
+    )
 
 
 class ChatRequest(BaseModel):

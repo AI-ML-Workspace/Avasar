@@ -1,0 +1,32 @@
+{
+  "scheme_name": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+  "category": "Agriculture & Farmer Welfare",
+  "description": "PMFBY is a crop insurance scheme launched in 2016 to provide financial support to farmers suffering crop loss or damage due to unforeseen events like natural calamities, pests, and diseases. It offers a uniform low-premium structure for farmers and ensures quick settlement of claims using technology such as remote sensing and crop cutting experiments.",
+  "eligibility": "All farmers growing notified crops in notified areas. Loanee farmers (those with Kisan Credit Card or seasonal agricultural operations loans) are covered compulsorily. Non-loanee farmers can enroll voluntarily. Sharecroppers and tenant farmers growing notified crops are also eligible.",
+  "benefits": [
+    "Comprehensive risk coverage for pre-sowing, sowing, standing crop, post-harvest, and localized calamity risks.",
+    "Low premium for farmers: 2% of sum insured for Kharif crops, 1.5% for Rabi crops, and 5% for annual commercial and horticultural crops.",
+    "Balance premium paid by Central and State Governments in equal proportions (75:25 or 90:10 for NE and hilly states).",
+    "Full sum insured payout for total crop loss based on yield data.",
+    "Post-harvest losses covered for up to 14 days after harvest for crops left in cut and spread condition."
+  ],
+  "application_process": "Loanee farmers are automatically enrolled through their bank (loan-linked). Non-loanee and voluntary farmers can apply through the PMFBY portal (pmfby.gov.in), CSC, nearest bank branch, or state agriculture department office. Deadline is the last date of enrolment for each crop season as notified by the state.",
+  "documents_required": [
+    "Aadhaar Card",
+    "Bank account passbook / account number",
+    "Land records / Khasra Khatauni (for own land) or share-cropping agreement",
+    "Sowing certificate from Patwari or Gram Panchayat",
+    "Mobile number linked to Aadhaar"
+  ],
+  "provider": "Ministry of Agriculture & Farmers Welfare, Government of India",
+  "official_source": "PMFBY Portal",
+  "official_source_url": "https://pmfby.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Coverage is limited to notified crops in notified areas each season — check state notification annually.",
+    "Claim settlement uses area-based yield data from Crop Cutting Experiments (CCE); individual loss assessment is only for post-harvest and localized calamities.",
+    "Non-loanee farmers must apply before the notified cut-off date for enrolment.",
+    "Yield shortfall claims are settled after harvest season data is compiled; full payout is made when yield falls below threshold.",
+    "The scheme excludes losses from war, nuclear risks, and willful negligence."
+  ]
+}

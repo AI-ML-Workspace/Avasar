@@ -1,0 +1,29 @@
+{
+  "scheme_name": "Deendayal Antyodaya Yojana - National Rural Livelihoods Mission (DAY-NRLM)",
+  "category": "Rural Livelihoods & Women Empowerment",
+  "description": "DAY-NRLM (Aajeevika) is a poverty alleviation project implemented by the Ministry of Rural Development. It aims to reduce poverty by mobilizing rural poor households into Self-Help Groups (SHGs) and federated institutions, enabling them to access gainful self-employment, skilled wage employment opportunities, and financial services, building sustainable livelihoods.",
+  "eligibility": "Rural poor households, with priority given to women, Scheduled Castes, Scheduled Tribes, vulnerable tribal groups, single women, disabled persons, and landless laborers. At least one woman member from each identified poor household is mobilized into a Self Help Group.",
+  "benefits": [
+    "Revolving Fund (RF) of Rs 10,000 to Rs 15,000 per eligible SHG to catalyze credit habits and meet immediate needs.",
+    "Community Investment Fund (CIF) provided to Village Organizations for lending to SHGs for livelihood activities.",
+    "Interest Subvention on prompt bank loan repayment, bringing the effective interest rate down to 7% (and further 4% in designated intensive districts) for loans up to Rs 3 lakh.",
+    "Capacity building, financial literacy, and livelihood training for members.",
+    "Support for farm and non-farm micro-enterprises and value chain collectives."
+  ],
+  "application_process": "Interested rural women can join or form a local Self Help Group (SHG) comprising 10-20 members through their local Village Organization (VO), Gram Panchayat, or Community Resource Persons (CRPs) designated under the state rural livelihood mission.",
+  "documents_required": [
+    "Aadhaar Card of members",
+    "Group bank account opening documents (resolution of SHG, member KYC)",
+    "Voter ID / proof of residence in the village",
+    "BPL or SECC deprivation certificate / Participatory Identification of the Poor (PIP) record"
+  ],
+  "provider": "Ministry of Rural Development, Government of India",
+  "official_source": "Deendayal Antyodaya Yojana - NRLM Portal",
+  "official_source_url": "https://aajeevika.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "SHG must follow the 'Panchasutra' principles: regular meetings, regular savings, regular internal lending, timely repayment, and up-to-date book of accounts.",
+    "Interest subvention is contingent on timely and regular loan repayments without default.",
+    "Funding flows through community institutions and banks, not directly to individuals."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "scheme_name": "National Health Mission (NHM)",
+  "category": "Health",
+  "description": "National Health Mission (NHM) is an umbrella programme encompassing National Rural Health Mission (NRHM) and National Urban Health Mission (NUHM). It aims to achieve universal access to equitable, affordable, and quality healthcare services for all, with a special focus on rural areas, the urban poor, women, children, and vulnerable population groups. NHM strengthens health systems, reduces maternal and child mortality, controls communicable diseases, and provides free essential medicines and diagnostics at public health facilities.",
+  "eligibility": "All citizens of India, with priority for rural and urban poor populations, pregnant women, children under 5, adolescent girls, persons from SC/ST and BPL families, and those with serious communicable diseases. Most NHM services are provided free of cost at government health facilities.",
+  "benefits": [
+    "Free outpatient and inpatient services at government Primary Health Centres (PHCs), Community Health Centres (CHCs), District Hospitals, and Sub-Centres.",
+    "Free essential medicines under the National Free Drugs Service Initiative.",
+    "Free diagnostics at government health facilities under the National Free Diagnostics Service Initiative.",
+    "Janani Suraksha Yojana (JSY): Cash incentive for institutional delivery — Rs 600–1,400 for rural areas, Rs 400–1,000 for urban areas depending on state category.",
+    "Janani Shishu Suraksha Karyakram (JSSK): Free treatment for pregnant women and sick newborns at government hospitals including delivery, diagnostics, medicines, blood, diet, and referral transport.",
+    "ASHA (Accredited Social Health Activist) workers available in every village as community health volunteers for guidance and referral.",
+    "Rashtriya Bal Swasthya Karyakram (RBSK): Free health screening and treatment for children aged 0–18 years for 4 Ds — defects, deficiencies, diseases, and developmental delays.",
+    "National Ambulance Service (108): Free emergency ambulance services."
+  ],
+  "application_process": "No formal application required. Citizens should visit their nearest Sub-Centre, Primary Health Centre, Community Health Centre, or District Hospital to avail NHM services. ASHA workers in rural areas can guide residents to appropriate health facilities and assist with entitlements under JSY and JSSK.",
+  "documents_required": [
+    "Aadhaar Card (for identity and DBT benefits like JSY)",
+    "Mother and Child Protection (MCP) Card (for maternity and immunization benefits)",
+    "BPL certificate (for priority services at some facilities)",
+    "Bank account details for cash transfer benefits (JSY)"
+  ],
+  "provider": "Ministry of Health and Family Welfare, Government of India (implemented by State Health Societies)",
+  "official_source": "National Health Mission Portal",
+  "official_source_url": "https://nhm.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Services vary by state as NHM is implemented by respective State Health Societies with central funding.",
+    "JSY cash incentive is paid after institutional delivery and is subject to registration and ANC visits.",
+    "Free medicines and diagnostics are available at government facilities only — not applicable at private hospitals.",
+    "ASHA worker performance incentives are outcome-based and not a salary."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "scheme_name": "Mission Shakti",
+  "category": "Women Empowerment & Safety",
+  "description": "Mission Shakti is an umbrella scheme launched by the Ministry of Women and Child Development for the safety, security, and empowerment of women. It operates in mission mode with two distinct sub-schemes: 'Sambal' (focusing on safety and security through One Stop Centres, Women Helpline 181, Beti Bachao Beti Padhao, and Nari Adalats) and 'Samarthya' (focusing on empowerment through Ujjawala, Swadhar Greh, Working Women Hostels, National Creche Scheme, and Pradhan Mantri Matru Vandana Yojana).",
+  "eligibility": "All Indian women and adolescent girls, with targeted interventions for vulnerable, marginalized, and distress-affected women, working mothers, and pregnant/lactating women.",
+  "benefits": [
+    "Integrated 24x7 emergency response, legal counsel, and shelter support under the Sambal sub-scheme.",
+    "Financial assistance and maternity benefit transfers under the Samarthya component (PMMVY).",
+    "Affordable, secure accommodation for working women with day-care facilities for children in urban and rural areas.",
+    "Community-level alternative dispute resolution via Nari Adalats.",
+    "Institutional care and rehabilitation support for destitute women, survivors of trafficking, and widows."
+  ],
+  "application_process": "Depending on the specific component, beneficiaries access services via local Anganwadi Centres, One Stop Centres, the 181 helpline, or state social welfare departments. For PMMVY benefits, online registration is done via pmmvy.wcd.gov.in.",
+  "documents_required": [
+    "Aadhaar Card of the woman applicant",
+    "Bank account passbook linked with Aadhaar (for direct benefit transfer components)",
+    "Component-specific documentation (e.g., employment letter for working women hostels, pregnancy registration for PMMVY)"
+  ],
+  "provider": "Ministry of Women and Child Development, Government of India",
+  "official_source": "Ministry of Women and Child Development Guidelines for Mission Shakti",
+  "official_source_url": "https://wcd.nic.in/acts/guidelines-mission-shakti",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Mission Shakti functions as an umbrella umbrella framework coordinating state and central allocations.",
+    "Sambal components are 100% centrally funded, while Samarthya components follow standard 60:40 Centre-State cost sharing (90:10 for NE/Himalayan states).",
+    "Direct financial transfers require active Aadhaar Seeding with the recipient's bank account."
+  ]
+}

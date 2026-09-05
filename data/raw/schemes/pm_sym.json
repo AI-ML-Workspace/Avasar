@@ -1,0 +1,27 @@
+{
+  "scheme_name": "Pradhan Mantri Shram Yogi Maan-dhan (PM-SYM)",
+  "category": "Social Security & Pension for Unorganised Workers",
+  "description": "PM-SYM is a central sector pension scheme administered by the Ministry of Labour and Employment and implemented through the Life Insurance Corporation of India (LIC) and CSC e-Governance Services. It is designed to provide old-age income security to unorganised workers whose monthly income is Rs 15,000 or less.",
+  "eligibility": "Unorganised workers (such as street vendors, agricultural workers, construction workers, domestic helpers, rickshaw pullers, rag pickers, handloom workers) aged between 18 and 40 years. Monthly income must be Rs 15,000 or below. Should NOT be covered under EPFO, ESIC, or NPS (government-funded) and must not be an income tax payer.",
+  "benefits": [
+    "Assured minimum monthly pension of Rs 3,000 after attaining the age of 60 years.",
+    "50% matching contribution by the Central Government: beneficiary contributes Rs 55 to Rs 200 per month depending on entry age, and the Government deposits an equal matching amount.",
+    "Spousal family pension: in case of death of the subscriber during pension receipt, spouse receives 50% of the pension amount (Rs 1,500/month).",
+    "Option for spouse to continue the scheme by paying regular contributions if the subscriber dies before age 60."
+  ],
+  "application_process": "Eligible unorganised workers can visit any Common Services Centre (CSC) with their Aadhaar card and bank passbook. The Village Level Entrepreneur (VLE) completes the digital registration, initial contribution is paid in cash, and subsequent contributions are auto-debited monthly from the subscriber's bank account. Alternatively, workers can self-enroll via maandhan.in.",
+  "documents_required": [
+    "Aadhaar Card",
+    "Savings bank account passbook / Jan Dhan account details with IFSC",
+    "Active mobile number"
+  ],
+  "provider": "Ministry of Labour and Employment, Government of India & LIC",
+  "official_source": "Maan-dhan Portal / Ministry of Labour and Employment",
+  "official_source_url": "https://maandhan.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Subscriber must maintain sufficient balance in the savings account for auto-debit; missed contributions attract late fees.",
+    "If subscriber exits before 10 years, only subscriber's share of contribution with savings bank interest rate is returned.",
+    "Income tax payers and organized sector employees covered under EPF/ESIC are strictly ineligible."
+  ]
+}

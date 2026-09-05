@@ -1,0 +1,26 @@
+{
+  "scheme_name": "Pradhan Mantri Jan Vikas Karyakram (PMJVK)",
+  "category": "Minority Welfare & Community Infrastructure",
+  "description": "PMJVK is a centrally sponsored scheme implemented by the Ministry of Minority Affairs (earlier known as Multi-sectoral Development Programme). It is designed to address development deficits in identified Minority Concentration Areas (MCAs) by creating socio-economic infrastructure and basic amenities, with a primary focus on education, health, skill development, and women empowerment.",
+  "eligibility": "Targeted at populations residing in designated Minority Concentration Blocks (MCBs), Minority Concentration Towns (MCTs), and Minority Concentration District Headquarters (MCD HQs) identified based on minority population density and socio-economic/basic amenities backwardness. Open to all residents in these notified areas with special emphasis on minority communities.",
+  "benefits": [
+    "Creation of high-standard educational infrastructure including residential schools, smart classrooms, hostels, IT labs, and Sadbhav Mandaps (community halls).",
+    "Establishment of healthcare infrastructure: primary health centres (PHCs), community health centres (CHCs), maternal and child health wings, and diagnostic facilities.",
+    "Skill development centres and industrial training institutes (ITIs) tailored to local livelihood opportunities.",
+    "Special projects dedicated to women: working women hostels, girls' higher secondary schools, and vocational training facilities.",
+    "At least 80% of resources earmarked for education, health, and skill development projects, and at least 33-40% specifically targeted for women and girls."
+  ],
+  "application_process": "Proposals for community infrastructure projects are formulated by State Governments/UT administrations through District Level Committees (DLC) based on local gap analysis, and approved by the Empowered Committee of the Ministry of Minority Affairs. Individual community members access the physical facilities once built.",
+  "documents_required": [
+    "Community facility access requires local area residence proof (Aadhaar, Ration card) or student enrollment records at beneficiary institutions."
+  ],
+  "provider": "Ministry of Minority Affairs, Government of India",
+  "official_source": "Ministry of Minority Affairs / PMJVK Portal",
+  "official_source_url": "https://minorityaffairs.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "PMJVK is an area development scheme rather than an individual cash transfer scheme.",
+    "Projects are funded on a Centre-State cost sharing basis (typically 60:40 for general states, 90:10 for NE/Himalayan states, 100% for UTs without legislature).",
+    "Land for project construction must be provided free of cost by the respective State Government."
+  ]
+}
