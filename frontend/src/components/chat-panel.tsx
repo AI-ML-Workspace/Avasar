@@ -170,6 +170,7 @@ export function ChatPanel({
               alt="Avasar Assistant"
               width={40}
               height={40}
+              unoptimized
               className="h-full w-full rounded-full object-contain"
             />
           </div>
@@ -228,6 +229,7 @@ export function ChatPanel({
                 alt="Avasar"
                 width={60}
                 height={60}
+                unoptimized
                 className="h-full w-full rounded-full object-contain"
               />
             </div>
@@ -274,6 +276,7 @@ export function ChatPanel({
                   alt="Avasar Logo"
                   width={36}
                   height={36}
+                  unoptimized
                   className="h-full w-full rounded-full object-contain"
                 />
               </div>
@@ -364,6 +367,7 @@ export function ChatPanel({
                 alt="Avasar Loading"
                 width={36}
                 height={36}
+                unoptimized
                 className="h-full w-full rounded-full object-contain"
               />
             </div>

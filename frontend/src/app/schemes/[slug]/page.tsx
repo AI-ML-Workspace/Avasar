@@ -72,6 +72,7 @@ export default async function SchemeDetailPage({ params }: Props) {
               src={scheme.image || "/logo.png"}
               alt={scheme.name}
               fill
+              unoptimized
               className="object-cover"
               priority
             />

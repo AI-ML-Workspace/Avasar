@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-fina" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2C4A52" />
+      <stop offset="100%" stop-color="#142529" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#bg-fina)" rx="16" />
+  <circle cx="200" cy="120" r="85" fill="#F4D160" opacity="0.15" />
+  <circle cx="200" cy="120" r="55" fill="#FFFFFF" opacity="0.08" />
+  
+            <!-- Bank Pillars & Rupee -->
+            <polygon points="200,65 260,95 140,95" fill="#FFD700" />
+            <rect x="150" y="100" width="14" height="60" rx="2" fill="#FFFFFF" />
+            <rect x="175" y="100" width="14" height="60" rx="2" fill="#FFFFFF" />
+            <rect x="210" y="100" width="14" height="60" rx="2" fill="#FFFFFF" />
+            <rect x="235" y="100" width="14" height="60" rx="2" fill="#FFFFFF" />
+            <rect x="135" y="160" width="130" height="12" rx="3" fill="#FFD700" />
+        
+  <!-- Badge -->
+  <rect x="90" y="195" width="220" height="26" rx="13" fill="#000000" opacity="0.4" />
+  <text x="200" y="212" fill="#FFFFFF" font-size="11" font-weight="700" font-family="system-ui, sans-serif" text-anchor="middle" letter-spacing="1">FINANCIAL SUPPORT &amp; BANKING</text>
+</svg>

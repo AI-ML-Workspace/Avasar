@@ -33,47 +33,50 @@ function sanitizeRawHtml(text: string): string {
     .replace(/&lt;\/?(div|span|p|html|body)\b[^&]*&gt;/gi, "");
 }
 
+import type { Components } from "react-markdown";
+
 /**
  * Custom ReactMarkdown component overrides styled for clean visual section cards
  */
-const markdownComponents = {
-  h1: ({ children }: any) => (
+const markdownComponents: Components = {
+  h1: ({ children }) => (
     <h1 className="text-lg font-bold text-foreground sm:text-xl border-b border-black pb-2 mb-3">
       {children}
     </h1>
   ),
-  h2: ({ children }: any) => (
+  h2: ({ children }) => (
     <h2 className="text-base font-bold text-foreground sm:text-lg border-b border-black/80 pb-1.5 mb-2.5">
       {children}
     </h2>
   ),
-  h3: ({ children }: any) => (
+  h3: ({ children }) => (
     <h3 className="text-sm font-bold text-foreground sm:text-base mb-2">
       {children}
     </h3>
   ),
-  h4: ({ children }: any) => (
+  h4: ({ children }) => (
     <h4 className="text-xs font-bold text-foreground uppercase tracking-wider mb-1.5">
       {children}
     </h4>
   ),
-  p: ({ children }: any) => (
+  p: ({ children }) => (
     <p className="my-1 text-sm leading-relaxed text-foreground/90 font-normal">
       {children}
     </p>
   ),
-  ul: ({ children }: any) => (
+  ul: ({ children }) => (
     <ul className="my-2 space-y-2 pl-0.5">
       {children}
     </ul>
   ),
-  ol: ({ children }: any) => (
+  ol: ({ children }) => (
     <ol className="my-2 space-y-2 pl-0.5 list-none">
       {children}
     </ol>
   ),
-  li: ({ children, node }: any) => {
-    const isOrdered = node?.parent?.tagName === "ol";
+  li: ({ children, node }) => {
+    const parent = (node as Record<string, unknown> | undefined)?.parent as { tagName?: string } | undefined;
+    const isOrdered = parent?.tagName === "ol";
 
     if (isOrdered) {
       return (
@@ -93,18 +96,18 @@ const markdownComponents = {
       </li>
     );
   },
-  strong: ({ children }: any) => (
+  strong: ({ children }) => (
     <strong className="font-semibold text-foreground">{children}</strong>
   ),
-  a: ({ href, children }: any) => (
+  a: ({ href, children }) => (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
       className="inline-flex items-center gap-1.5 font-semibold text-primary hover:text-accent underline underline-offset-2 transition"
     >
-      <span>{children}</span>
-      <ExternalLink className="h-3.5 w-3.5 shrink-0" />
+      {children}
+      <ExternalLink className="h-3 w-3 inline" />
     </a>
   ),
 };

@@ -13,6 +13,7 @@ export function SiteFooter() {
                 alt="Avasar Logo"
                 width={40}
                 height={40}
+                unoptimized
                 className="h-full w-full rounded-full object-contain"
               />
             </div>

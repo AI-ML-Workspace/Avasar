@@ -81,8 +81,19 @@ class RAGService:
         if top_k <= 0:
             raise ValueError(f"top_k must be a positive integer, got {top_k}")
 
-        query_vec = self.embedding_service.embed_text(query.strip())
-        return self.vector_store.search(query_vec, top_k=top_k)
+        results: List[Tuple[ProcessedChunk, float]] = []
+        try:
+            query_vec = self.embedding_service.embed_text(query.strip())
+            results = self.vector_store.search(query_vec, top_k=top_k)
+        except Exception as err:
+            logger.warning("Embedding/vector search encountered error: %s; falling back to lexical search", err)
+            results = []
+
+        # If semantic search returned nothing or embedding failed, fall back to lexical ranking over canonical chunks
+        if not results:
+            results = self.vector_store.search_lexical(query.strip(), top_k=top_k)
+
+        return results
 
     async def retrieve(
         self,

@@ -117,6 +117,64 @@ class FAISSVectorStore:
 
         return results
 
+    def search_lexical(
+        self,
+        query: str,
+        top_k: int = 4,
+    ) -> List[Tuple[ProcessedChunk, float]]:
+        """Lexical and keyword chunk search over stored chunks.
+
+        Serves as a deterministic zero-failure fallback for discovery and scheme
+        queries if the embedding service or external inference API is temporarily
+        unavailable, ensuring grounded official sources are always retrieved.
+        """
+        if not query or not query.strip() or not self.chunks:
+            return []
+
+        import re
+        tokens = set(re.findall(r"\w+", query.lower()))
+        # Filter out common stop words
+        stops = {"what", "is", "the", "for", "can", "and", "are", "which", "how", "who", "i", "a", "an", "to", "of", "in", "my"}
+        query_words = [t for t in tokens if len(t) >= 3 and t not in stops]
+        if not query_words:
+            query_words = [t for t in tokens if len(t) >= 2]
+
+        scored: List[Tuple[ProcessedChunk, float]] = []
+        for chunk in self.chunks:
+            score = 0.0
+            content_lower = (chunk.content or "").lower()
+            name_lower = (chunk.scheme_name or "").lower()
+            cat_lower = (chunk.category or "").lower()
+
+            for word in query_words:
+                if word in name_lower:
+                    score += 6.0
+                if word in cat_lower:
+                    score += 4.0
+                if word in content_lower:
+                    score += 1.0
+
+            # Domain intent boosters for discovery queries
+            if "student" in query_words or "scholarship" in query_words or "study" in query_words:
+                if any(k in name_lower or k in cat_lower for k in ["scholarship", "student", "education", "fellowship", "shiksha"]):
+                    score += 5.0
+            if "farmer" in query_words or "kisan" in query_words or "agriculture" in query_words:
+                if any(k in name_lower or k in cat_lower for k in ["kisan", "farmer", "krishi", "fasal", "agriculture"]):
+                    score += 5.0
+            if "women" in query_words or "girl" in query_words or "mahila" in query_words:
+                if any(k in name_lower or k in cat_lower for k in ["women", "girl", "matru", "shakti", "sukanya", "mahila"]):
+                    score += 5.0
+            if "health" in query_words or "hospital" in query_words or "medical" in query_words:
+                if any(k in name_lower or k in cat_lower for k in ["ayushman", "health", "pmjay", "swasthya", "medical"]):
+                    score += 5.0
+
+            if score > 0:
+                normalized_score = min(0.95, 0.5 + (score / 40.0))
+                scored.append((chunk, normalized_score))
+
+        scored.sort(key=lambda x: x[1], reverse=True)
+        return scored[:top_k]
+
     def save(self, index_path: Union[str, Path]) -> None:
         """Save FAISS binary index and chunk metadata to disk.
 

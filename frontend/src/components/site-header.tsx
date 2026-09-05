@@ -18,6 +18,7 @@ export function SiteHeader({ transparent = false }: { transparent?: boolean }) {
               alt="Avasar Logo"
               width={44}
               height={44}
+              unoptimized
               className="h-full w-full rounded-full object-contain"
               priority
             />
