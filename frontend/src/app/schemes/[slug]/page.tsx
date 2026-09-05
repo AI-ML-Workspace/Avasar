@@ -29,12 +29,12 @@ export async function generateMetadata({ params }: Props) {
 
 function Section({ title, items }: { title: string; items: string[] }) {
   return (
-    <div className="rounded-3xl border border-border/80 bg-card p-6 shadow-soft hover:border-accent/40 transition">
-      <h2 className="text-base font-bold text-foreground">{title}</h2>
-      <ul className="mt-4 space-y-2.5 text-sm text-foreground/90">
+    <div className="rounded-3xl floating-card p-6">
+      <h2 className="text-base font-bold text-[#2A1503]">{title}</h2>
+      <ul className="mt-4 space-y-2.5 text-sm text-[#2A1503]/90">
         {items.map((i) => (
           <li key={i} className="flex items-start gap-2.5">
-            <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-amber-700 dark:text-amber-400" />
+            <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-amber-800" />
             <span className="leading-relaxed">{i}</span>
           </li>
         ))}
@@ -51,21 +51,23 @@ export default async function SchemeDetailPage({ params }: Props) {
   }
 
   return (
-    <div className="relative flex min-h-screen flex-col bg-background text-foreground overflow-x-hidden">
-      <MandalaBackground />
+    <>
+      <div className="page-background">
+        <MandalaBackground />
+      </div>
 
-      <div className="relative z-10 flex flex-col min-h-screen">
+      <div className="page-content flex min-h-screen flex-col">
         <SiteHeader />
         <main className="mx-auto w-full max-w-4xl flex-1 px-5 py-10">
           <Link
             href="/schemes"
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-muted-foreground hover:text-foreground transition uppercase tracking-wider mb-4"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-muted-foreground hover:text-[#2A1503] transition uppercase tracking-wider mb-4"
           >
             <ArrowLeft className="h-3.5 w-3.5" /> All schemes
           </Link>
 
-          {/* Scheme Banner Image */}
-          <div className="relative h-56 sm:h-72 w-full overflow-hidden rounded-3xl mb-6 shadow-soft border border-border/80">
+          {/* Scheme Banner Image - Floating Card */}
+          <div className="relative h-56 sm:h-72 w-full overflow-hidden rounded-3xl mb-6 floating-card">
             <Image
               src={scheme.image || "/logo.png"}
               alt={scheme.name}
@@ -73,13 +75,13 @@ export default async function SchemeDetailPage({ params }: Props) {
               className="object-cover"
               priority
             />
-            <span className="absolute top-4 left-4 rounded-full border border-accent/40 bg-card/90 px-3.5 py-1 text-xs font-bold text-foreground backdrop-blur-md shadow-xs">
+            <span className="absolute top-4 left-4 rounded-full border border-black/20 bg-white/95 px-3.5 py-1 text-xs font-bold text-[#2A1503] backdrop-blur-md shadow-xs">
               {scheme.category}
             </span>
           </div>
 
           <div>
-            <h1 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl leading-tight">
+            <h1 className="text-3xl font-extrabold tracking-tight text-[#2A1503] sm:text-4xl leading-tight">
               {scheme.name}
             </h1>
             <p className="mt-3 text-base text-muted-foreground leading-relaxed">{scheme.description}</p>
@@ -94,21 +96,21 @@ export default async function SchemeDetailPage({ params }: Props) {
             <Section title="⚠️ Important conditions" items={scheme.conditions} />
           </div>
 
-          <div className="mt-8 flex flex-col gap-4 rounded-3xl border border-accent/40 bg-primary p-6 text-primary-foreground sm:flex-row sm:items-center sm:justify-between shadow-lift">
-            <p className="text-sm leading-relaxed">
+          <div className="mt-8 flex flex-col gap-4 rounded-3xl border border-black bg-primary p-6 text-primary-foreground sm:flex-row sm:items-center sm:justify-between shadow-lift">
+            <p className="text-sm leading-relaxed font-medium">
               Verify eligibility and application details on the official government website.
             </p>
             <a
               href={scheme.source.url}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex w-fit items-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-bold text-accent-foreground shadow-sm hover:opacity-95 transition shrink-0"
+              className="inline-flex w-fit items-center gap-2 rounded-xl bg-accent border border-black px-5 py-3 text-sm font-bold text-accent-foreground shadow-sm hover:opacity-95 transition shrink-0"
             >
               {scheme.source.label} <ExternalLink className="h-4 w-4" />
             </a>
           </div>
 
-          <div className="mt-6 rounded-3xl border border-border/80 bg-card p-6 shadow-soft">
+          <div className="mt-6 rounded-3xl floating-card p-6">
             <p className="text-sm text-muted-foreground">
               Have a question about this scheme?{" "}
               <Link
@@ -123,6 +125,6 @@ export default async function SchemeDetailPage({ params }: Props) {
         </main>
         <SiteFooter />
       </div>
-    </div>
+    </>
   );
 }

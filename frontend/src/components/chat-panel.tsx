@@ -160,11 +160,11 @@ export function ChatPanel({
   };
 
   return (
-    <div className="flex h-full flex-col overflow-hidden rounded-3xl border border-border/90 bg-card/95 shadow-lift backdrop-blur-md transition-all">
+    <div className="flex h-full flex-col overflow-hidden rounded-3xl border border-black bg-card/95 shadow-lift backdrop-blur-md transition-all">
       {/* Header Bar */}
-      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border/80 bg-secondary/60 px-5 py-3.5">
+      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-black bg-secondary/60 px-5 py-3.5">
         <div className="flex items-center gap-3">
-          <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white p-0.5 shadow-md ring-2 ring-accent/30">
+          <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white p-0.5 shadow-md ring-2 ring-black/20">
             <Image
               src="/logo.png"
               alt="Avasar Assistant"
@@ -176,7 +176,7 @@ export function ChatPanel({
           <div>
             <div className="flex items-center gap-2">
               <h3 className="text-sm font-bold text-foreground">Avasar Assistant</h3>
-              <span className="inline-flex items-center gap-1 rounded-full border border-accent/40 bg-accent/15 px-2 py-0.5 text-[10px] font-semibold text-foreground">
+              <span className="inline-flex items-center gap-1 rounded-full border border-black/80 bg-accent/20 px-2 py-0.5 text-[10px] font-semibold text-foreground">
                 <Sparkles className="h-3 w-3 text-accent" /> Verified RAG
               </span>
             </div>
@@ -186,10 +186,10 @@ export function ChatPanel({
 
         <div className="flex items-center gap-2">
           <Select value={language} onValueChange={(v) => setLanguage(v as LanguageCode)}>
-            <SelectTrigger className="h-9 w-[150px] rounded-xl border-border bg-card text-xs font-semibold shadow-xs">
+            <SelectTrigger className="h-9 w-[150px] rounded-xl border border-black bg-card text-xs font-semibold shadow-xs">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent className="rounded-xl">
+            <SelectContent className="rounded-xl border border-black">
               {languages.map((l) => (
                 <SelectItem key={l.code} value={l.code} className="text-xs">
                   <span className="font-semibold">{l.native}</span>{" "}
@@ -203,7 +203,7 @@ export function ChatPanel({
             <Button
               variant="outline"
               size="icon"
-              className="h-9 w-9 rounded-xl border-border hover:bg-destructive/10 hover:text-destructive transition"
+              className="h-9 w-9 rounded-xl border border-black hover:bg-destructive/10 hover:text-destructive transition"
               aria-label="Clear conversation"
               title="Clear conversation"
               onClick={() => {
@@ -222,7 +222,7 @@ export function ChatPanel({
       <div className="flex-1 space-y-6 overflow-y-auto px-4 py-6 sm:px-6">
         {messages.length === 0 && (
           <div className="mx-auto max-w-xl py-6 text-center">
-            <div className="relative mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-white p-1 shadow-md ring-4 ring-accent/20">
+            <div className="relative mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-white p-1 shadow-md ring-4 ring-black/10">
               <Image
                 src="/logo.png"
                 alt="Avasar"
@@ -246,7 +246,7 @@ export function ChatPanel({
                 <button
                   key={p}
                   onClick={() => void send(p, messages)}
-                  className="group flex items-center justify-between rounded-2xl border border-border/80 bg-secondary/50 px-4 py-3.5 text-sm font-medium text-foreground transition-all hover:border-accent hover:bg-card hover:shadow-soft cursor-pointer"
+                  className="group flex items-center justify-between rounded-2xl border border-black bg-secondary/50 px-4 py-3.5 text-sm font-medium text-foreground transition-all hover:bg-card hover:shadow-soft cursor-pointer"
                 >
                   <span>{p}</span>
                   <ArrowUp className="h-4 w-4 text-muted-foreground rotate-45 transition group-hover:text-primary group-hover:translate-x-0.5" />
@@ -259,16 +259,16 @@ export function ChatPanel({
         {messages.map((m) =>
           m.role === "user" ? (
             <div key={m.id} className="flex justify-end gap-3 items-start">
-              <div className="max-w-[85%] rounded-2xl rounded-tr-xs bg-primary px-4 py-3 text-sm font-medium text-primary-foreground shadow-sm">
+              <div className="max-w-[85%] rounded-2xl rounded-tr-xs border border-black bg-primary px-4 py-3 text-sm font-medium text-primary-foreground shadow-sm">
                 <p className="whitespace-pre-wrap leading-relaxed">{m.content}</p>
               </div>
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-secondary text-foreground shadow-xs font-bold text-xs">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-black bg-secondary text-foreground shadow-xs font-bold text-xs">
                 <User className="h-4 w-4" />
               </span>
             </div>
           ) : (
             <div key={m.id} className="group flex gap-3.5 items-start">
-              <div className="relative mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white p-0.5 shadow-md ring-2 ring-accent/30">
+              <div className="relative mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white p-0.5 shadow-md ring-2 ring-black/20">
                 <Image
                   src="/logo.png"
                   alt="Avasar Logo"
@@ -283,12 +283,12 @@ export function ChatPanel({
 
                 {/* Verified Sources & Citations */}
                 {m.sources && m.sources.length > 0 && (
-                  <div className="rounded-2xl border border-border/80 bg-secondary/50 p-4 shadow-xs">
-                    <div className="flex items-center justify-between gap-2 border-b border-border/60 pb-2">
+                  <div className="rounded-2xl border border-black bg-secondary/50 p-4 shadow-xs">
+                    <div className="flex items-center justify-between gap-2 border-b border-black/40 pb-2">
                       <p className="flex items-center gap-1.5 text-xs font-bold text-foreground uppercase tracking-wider">
                         <BookOpen className="h-4 w-4 text-accent" /> Verified Government Sources ({m.sources.length})
                       </p>
-                      <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-foreground bg-accent/20 px-2.5 py-0.5 rounded-full border border-accent/40">
+                      <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-foreground bg-accent/20 px-2.5 py-0.5 rounded-full border border-black">
                         <ShieldCheck className="h-3 w-3 text-accent" /> Grounded
                       </span>
                     </div>
@@ -297,7 +297,7 @@ export function ChatPanel({
                       {m.sources.map((s, sIdx) => (
                         <div
                           key={sIdx}
-                          className="rounded-xl border border-border/60 bg-card p-3 text-xs shadow-xs transition hover:border-accent/40"
+                          className="rounded-xl border border-black/80 bg-card p-3 text-xs shadow-xs transition hover:border-black"
                         >
                           <div className="flex flex-wrap items-center justify-between gap-2">
                             <span className="font-semibold text-foreground">{s.title}</span>
@@ -306,7 +306,7 @@ export function ChatPanel({
                                 href={s.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 font-semibold text-primary hover:text-accent bg-primary/10 px-2.5 py-1 rounded-lg text-[11px] transition"
+                                className="inline-flex items-center gap-1 font-semibold text-primary hover:text-accent bg-primary/10 border border-black/40 px-2.5 py-1 rounded-lg text-[11px] transition"
                               >
                                 Official Portal <ExternalLink className="h-3 w-3" />
                               </a>
@@ -358,7 +358,7 @@ export function ChatPanel({
         {/* Loading Indicator */}
         {loading && (
           <div className="flex items-start gap-3">
-            <div className="relative mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white p-0.5 shadow-md ring-2 ring-accent/30 animate-pulse">
+            <div className="relative mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white p-0.5 shadow-md ring-2 ring-black/20 animate-pulse">
               <Image
                 src="/logo.png"
                 alt="Avasar Loading"
@@ -367,7 +367,7 @@ export function ChatPanel({
                 className="h-full w-full rounded-full object-contain"
               />
             </div>
-            <div className="rounded-2xl border border-border/80 bg-card p-4 shadow-xs">
+            <div className="rounded-2xl border border-black bg-card p-4 shadow-xs">
               <div className="flex items-center gap-3">
                 <div className="flex space-x-1.5">
                   <span className="h-2 w-2 rounded-full bg-primary animate-bounce [animation-delay:-0.3s]" />
@@ -385,8 +385,8 @@ export function ChatPanel({
       </div>
 
       {/* Input Footer Area */}
-      <div className="border-t border-border/80 bg-secondary/40 p-4 sm:p-5 backdrop-blur-md">
-        <div className="relative flex items-end gap-2 rounded-2xl border border-border/80 bg-card p-2 shadow-xs focus-within:border-accent focus-within:ring-2 focus-within:ring-accent/20 transition-all">
+      <div className="border-t border-black bg-secondary/40 p-4 sm:p-5 backdrop-blur-md">
+        <div className="relative flex items-end gap-2 rounded-2xl border border-black bg-card p-2 shadow-xs focus-within:ring-2 focus-within:ring-black/20 transition-all">
           <Textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
@@ -406,7 +406,7 @@ export function ChatPanel({
               <Button
                 size="icon"
                 variant="secondary"
-                className="h-10 w-10 rounded-xl bg-destructive/10 text-destructive hover:bg-destructive/20 transition"
+                className="h-10 w-10 rounded-xl border border-black bg-destructive/10 text-destructive hover:bg-destructive/20 transition"
                 aria-label="Stop generation"
                 title="Stop generation"
                 onClick={() => abortRef.current?.abort()}
@@ -416,7 +416,7 @@ export function ChatPanel({
             ) : (
               <Button
                 size="icon"
-                className="h-10 w-10 rounded-xl bg-primary text-primary-foreground font-bold shadow-soft hover:bg-primary/90 disabled:opacity-40 transition-all cursor-pointer"
+                className="h-10 w-10 rounded-xl border border-black bg-primary text-primary-foreground font-bold shadow-soft hover:bg-primary/90 disabled:opacity-40 transition-all cursor-pointer"
                 aria-label="Send message"
                 disabled={!input.trim()}
                 onClick={() => void send(input, messages)}

@@ -48,23 +48,23 @@ function SchemesContent() {
           <Link
             key={s.slug}
             href={`/schemes/${s.slug}`}
-            className="group flex flex-col overflow-hidden rounded-3xl border border-border/80 bg-card shadow-soft transition hover:-translate-y-1 hover:shadow-lift hover:border-accent/60"
+            className="group flex flex-col overflow-hidden rounded-3xl floating-card transition"
           >
             {/* Scheme Card Image */}
-            <div className="relative h-48 w-full overflow-hidden bg-secondary">
+            <div className="relative h-56 w-full overflow-hidden bg-secondary border-b border-black/10">
               <Image
                 src={s.image || "/logo.png"}
                 alt={s.name}
                 fill
                 className="object-cover transition duration-300 group-hover:scale-105"
               />
-              <span className="absolute top-3 left-3 rounded-full border border-accent/40 bg-card/90 px-3 py-1 text-[11px] font-bold text-foreground backdrop-blur-md shadow-xs">
+              <span className="absolute top-3 left-3 rounded-full border border-black/20 bg-white/95 px-3 py-1 text-[11px] font-bold text-[#2A1503] backdrop-blur-md shadow-xs">
                 {s.category}
               </span>
             </div>
 
-            <div className="flex flex-1 flex-col p-5 sm:p-6">
-              <h2 className="text-lg font-bold text-foreground group-hover:text-primary transition leading-snug">
+            <div className="flex flex-1 flex-col p-5 sm:p-6 bg-white/95">
+              <h2 className="text-lg font-bold text-[#2A1503] group-hover:text-primary transition leading-snug">
                 {s.name}
               </h2>
               <p className="mt-2 flex-1 text-sm text-muted-foreground leading-relaxed">
@@ -88,28 +88,30 @@ function SchemesContent() {
 
 export default function SchemesPage() {
   return (
-    <div className="relative flex min-h-screen flex-col bg-background text-foreground overflow-x-hidden">
-      <MandalaBackground />
+    <>
+      <div className="page-background">
+        <MandalaBackground />
+      </div>
 
-      <div className="relative z-10 flex flex-col min-h-screen">
+      <div className="page-content flex min-h-screen flex-col">
         <SiteHeader />
         <main className="mx-auto w-full max-w-6xl flex-1 px-5 py-12">
           <div className="flex items-center gap-2 text-xs font-bold text-accent uppercase tracking-wider">
             <Sparkles className="h-4 w-4" /> Official Scheme Directory
           </div>
-          <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+          <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-[#2A1503] sm:text-4xl">
             Explore government schemes
           </h1>
           <p className="mt-2 text-muted-foreground leading-relaxed">
             Discover verified Indian welfare schemes by category to check eligibility and benefits.
           </p>
 
-          <Suspense fallback={<div className="mt-8 h-48 animate-pulse rounded-3xl bg-card/80 border border-border" />}>
+          <Suspense fallback={<div className="mt-8 h-48 animate-pulse rounded-3xl floating-card" />}>
             <SchemesContent />
           </Suspense>
         </main>
         <SiteFooter />
       </div>
-    </div>
+    </>
   );
 }

@@ -26,16 +26,18 @@ const steps = [
 
 export default function HowItWorksPage() {
   return (
-    <div className="relative flex min-h-screen flex-col bg-background text-foreground overflow-x-hidden">
-      <MandalaBackground />
+    <>
+      <div className="page-background">
+        <MandalaBackground />
+      </div>
 
-      <div className="relative z-10 flex flex-col min-h-screen">
+      <div className="page-content flex min-h-screen flex-col">
         <SiteHeader />
         <main className="mx-auto w-full max-w-3xl flex-1 px-5 py-12">
           <div className="flex items-center gap-2 text-xs font-bold text-accent uppercase tracking-wider">
             <Sparkles className="h-4 w-4" /> Simple & Transparent
           </div>
-          <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+          <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-[#2A1503] sm:text-4xl">
             How Avasar works
           </h1>
           <p className="mt-3 text-base text-muted-foreground leading-relaxed">
@@ -47,15 +49,15 @@ export default function HowItWorksPage() {
             {steps.map((s) => (
               <div
                 key={s.title}
-                className="rounded-3xl border border-border/80 bg-card p-6 shadow-soft hover:shadow-lift hover:border-accent/50 transition"
+                className="rounded-3xl floating-card p-6"
               >
-                <h2 className="text-lg font-bold text-foreground">{s.title}</h2>
+                <h2 className="text-lg font-bold text-[#2A1503]">{s.title}</h2>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.body}</p>
               </div>
             ))}
           </div>
 
-          <div className="mt-8 flex items-start gap-3 rounded-3xl border border-accent/40 bg-secondary/80 p-6 text-sm text-foreground shadow-xs">
+          <div className="mt-8 flex items-start gap-3 rounded-3xl border border-black/80 bg-secondary/90 p-6 text-sm text-[#2A1503] shadow-xs backdrop-blur-md">
             <ShieldCheck className="mt-0.5 h-5 w-5 text-accent shrink-0" />
             <p className="leading-relaxed">
               Avasar provides information based on verified government sources. Please double-check important
@@ -65,6 +67,6 @@ export default function HowItWorksPage() {
         </main>
         <SiteFooter />
       </div>
-    </div>
+    </>
   );
 }

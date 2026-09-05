@@ -38,12 +38,12 @@ function sanitizeRawHtml(text: string): string {
  */
 const markdownComponents = {
   h1: ({ children }: any) => (
-    <h1 className="text-lg font-bold text-foreground sm:text-xl border-b border-border/80 pb-2 mb-3">
+    <h1 className="text-lg font-bold text-foreground sm:text-xl border-b border-black pb-2 mb-3">
       {children}
     </h1>
   ),
   h2: ({ children }: any) => (
-    <h2 className="text-base font-bold text-foreground sm:text-lg border-b border-border/60 pb-1.5 mb-2.5">
+    <h2 className="text-base font-bold text-foreground sm:text-lg border-b border-black/80 pb-1.5 mb-2.5">
       {children}
     </h2>
   ),
@@ -78,7 +78,7 @@ const markdownComponents = {
     if (isOrdered) {
       return (
         <li className="flex items-start gap-2.5 text-sm text-foreground">
-          <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-[11px] font-bold text-primary">
+          <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-[11px] font-bold text-primary border border-black/40">
             •
           </span>
           <div className="flex-1 min-w-0">{children}</div>
@@ -247,9 +247,9 @@ export function StructuredSchemeResponse({ content }: StructuredSchemeResponsePr
 
   if (isFallbackMessage) {
     return (
-      <div className="rounded-2xl border border-border bg-card p-5 shadow-xs">
+      <div className="rounded-2xl border border-black bg-card p-5 shadow-xs">
         <div className="flex items-start gap-3">
-          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-secondary text-primary">
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-secondary text-primary border border-black/60">
             <Info className="h-5 w-5" />
           </div>
           <div>
@@ -276,7 +276,7 @@ export function StructuredSchemeResponse({ content }: StructuredSchemeResponsePr
         return (
           <div
             key={bIdx}
-            className="rounded-3xl border border-border bg-card shadow-soft overflow-hidden"
+            className="rounded-3xl border border-black bg-card shadow-soft overflow-hidden"
           >
             {/* Top Card Accent */}
             <div className="h-1 w-full bg-primary" />
@@ -285,14 +285,14 @@ export function StructuredSchemeResponse({ content }: StructuredSchemeResponsePr
               {parsedSections.map((sec) => (
                 <div
                   key={sec.id}
-                  className={`rounded-2xl border border-border/80 p-4 sm:p-5 shadow-xs transition ${
+                  className={`rounded-2xl border border-black p-4 sm:p-5 shadow-xs transition ${
                     sec.type === "why_relevant"
-                      ? "bg-secondary/80 border-accent/60"
-                      : "bg-card/80"
+                      ? "bg-secondary/80 border-black"
+                      : "bg-card/90"
                   }`}
                 >
                   {sec.type !== "scheme_header" && sec.type !== "general" && (
-                    <div className="flex items-center gap-2 border-b border-border/60 pb-2 mb-3">
+                    <div className="flex items-center gap-2 border-b border-black/40 pb-2 mb-3">
                       {sec.icon}
                       <h4 className="text-xs font-bold text-foreground uppercase tracking-wider">
                         {sec.title}

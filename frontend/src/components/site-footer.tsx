@@ -3,11 +3,11 @@ import Image from "next/image";
 
 export function SiteFooter() {
   return (
-    <footer className="relative z-10 border-t border-border/80 bg-card/90 backdrop-blur-md">
+    <footer className="relative z-10 border-t border-black bg-card/85 backdrop-blur-md">
       <div className="mx-auto grid max-w-6xl gap-8 px-5 py-12 sm:grid-cols-2 lg:grid-cols-3">
         <div>
           <div className="flex items-center gap-3">
-            <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white p-0.5 shadow-xs ring-1 ring-border">
+            <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white p-0.5 shadow-xs ring-1 ring-black/40">
               <Image
                 src="/logo.png"
                 alt="Avasar Logo"

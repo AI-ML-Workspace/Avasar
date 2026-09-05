@@ -23,16 +23,18 @@ function ChatContent() {
 
 export default function ChatPage() {
   return (
-    <div className="relative flex min-h-screen flex-col bg-background text-foreground overflow-x-hidden">
-      <MandalaBackground />
+    <>
+      <div className="page-background">
+        <MandalaBackground />
+      </div>
 
-      <div className="relative z-10 flex flex-col min-h-screen">
+      <div className="page-content flex min-h-screen flex-col">
         <SiteHeader />
         <main className="mx-auto w-full max-w-4xl flex-1 px-4 py-6 sm:px-6">
           <div className="h-[calc(100vh-9.5rem)]">
             <Suspense
               fallback={
-                <div className="flex h-full w-full items-center justify-center rounded-3xl border border-border bg-card/90">
+                <div className="flex h-full w-full items-center justify-center rounded-3xl floating-card">
                   <p className="text-sm font-medium text-muted-foreground">Loading assistant…</p>
                 </div>
               }
@@ -42,6 +44,6 @@ export default function ChatPage() {
           </div>
         </main>
       </div>
-    </div>
+    </>
   );
 }

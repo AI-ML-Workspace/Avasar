@@ -28,10 +28,11 @@ export function CircularGalleryClient({ items }: { items: GalleryItem[] }) {
     <Suspense fallback={<div className="h-full w-full" />}>
       <CircularGallery
         items={items.map(({ image, text }) => ({ image, text }))}
-        bend={2.5}
-        textColor="#ffffff"
+        bend={2.2}
+        textColor="#2A1503"
         borderRadius={0.06}
         scrollEase={0.03}
+        font="bold 28px Figtree"
       />
     </Suspense>
   );
