@@ -1,5 +1,5 @@
 // Cards shown in the circular gallery on the homepage.
-// Edit this list any time — change the image URL, the label, or the link.
+// Replaced external Unsplash URLs with local scheme images uploaded in public/
 export type GalleryItem = {
   image: string;
   text: string;
@@ -8,50 +8,42 @@ export type GalleryItem = {
 
 export const galleryItems: GalleryItem[] = [
   {
-    image:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80",
+    image: "/Screenshot 2026-09-05 073522.png",
     text: "Students",
     href: "/schemes?category=Students",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=900&q=80",
+    image: "/Pradhan_Mantri_Kisan_Samman_Nidhi_mobile_dd1cd5b59b.jpg",
     text: "Farmers",
     href: "/schemes?category=Farmers",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=80",
+    image: "/Screenshot 2026-09-05 073528.png",
     text: "Women",
     href: "/schemes?category=Women",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=900&q=80",
+    image: "/Screenshot 2026-09-05 073535.png",
     text: "Healthcare",
     href: "/schemes?category=Healthcare",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=80",
+    image: "/Screenshot 2026-09-05 073544.png",
     text: "Housing",
     href: "/schemes?category=Housing",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80",
+    image: "/Screenshot 2026-09-05 073558.png",
     text: "Employment",
     href: "/schemes?category=Employment",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80",
+    image: "/Screenshot 2026-09-05 073611.png",
     text: "Financial Support",
     href: "/schemes?category=Financial Support",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=900&q=80",
+    image: "/Screenshot 2026-09-05 073620.png",
     text: "Small Businesses",
     href: "/schemes?category=Small Businesses",
   },

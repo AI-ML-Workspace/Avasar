@@ -2,6 +2,7 @@ export type Scheme = {
   slug: string;
   name: string;
   category: string;
+  image: string;
   summary: string;
   description: string;
   eligibility: string[];
@@ -29,6 +30,7 @@ export const schemes: Scheme[] = [
     slug: "pm-kisan",
     name: "PM-KISAN (Pradhan Mantri Kisan Samman Nidhi)",
     category: "Farmers",
+    image: "/Pradhan_Mantri_Kisan_Samman_Nidhi_mobile_dd1cd5b59b.jpg",
     summary: "Income support of ₹6,000 per year for eligible landholding farmer families.",
     description:
       "A central sector scheme that provides income support to all landholding farmer families, paid in three equal instalments directly into bank accounts.",
@@ -61,6 +63,7 @@ export const schemes: Scheme[] = [
     slug: "pm-scholarship-national",
     name: "National Scholarship Portal Schemes",
     category: "Students",
+    image: "/Screenshot 2026-09-05 073522.png",
     summary: "A single window for central and state scholarships for school and college students.",
     description:
       "The National Scholarship Portal hosts pre-matric, post-matric and merit-cum-means scholarships offered by central ministries and states.",
@@ -98,6 +101,7 @@ export const schemes: Scheme[] = [
     slug: "ayushman-bharat-pmjay",
     name: "Ayushman Bharat PM-JAY",
     category: "Healthcare",
+    image: "/Screenshot 2026-09-05 073535.png",
     summary: "Health cover of ₹5 lakh per family per year for secondary and tertiary care.",
     description:
       "A health assurance scheme providing cashless treatment at empanelled public and private hospitals for eligible families.",
@@ -128,6 +132,7 @@ export const schemes: Scheme[] = [
     slug: "pmay-urban",
     name: "Pradhan Mantri Awas Yojana (Urban)",
     category: "Housing",
+    image: "/Screenshot 2026-09-05 073544.png",
     summary: "Assistance for affordable housing for urban families, including interest subsidy.",
     description:
       "Supports construction, purchase or enhancement of houses for eligible urban households through subsidies and affordable housing projects.",
@@ -164,6 +169,7 @@ export const schemes: Scheme[] = [
     slug: "sukanya-samriddhi",
     name: "Sukanya Samriddhi Yojana",
     category: "Women",
+    image: "/Screenshot 2026-09-05 073528.png",
     summary: "A small savings scheme for a girl child with attractive interest and tax benefits.",
     description:
       "Parents or guardians can open an account for a girl child below 10 years, building savings for her education and marriage.",
@@ -198,6 +204,7 @@ export const schemes: Scheme[] = [
     slug: "mgnrega",
     name: "MGNREGA (Mahatma Gandhi NREGA)",
     category: "Employment",
+    image: "/Screenshot 2026-09-05 073558.png",
     summary: "Guaranteed 100 days of wage employment per year for rural households.",
     description:
       "Provides a legal guarantee of at least 100 days of unskilled manual work in a financial year to every rural household that demands it.",
@@ -228,6 +235,7 @@ export const schemes: Scheme[] = [
     slug: "pm-mudra-yojana",
     name: "Pradhan Mantri MUDRA Yojana",
     category: "Small Businesses",
+    image: "/Screenshot 2026-09-05 073620.png",
     summary: "Collateral-free loans up to ₹10 lakh for small and micro enterprises.",
     description:
       "Provides loans under Shishu, Kishore and Tarun categories to non-farm micro and small enterprises through banks and NBFCs.",
@@ -264,6 +272,7 @@ export const schemes: Scheme[] = [
     slug: "atal-pension-yojana",
     name: "Atal Pension Yojana",
     category: "Financial Support",
+    image: "/Screenshot 2026-09-05 073611.png",
     summary: "A guaranteed pension of ₹1,000 to ₹5,000 per month after age 60.",
     description:
       "A pension scheme focused on workers in the unorganised sector, with contributions based on the chosen pension amount and joining age.",

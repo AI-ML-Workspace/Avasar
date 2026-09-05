@@ -3,8 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ArrowRight, ShieldCheck, Sparkle } from "lucide-react";
-import { CloudShader } from "@/components/ui/cloud-shader";
+import { ArrowRight, ShieldCheck, Sparkles, Search } from "lucide-react";
+import { MandalaBackground } from "@/components/ui/mandala-background";
 import { CircularGalleryClient } from "@/components/circular-gallery-client";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -31,61 +31,67 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <section className="relative min-h-[92vh]">
-        <div className="absolute inset-0">
-          <CloudShader className="h-full w-full" speed={0.9} count={6} />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/25 via-transparent to-background" />
+    <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden">
+      <MandalaBackground />
 
-        <SiteHeader transparent />
+      <section className="relative z-10 min-h-[85vh]">
+        <SiteHeader transparent={false} />
 
-        <div className="relative z-10 mx-auto max-w-4xl px-5 pt-28 text-center">
-          <span className="inline-flex items-center gap-2 rounded-full bg-primary/85 px-4 py-1.5 text-xs font-medium text-primary-foreground shadow-sm">
-            <Sparkle className="h-3.5 w-3.5 text-accent" /> AI assistant for Indian government
-            schemes
+        <div className="relative z-10 mx-auto max-w-4xl px-5 pt-16 sm:pt-24 text-center">
+          <span className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-secondary/80 px-4 py-1.5 text-xs font-semibold text-foreground shadow-xs backdrop-blur-md">
+            <Sparkles className="h-3.5 w-3.5 text-accent" /> Multilingual AI Assistant for Indian Government Schemes
           </span>
-          <h1 className="mt-5 text-4xl font-semibold tracking-tight text-primary-foreground drop-shadow-md sm:text-6xl">
-            Government benefits, in your language.
-          </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-primary-foreground/90 drop-shadow sm:text-lg">
-            Ask a question the way you would ask a friend. Avasar explains which schemes may fit
-            you, what you are eligible for, the documents you need and exactly where to apply.
-          </p>
 
-          <div className="glass-panel mx-auto mt-8 max-w-2xl rounded-3xl p-3">
+          <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-foreground sm:text-6xl leading-[1.15]">
+            Government benefits, <br className="hidden sm:inline" />
+            in your language.
+          </h1>
+
+          {/* Search Card Container */}
+          <div className="relative mx-auto mt-10 max-w-2xl rounded-3xl border border-border/80 bg-card/95 p-3 shadow-lift backdrop-blur-md">
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
               <Select value={language} onValueChange={(v) => setLanguage(v as LanguageCode)}>
-                <SelectTrigger className="h-12 w-full rounded-2xl border-none bg-secondary sm:w-[140px]">
+                <SelectTrigger className="h-12 w-full rounded-2xl border-border bg-secondary/70 text-xs font-semibold text-foreground sm:w-[150px]">
                   <SelectValue />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="rounded-xl">
                   {languages.map((l) => (
-                    <SelectItem key={l.code} value={l.code}>
-                      {l.native}
+                    <SelectItem key={l.code} value={l.code} className="text-xs">
+                      <span className="font-semibold">{l.native}</span>{" "}
+                      <span className="text-muted-foreground">({l.label})</span>
                     </SelectItem>
                   ))}
                 </SelectContent>
               </Select>
-              <input
-                value={question}
-                onChange={(e) => setQuestion(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && ask(question)}
-                placeholder="What schemes can I apply for as a student?"
-                className="h-12 flex-1 rounded-2xl bg-transparent px-4 text-base text-foreground outline-none placeholder:text-muted-foreground"
-              />
-              <Button size="lg" className="h-12 rounded-2xl" onClick={() => ask(question)}>
-                Ask Avasar <ArrowRight className="ml-1 h-4 w-4" />
+
+              <div className="relative flex-1">
+                <input
+                  value={question}
+                  onChange={(e) => setQuestion(e.target.value)}
+                  onKeyDown={(e) => e.key === "Enter" && ask(question)}
+                  placeholder="Ask e.g. What schemes can I apply for as a student?"
+                  className="h-12 w-full rounded-2xl bg-transparent px-4 pr-10 text-sm font-medium text-foreground outline-none placeholder:text-muted-foreground"
+                />
+                <Search className="absolute right-3.5 top-3.5 h-5 w-5 text-muted-foreground/60 pointer-events-none" />
+              </div>
+
+              <Button
+                size="lg"
+                className="h-12 rounded-2xl bg-primary text-primary-foreground font-semibold shadow-soft hover:bg-primary/90 border border-accent/40 cursor-pointer"
+                onClick={() => ask(question)}
+              >
+                Ask Avasar <ArrowRight className="ml-1.5 h-4 w-4" />
               </Button>
             </div>
           </div>
 
-          <div className="mx-auto mt-4 flex max-w-3xl flex-wrap justify-center gap-2">
+          {/* Suggested Prompts */}
+          <div className="mx-auto mt-6 flex max-w-3xl flex-wrap justify-center gap-2">
             {suggestedPrompts.map((p) => (
               <button
                 key={p}
                 onClick={() => ask(p)}
-                className="rounded-full bg-card/85 px-4 py-2 text-sm text-foreground shadow-soft backdrop-blur transition hover:bg-card cursor-pointer"
+                className="rounded-full border border-border/80 bg-card/90 px-4 py-2 text-xs font-medium text-foreground shadow-xs transition hover:border-accent hover:bg-secondary cursor-pointer"
               >
                 {p}
               </button>
@@ -93,47 +99,52 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="relative z-10 mt-8 h-[32rem] w-full pb-6">
+        {/* Circular Showcase Gallery */}
+        <div className="relative z-10 mt-12 h-[28rem] w-full pb-6">
           <CircularGalleryClient items={galleryItems} />
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 py-16">
+      {/* Clean Value Pillars */}
+      <section className="relative z-10 mx-auto max-w-6xl px-5 py-14">
         <div className="grid gap-6 sm:grid-cols-3">
           {[
             {
               title: "Ask in your language",
-              body: "English, हिन्दी, தமிழ், తెలుగు and ಕನ್ನಡ — type naturally, no forms or jargon.",
+              body: "English, हिन्दी, தமிழ், తెలుగు and ಕನ್ನಡ — ask naturally without jargon.",
             },
             {
               title: "Understand clearly",
-              body: "Eligibility, benefits, documents and steps laid out simply, not as walls of text.",
+              body: "Eligibility, benefits, documents, and steps in clean structured cards.",
             },
             {
-              title: "Go to the right place",
-              body: "Every answer points to the official government portal or office to apply.",
+              title: "Official Government Portals",
+              body: "Every answer links directly to verified government portals.",
             },
           ].map((c) => (
-            <div key={c.title} className="rounded-3xl border border-border bg-card p-6 shadow-soft">
-              <h2 className="text-lg font-semibold text-foreground">{c.title}</h2>
-              <p className="mt-2 text-sm text-muted-foreground">{c.body}</p>
+            <div
+              key={c.title}
+              className="rounded-3xl border border-border/80 bg-card/90 p-6 shadow-soft hover:shadow-lift transition"
+            >
+              <h2 className="text-lg font-bold text-foreground">{c.title}</h2>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{c.body}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-10 flex flex-col items-start gap-4 rounded-3xl bg-primary p-8 text-primary-foreground sm:flex-row sm:items-center sm:justify-between shadow-soft">
-          <div className="flex items-start gap-3">
-            <ShieldCheck className="mt-0.5 h-6 w-6 text-accent shrink-0" />
-            <p className="max-w-2xl text-sm">
-              Avasar provides information based on available government sources. Please verify
-              important eligibility and application details on the official website.
+        {/* Verified Banner */}
+        <div className="mt-10 flex flex-col items-start gap-4 rounded-3xl border border-accent/40 bg-primary p-7 text-primary-foreground sm:flex-row sm:items-center sm:justify-between shadow-lift">
+          <div className="flex items-center gap-3">
+            <ShieldCheck className="h-6 w-6 text-accent shrink-0" />
+            <p className="text-sm font-medium">
+              Grounded strictly in verified Indian government records.
             </p>
           </div>
           <Link
             href="/schemes"
-            className="rounded-xl bg-accent px-5 py-3 text-sm font-medium text-accent-foreground shadow hover:opacity-95 transition"
+            className="rounded-xl bg-accent px-5 py-2.5 text-xs font-bold text-accent-foreground shadow-xs hover:opacity-95 transition shrink-0"
           >
-            Browse schemes
+            Browse All Schemes
           </Link>
         </div>
       </section>
