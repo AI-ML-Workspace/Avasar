@@ -1,0 +1,75 @@
+# ─── Virtual Environments ──────────────────────────────────────────────────
+.venv
+venv
+*/.venv
+*/venv
+backend/.venv
+backend/venv
+env/
+ENV/
+
+# ─── Node & Frontend Artifacts ──────────────────────────────────────────────
+node_modules
+*/node_modules
+frontend/node_modules
+.next
+*/.next
+frontend/.next
+out
+dist
+build
+.turbo
+.pnpm-store
+
+# ─── Version Control & CI ───────────────────────────────────────────────────
+.git
+.github
+.gitignore
+
+# ─── Python Caches & Bytecode ───────────────────────────────────────────────
+__pycache__
+*/__pycache__
+*/**/__pycache__
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache
+.ruff_cache
+.mypy_cache
+.coverage
+htmlcov
+
+# ─── Local Development & Secrets ────────────────────────────────────────────
+.env.local
+.env.*.local
+*.env
+*.log
+logs/
+
+# ─── Offline Maintenance & Build Artifacts ──────────────────────────────────
+# Offline ingestion, building, and benchmarking scripts (not used at runtime)
+scripts/
+docs/
+tests/
+backend/tests/
+
+# Large raw datasets (runtime only requires vector_store/ and data/source_health.json)
+data/raw/
+data/ingested/
+data/processed/
+!data/source_health.json
+
+# Model & cache downloads (prevent bundling any cached weights)
+.cache
+*/.cache
+huggingface
+*/huggingface
+
+# ─── OS & IDE Files ─────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+.vscode
+.idea

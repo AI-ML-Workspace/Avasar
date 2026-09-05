@@ -3,18 +3,18 @@ fastapi==0.111.0
 uvicorn[standard]==0.30.1
 python-dotenv==1.0.1
 
-# HTTP client (for LLM API calls later)
+# HTTP client (for LLM and external embedding API calls)
 httpx==0.27.0
 
-# Multilingual embeddings & FAISS vector store
-sentence-transformers>=3.0.0
+# Vector store search & numerical runtime
 faiss-cpu>=1.8.0
+numpy>=1.26.0
 
 # LLM Provider SDKs
 groq>=0.11.0
 google-genai>=1.0.0
 openai>=1.50.0
 
-# Future: Language detection & translation
-# langdetect==1.0.9
-# deep-translator==1.11.4
+# Note: sentence-transformers is in requirements-dev.txt for offline index building
+# In serverless Vercel deployment, embeddings are loaded via external API (e.g. HF_TOKEN)
+# to stay well under the 500 MB function limit (total runtime dependencies: ~148 MB).

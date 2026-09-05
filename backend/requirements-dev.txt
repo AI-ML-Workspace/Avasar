@@ -1,0 +1,3 @@
+# Offline indexing, local development & test dependencies
+-r requirements.txt
+sentence-transformers>=3.0.0

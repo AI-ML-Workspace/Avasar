@@ -67,6 +67,13 @@ class Settings(BaseModel):
             "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
         )
     )
+    # External embedding API configurations (for serverless deployments)
+    hf_token: Optional[str] = Field(
+        default_factory=lambda: os.getenv("HF_TOKEN") or os.getenv("HUGGINGFACE_API_KEY")
+    )
+    embedding_api_url: Optional[str] = Field(
+        default_factory=lambda: os.getenv("EMBEDDING_API_URL")
+    )
 
     # Language configuration
     default_language: str = Field(
