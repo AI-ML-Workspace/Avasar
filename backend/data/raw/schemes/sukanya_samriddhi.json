@@ -1,0 +1,30 @@
+{
+  "scheme_name": "Sukanya Samriddhi Account Scheme (SSAS)",
+  "category": "Small Savings & Girl Child Welfare",
+  "description": "Sukanya Samriddhi Account Scheme is a government-backed small savings scheme targeted at parents or legal guardians of a girl child to build a dedicated financial reserve for her higher education and marriage expenses.",
+  "eligibility": "Account can be opened by a natural or legal guardian in the name of a girl child from her birth till she attains the age of 10 years. Only one account per girl child and maximum two accounts per family (except in cases of twins/triplets).",
+  "benefits": [
+    "Attractive government-notified interest rate (compounded annually).",
+    "Tax exemption under Section 80C of the Income Tax Act for contributions made.",
+    "Tax-free interest earned and maturity proceeds (EEE status).",
+    "Partial withdrawal up to 50% of the balance permitted for higher education after the girl child reaches 18 years of age or passes 10th standard."
+  ],
+  "application_process": "Guardians can open a Sukanya Samriddhi Account by visiting any designated India Post Post Office branch or authorized public/private commercial bank branch with the prescribed account opening form.",
+  "documents_required": [
+    "Birth Certificate of the girl child",
+    "Identity proof of the guardian (Aadhaar, PAN Card, Voter ID, Passport)",
+    "Address proof of the guardian (Utility bill, Aadhaar, Passport)",
+    "Photograph of the girl child and legal guardian",
+    "Medical certificate in case of twin/triplet births (if claiming additional account)"
+  ],
+  "provider": "Department of Posts (India Post) & Ministry of Finance, Government of India",
+  "official_source": "India Post / Ministry of Finance",
+  "official_source_url": "https://www.indiapost.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Minimum annual deposit is ₹250 and maximum annual deposit is ₹1,50,000 in a financial year.",
+    "Deposits can be made for 15 years from the date of opening.",
+    "The account matures after 21 years from the date of account opening or at the time of marriage of the girl child after attaining 18 years.",
+    "Failure to deposit the minimum amount in any financial year attracts a penalty fee of ₹50 along with the minimum required deposit."
+  ]
+}

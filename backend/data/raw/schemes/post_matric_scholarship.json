@@ -1,0 +1,35 @@
+{
+  "scheme_name": "Post-Matric Scholarship for SC, ST, OBC Students",
+  "category": "Education & Scholarship",
+  "description": "Post-Matric Scholarships are Central Sector Scholarships provided by the Ministry of Social Justice & Empowerment (for SC and OBC students) and the Ministry of Tribal Affairs (for ST students) to support students from Scheduled Castes, Scheduled Tribes, and Other Backward Classes to complete their education from Class 11 onwards up to PhD level, including professional and technical courses. The scheme enables poor students from marginalized communities to pursue higher education without financial barriers.",
+  "eligibility": "For SC/OBC: Students from Scheduled Castes or OBC communities studying in Class 11 and above (including degree, postgraduate, diploma, and professional courses) at recognized institutions. Annual family income must be below Rs 2.5 lakh (SC Post-Matric) or Rs 1 lakh (OBC Post-Matric). For ST: Scheduled Tribe students in Class 11 and above with family income below Rs 2.5 lakh.",
+  "benefits": [
+    "Maintenance allowance (stipend) covering living expenses varying by course level and day scholar/hosteller status.",
+    "Compulsory non-refundable fees: tuition, examination, library, sports, and other mandatory fees reimbursed.",
+    "Hostellers: Rs 1,200–1,300 per month maintenance allowance; Day Scholars: Rs 550–750 per month (rates vary by course level).",
+    "Additional allowances for students with disabilities.",
+    "Coverage includes professional courses like MBBS, BDS, B.Tech, LLB, B.Ed, CA, ICWA, and others."
+  ],
+  "application_process": "Apply online through the National Scholarship Portal (scholarships.gov.in) at the start of the academic year. First-time applicants register on NSP and fill the scholarship application for the relevant scheme. Renewal applications must be submitted each year. Applications are verified by respective states/institutions.",
+  "documents_required": [
+    "Aadhaar Card",
+    "Caste certificate (SC/ST/OBC) issued by competent authority",
+    "Income certificate (annual family income below threshold)",
+    "Mark sheet of qualifying examination",
+    "Bonafide student certificate from institution",
+    "Bank account details (student's own account)",
+    "Photograph",
+    "Institution enrollment/admission letter"
+  ],
+  "provider": "Ministry of Social Justice & Empowerment (SC/OBC), Ministry of Tribal Affairs (ST), Government of India",
+  "official_source": "National Scholarship Portal",
+  "official_source_url": "https://scholarships.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Income limit varies by scheme: SC and ST — Rs 2.5 lakh per annum; OBC — Rs 1 lakh per annum.",
+    "Scholarship is renewable annually subject to satisfactory progress in studies.",
+    "Only one post-matric scholarship can be availed at a time; students must not be availing other central/state scholarships simultaneously.",
+    "Application window is open from August to November each academic year on NSP — deadlines must be observed.",
+    "Marks/grade requirements vary — students should check the specific scheme guidelines on NSP."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "scheme_name": "Digital India Programme",
+  "category": "Digital Infrastructure & e-Governance (Flagship National Programme)",
+  "description": "Digital India is a flagship umbrella programme of the Government of India designed to transform the country into a digitally empowered society and knowledge economy through digital infrastructure, digital governance, and digital empowerment of citizens.",
+  "eligibility": "Digital India is a broad national technology vision and infrastructure programme benefiting all citizens, businesses, and government entities across India; it is not an individual cash-transfer scheme.",
+  "benefits": [
+    "High-speed broadband network connectivity across Gram Panchayats (BharatNet).",
+    "Universal access to digital governance services via digital platforms such as DigiLocker, UMANG, Aadhaar, UPI, eHospital, and MyGov.",
+    "Digital literacy initiatives (e.g., PMGDISHA) to train rural citizens in operating digital devices.",
+    "Promotes electronics manufacturing, digital payments, and e-commerce across India."
+  ],
+  "application_process": "Not applicable. Digital India is a national policy framework and umbrella programme. Citizens access individual services provided under Digital India (e.g., DigiLocker, UMANG) by creating accounts on the respective service portals/apps.",
+  "documents_required": [],
+  "provider": "Ministry of Electronics and Information Technology (MeitY), Government of India",
+  "official_source": "Digital India Official Portal",
+  "official_source_url": "https://www.digitalindia.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Digital India does not offer direct cash application schemes; it provides public digital infrastructure and e-governance platforms.",
+    "Individual digital services under Digital India (e.g., DigiLocker, eHospital) have separate free registration procedures."
+  ]
+}

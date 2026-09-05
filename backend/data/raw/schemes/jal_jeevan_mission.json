@@ -1,0 +1,21 @@
+{
+  "scheme_name": "Jal Jeevan Mission (JJM)",
+  "category": "Rural Infrastructure & Drinking Water (National Programme)",
+  "description": "Jal Jeevan Mission is a national flagship programme implemented in partnership with States to assist, empower, and facilitate rural communities in providing Functional Household Tap Connections (FHTC) delivering potable water in adequate quantity and prescribed quality to every rural home.",
+  "eligibility": "JJM is a infrastructure and community-level public utility programme targeting all rural households across all villages in India; it is not an individual cash-transfer scheme.",
+  "benefits": [
+    "Provision of clean tap water supply (minimum 55 liters per capita per day) to every rural household.",
+    "Installation of tap water connections in rural schools, Anganwadi centres, Gram Panchayat buildings, health centres, and community halls.",
+    "Community-led water security, rainwater harvesting, greywater treatment, and water quality monitoring through Gram Panchayats / Village Water and Sanitation Committees (VWSC)."
+  ],
+  "application_process": "Not applicable. JJM is implemented by State Water Supply/Public Health Engineering Departments and Gram Panchayats. Individual citizens do not apply online for cash grants; local tap connections are executed through village piped water supply schemes.",
+  "documents_required": [],
+  "provider": "Department of Drinking Water and Sanitation, Ministry of Jal Shakti, Government of India",
+  "official_source": "Jal Jeevan Mission Portal",
+  "official_source_url": "https://jaljeevanmission.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "JJM is a community-driven national mission executed at the Village Panchayat level.",
+    "Operation and maintenance of in-village water supply infrastructure is managed locally by Gram Panchayats / Pani Samitis."
+  ]
+}

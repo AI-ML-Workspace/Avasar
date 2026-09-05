@@ -1,0 +1,29 @@
+{
+  "scheme_name": "Pradhan Mantri Kaushal Vikas Yojana (PMKVY)",
+  "category": "Employment & Skill Development",
+  "description": "PMKVY is the flagship outcome-based skill training scheme of the Ministry of Skill Development and Entrepreneurship (MSDE), implemented by the National Skill Development Corporation (NSDC). It aims to enable Indian youth to take up industry-relevant skill training that helps them secure a better livelihood, offering Short Term Training (STT) and Recognition of Prior Learning (RPL).",
+  "eligibility": "Indian nationals who are school/college dropouts or unemployed youth aged between 15 and 45 years. Possess valid Aadhaar and bank account. For Recognition of Prior Learning (RPL), individuals with prior informal learning or work experience in relevant sectors are eligible.",
+  "benefits": [
+    "Free skill certification and training across hundreds of National Skills Qualifications Framework (NSQF) aligned job roles.",
+    "Training and assessment fees completely borne by the Government.",
+    "Accredited certification jointly issued by Skill India, Sector Skill Councils, and NSDC.",
+    "Placement assistance and career counseling following course completion for Short Term Training candidates.",
+    "Monetary reward / reward voucher upon successful certification under specified RPL components."
+  ],
+  "application_process": "Candidates register online at the Skill India Digital portal (skillindiadigital.gov.in) or visit their nearest Pradhan Mantri Kaushal Kendra (PMKK) or accredited training centre. Candidates choose a sector and training job role, undergo training, and appear for standardized third-party assessment.",
+  "documents_required": [
+    "Aadhaar Card",
+    "Bank account details (account number, IFSC code)",
+    "Educational certificates / highest qualification marksheet (if applicable)",
+    "Passport size photographs"
+  ],
+  "provider": "Ministry of Skill Development and Entrepreneurship (MSDE) & National Skill Development Corporation (NSDC)",
+  "official_source": "Pradhan Mantri Kaushal Vikas Yojana / Skill India Digital",
+  "official_source_url": "https://www.pmkvyofficial.org/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "A candidate can undergo subsidized training only once under STT unless undertaking an authorized advanced level upskilling course.",
+    "Attendance must meet the minimum threshold (typically 70-80%) verified through biometric Aadhaar-enabled attendance systems.",
+    "Certification is strictly issued after clearing the formal assessment by an independent assessment agency."
+  ]
+}

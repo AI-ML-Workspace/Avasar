@@ -1,0 +1,29 @@
+{
+  "scheme_name": "Pradhan Mantri Ujjwala Yojana (PMUY / Ujjwala 2.0)",
+  "category": "Energy & Women's Welfare",
+  "description": "Pradhan Mantri Ujjwala Yojana aims to provide clean cooking fuel (LPG) to deposit-free connections for women from low-income households, reducing health hazards associated with traditional cooking fuels.",
+  "eligibility": "Adult women belonging to poor households (SC/ST, Pradhan Mantri Awas Yojana, Antyodaya Anna Yojana, Most Backward Classes, Tea & Ex-Tea Garden Tribes, Forest Dwellers, Islands/River Islands, or 14-point declaration poor households) having no existing LPG connection in the household.",
+  "benefits": [
+    "Deposit-free LPG connection including a pressure regulator, safety hose, LPG booklet, and domestic gas cylinder.",
+    "Financial support of ₹1,600 per connection provided by the Central Government.",
+    "First LPG refill and hotplate (stove) provided free of cost to the beneficiary.",
+    "Targeted government subsidy per 14.2 kg cylinder for specified refills."
+  ],
+  "application_process": "Applicants can apply online via the official PMUY portal (pmuy.gov.in) or by submitting an application form directly to the nearest LPG distributor of IOCL, BPCL, or HPCL.",
+  "documents_required": [
+    "Know Your Customer (KYC) form",
+    "Aadhaar Card of the applicant woman and adult family members listed in Ration Card",
+    "Ration Card / family composition document issued by State Government",
+    "Bank Account number and IFSC code of the applicant",
+    "Proof of address (Aadhaar Card, Utility Bill)"
+  ],
+  "provider": "Ministry of Petroleum and Natural Gas, Government of India",
+  "official_source": "PMUY Official Website",
+  "official_source_url": "https://www.pmuy.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Applicant must be an adult woman (at least 18 years old).",
+    "There must not be any existing LPG connection in the same household.",
+    "Under Ujjwala 2.0, migrant workers can submit a self-declaration in place of proof of address and ration card."
+  ]
+}

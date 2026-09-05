@@ -1,0 +1,35 @@
+{
+  "scheme_name": "Kisan Credit Card (KCC) Scheme",
+  "category": "Agriculture & Farmer Welfare",
+  "description": "The Kisan Credit Card (KCC) scheme provides farmers with timely and adequate credit support for their agricultural operations, post-harvest expenses, produce maintenance, consumption requirements, and allied activities like animal husbandry and fisheries. It ensures farmers have flexible, revolving credit access at an affordable interest rate through a simplified and bankable credit delivery mechanism.",
+  "eligibility": "All farmers — individual/joint borrowers who are owner-cultivators, tenant farmers, oral lessees, and sharecroppers. Self-Help Groups (SHGs) or Joint Liability Groups (JLGs) of farmers including tenant farmers, sharecroppers, etc. Fishermen and animal husbandry farmers are also eligible under extended KCC.",
+  "benefits": [
+    "Short-term credit for crop cultivation needs based on the scale of finance for notified crops.",
+    "Post-harvest expenses, produce marketing loan, and farm asset maintenance included.",
+    "Allied activities including animal husbandry and fisheries covered.",
+    "Consumption credit of up to 10% of limit for domestic needs.",
+    "Interest subvention available: 2% interest subvention and 3% prompt repayment incentive from Government of India, bringing effective interest rate to as low as 4% per annum for loans up to Rs 3 lakh.",
+    "Revolving credit facility — repay and redraw as needed within the sanctioned limit.",
+    "Personal accident insurance coverage and asset insurance may be bundled."
+  ],
+  "application_process": "Apply at the nearest branch of a Commercial Bank, Regional Rural Bank (RRB), or Cooperative Bank. Application forms are available at bank branches or through PM-KISAN portal (pmkisan.gov.in/KCC.aspx). Farmers with PM-KISAN registration can apply for KCC through simplified process. PM-KISAN beneficiaries can also apply via the PM-KISAN mobile app.",
+  "documents_required": [
+    "Aadhaar Card",
+    "Land records / Khasra (for landowners) or tenancy/lease agreement",
+    "Photograph",
+    "Bank account details",
+    "Identity proof (Voter ID, Driving License, or Passport)",
+    "Proof of agricultural activity"
+  ],
+  "provider": "Department of Financial Services, Ministry of Finance / NABARD / Participating Banks",
+  "official_source": "NABARD KCC Guidelines",
+  "official_source_url": "https://www.nabard.org/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Credit limit is reviewed and enhanced annually based on updated land holdings, cropping pattern, and cost of cultivation.",
+    "The card is valid for 5 years, subject to annual review.",
+    "Prompt repayment incentive of 3% reduces effective interest to 4% for loans up to Rs 3 lakh.",
+    "Repayment schedule is aligned with crop harvest and marketing cycle.",
+    "Non-repayment or default can lead to account becoming NPA and loss of credit facility."
+  ]
+}

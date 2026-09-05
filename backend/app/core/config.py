@@ -131,46 +131,85 @@ class Settings(BaseModel):
     def resolved_ingestion_data_dir(self) -> Path:
         """Resolve directory for fetched official government data."""
         p = Path(self.ingestion_data_dir)
-        if p.is_absolute():
+        if p.is_absolute() and p.exists():
             return p
-        return (ROOT_DIR / p).resolve()
+        backend_dir = Path(__file__).resolve().parents[2]
+        for cand in [backend_dir / "data" / "ingested", ROOT_DIR / "data" / "ingested", ROOT_DIR / p]:
+            if cand.exists():
+                return cand.resolve()
+        return (backend_dir / "data" / "ingested").resolve()
 
     @property
     def resolved_sources_config_path(self) -> Path:
         """Resolve sources registry config path reliably."""
         if self.sources_config_path:
             p = Path(self.sources_config_path)
-            if p.is_absolute():
+            if p.is_absolute() and p.exists():
                 return p
-            return (ROOT_DIR / p).resolve()
-        return Path(__file__).resolve().parent / "sources.json"
+        bundled = Path(__file__).resolve().parent / "sources.json"
+        if bundled.exists():
+            return bundled
+        return (ROOT_DIR / (self.sources_config_path or "backend/app/core/sources.json")).resolve()
 
     @property
     def resolved_processed_data_dir(self) -> Path:
         """Resolve directory for processed canonical corpus data."""
         p = Path(self.processed_data_dir)
-        if p.is_absolute():
+        if p.is_absolute() and p.exists():
             return p
-        return (ROOT_DIR / p).resolve()
+        backend_dir = Path(__file__).resolve().parents[2]
+        candidates = [
+            backend_dir / "data" / "processed",
+            ROOT_DIR / "data" / "processed",
+            ROOT_DIR / "backend" / "data" / "processed",
+            Path.cwd() / "data" / "processed",
+        ]
+        for cand in candidates:
+            if cand.exists():
+                return cand.resolve()
+        return (backend_dir / "data" / "processed").resolve()
 
     @property
     def resolved_raw_data_dir(self) -> Path:
         """Resolve directory for raw scheme data."""
         p = Path(self.raw_data_dir)
-        if p.is_absolute():
+        if p.is_absolute() and p.exists():
             return p
-        return (ROOT_DIR / p).resolve()
+        backend_dir = Path(__file__).resolve().parents[2]
+        candidates = [
+            backend_dir / "data" / "raw" / "schemes",
+            ROOT_DIR / "data" / "raw" / "schemes",
+            backend_dir / "data" / "raw",
+            ROOT_DIR / "data" / "raw",
+            Path.cwd() / "data" / "raw" / "schemes",
+        ]
+        for cand in candidates:
+            if cand.exists():
+                return cand.resolve()
+        return (backend_dir / "data" / "raw" / "schemes").resolve()
 
     @property
     def resolved_vector_store_path(self) -> Path:
-        """Resolve vector_store_path reliably relative to project root or absolute path."""
+        """Resolve vector_store_path reliably across local dev and Vercel serverless."""
         p = Path(self.vector_store_path)
-        if p.is_absolute():
+        if p.is_absolute() and p.exists():
             return p
-        # If relative to backend/ (e.g. "../vector_store/index.faiss"):
-        if str(p).startswith(".."):
-            return (ROOT_DIR / "backend" / p).resolve()
-        return (ROOT_DIR / p).resolve()
+
+        backend_dir = Path(__file__).resolve().parents[2]
+        candidates = [
+            backend_dir / "vector_store" / "index.faiss",
+            ROOT_DIR / "vector_store" / "index.faiss",
+            ROOT_DIR / "backend" / "vector_store" / "index.faiss",
+            Path.cwd() / "vector_store" / "index.faiss",
+            (backend_dir / p).resolve(),
+            (ROOT_DIR / p).resolve(),
+            (ROOT_DIR / "backend" / p).resolve(),
+        ]
+        for cand in candidates:
+            if cand.exists():
+                return cand.resolve()
+        # Fallback to direct backend location if none found yet
+        return (backend_dir / "vector_store" / "index.faiss").resolve()
 
 
 settings = Settings()

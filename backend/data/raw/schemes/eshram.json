@@ -1,0 +1,28 @@
+{
+  "scheme_name": "e-Shram Portal (National Database of Unorganised Workers)",
+  "category": "Labour & Social Security",
+  "description": "e-Shram is a comprehensive national database of unorganised workers created by the Ministry of Labour and Employment. It assigns each registered unorganised worker a unique 12-digit Universal Account Number (UAN) and an e-Shram card, serving as a unified identity for accessing social security schemes, welfare benefits, and disaster relief measures delivered by the central and state governments.",
+  "eligibility": "Any unorganised worker aged between 16 and 59 years. Must not be an income tax payee and must not be an active member of EPFO (Employees' Provident Fund) or ESIC (Employees' State Insurance). Includes gig and platform workers, agricultural laborers, construction workers, street vendors, and domestic workers.",
+  "benefits": [
+    "Issuance of an all-India recognized 12-digit Universal Account Number (UAN) and digital e-Shram identity card.",
+    "Seamless portability of social security and welfare benefits across states for migrant workers.",
+    "Accidental insurance coverage under PMSBY (Rs 2 lakh for accidental death/permanent disability and Rs 1 lakh for partial disability) for registered eligible workers.",
+    "Single window integration for accessing schemes like PM-SYM, PM-JAY, National Career Service, and future relief disbursements.",
+    "Integration with Skill India Digital and apprenticeship opportunities."
+  ],
+  "application_process": "Self-registration online through the e-Shram portal (eshram.gov.in) using Aadhaar-linked mobile OTP, or via the nearest Common Services Centre (CSC) or State Seva Kendra free of charge.",
+  "documents_required": [
+    "Aadhaar Card",
+    "Aadhaar-linked active mobile number",
+    "Active bank account details (account number, IFSC)"
+  ],
+  "provider": "Ministry of Labour and Employment, Government of India",
+  "official_source": "e-Shram Portal (National Database of Unorganised Workers)",
+  "official_source_url": "https://eshram.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Registration on the e-Shram portal is entirely free of charge for the worker.",
+    "Workers must update occupation, address, and mobile number whenever changes occur.",
+    "Organized sector formal workers covered under EPFO/ESIC are disqualified from registration."
+  ]
+}

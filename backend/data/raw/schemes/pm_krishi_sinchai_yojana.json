@@ -1,0 +1,32 @@
+{
+  "scheme_name": "PM Krishi Sinchayee Yojana (PMKSY)",
+  "category": "Agriculture & Irrigation",
+  "description": "PMKSY aims to achieve the convergence of investments in irrigation at the field level, expand cultivable area under assured irrigation, improve on-farm water use efficiency to reduce wastage of water, enhance adoption of precision-irrigation and other water saving technologies (More Crop Per Drop), enhance recharge of aquifers, and introduce sustainable water conservation practices. Its slogan is 'Har Khet Ko Pani, More Crop Per Drop'.",
+  "eligibility": "All farmers with agricultural land are eligible for micro-irrigation subsidies under PMKSY-PDMC (Per Drop More Crop). Small and marginal farmers, women farmers, SC/ST farmers receive priority and higher subsidy percentages. States submit proposals under various components for irrigation infrastructure creation.",
+  "benefits": [
+    "Micro-irrigation subsidy (drip and sprinkler irrigation systems): 55% subsidy for small and marginal farmers; 45% subsidy for other farmers on the cost of micro-irrigation equipment.",
+    "Accelerated Irrigation Benefits Programme (AIBP): completion of long-pending major and medium irrigation projects for expanding irrigation potential.",
+    "Har Khet Ko Pani: creation of new water sources, repair of existing water bodies, distribution network for assured water supply to every farm.",
+    "Watershed development (WDC): development of rainfed areas through watershed management for soil and water conservation.",
+    "Water savings of 30–50% with micro-irrigation leading to 40–100% increase in crop yield."
+  ],
+  "application_process": "Farmers apply for micro-irrigation subsidies through their State Agriculture or Horticulture Department or the State PMKSY Implementation Agency. Applications are submitted online through the state portal or at district agriculture offices. Equipment must be purchased from approved vendors listed by the state department.",
+  "documents_required": [
+    "Aadhaar Card",
+    "Land ownership or tenancy records (Khasra/Khatauni)",
+    "Bank account passbook",
+    "Quotation from approved micro-irrigation vendor",
+    "Photograph",
+    "Category certificate (if SC/ST/small-marginal farmer)"
+  ],
+  "provider": "Ministry of Jal Shakti & Ministry of Agriculture and Farmers Welfare, Government of India",
+  "official_source": "PMKSY Official Portal",
+  "official_source_url": "https://pmksy.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Subsidy disbursement varies by state — contact the State Agriculture Department for current rates.",
+    "Micro-irrigation installations must be from government-empanelled vendors to qualify for subsidy.",
+    "Subsidy is provided directly to farmer's bank account via DBT after successful installation verification.",
+    "The scheme has multiple components (AIBP, HKKP, WDC, PDMC) — farmers typically interact with the PDMC (micro-irrigation) component at the individual level."
+  ]
+}

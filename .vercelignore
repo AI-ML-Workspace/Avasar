@@ -53,11 +53,13 @@ docs/
 tests/
 backend/tests/
 
-# Large raw datasets (runtime only requires vector_store/ and data/source_health.json)
+# Large raw datasets (runtime requires backend/vector_store and processed scheme metadata)
 data/raw/
 data/ingested/
 data/processed/
 !data/source_health.json
+!backend/vector_store/**
+!backend/data/**
 
 # Model & cache downloads (prevent bundling any cached weights)
 .cache

@@ -1,0 +1,30 @@
+{
+  "scheme_name": "National Scholarship Portal (NSP) / Government Scholarship Schemes",
+  "category": "Education & Student Scholarships",
+  "description": "National Scholarship Portal (NSP) is a single, integrated digital portal created to provide end-to-end management of various scholarship schemes implemented by Central Ministries, State Governments, and Union Territories for pre-matric, post-matric, higher education, and merit-cum-means students.",
+  "eligibility": "Students enrolled in recognized schools, colleges, universities, or technical/vocational institutions who fulfill the specific eligibility criteria (income limit, academic marks, category) of individual scholarship schemes hosted on NSP.",
+  "benefits": [
+    "Single window interface for searching, applying, and tracking multiple Central and State scholarship schemes.",
+    "Direct financial aid for tuition fees, maintenance allowances, hostel fees, and educational expenditures.",
+    "Direct Benefit Transfer (DBT) directly into verified bank accounts of selected students."
+  ],
+  "application_process": "Students register online on the NSP portal (scholarships.gov.in) using One-Time Registration (OTR) / Aadhaar, complete student verification, select eligible scholarship schemes, upload supporting documents, and submit applications for institutional and nodal officer verification.",
+  "documents_required": [
+    "Aadhaar Card / OTR registration ID",
+    "Educational marksheets of qualifying examination",
+    "Income Certificate issued by competent state authority",
+    "Category / Caste Certificate (SC/ST/OBC/EWS/Minority, if applicable)",
+    "Domicile Certificate / Bonafide Student Certificate from institution",
+    "Fee receipt of current academic year",
+    "Active Aadhaar-seeded Bank Account details"
+  ],
+  "provider": "Ministry of Electronics and Information Technology (MeitY) & Participating Central/State Ministries",
+  "official_source": "National Scholarship Portal",
+  "official_source_url": "https://scholarships.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "A student can generally avail only one scholarship scheme hosted on NSP for a single course duration.",
+    "Aadhaar-based e-KYC and institution verification are mandatory.",
+    "Bank account must be seeded with Aadhaar for direct benefit disbursement."
+  ]
+}

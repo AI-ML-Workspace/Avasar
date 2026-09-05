@@ -1,0 +1,33 @@
+{
+  "scheme_name": "Pre-Matric Scholarship for SC, ST, OBC, Minority Students",
+  "category": "Education & Scholarship",
+  "description": "Pre-Matric Scholarships are Central Sector Scholarships to support students from Scheduled Castes, Scheduled Tribes, OBC, and Minority communities in Classes 9 and 10 to continue their education and reduce dropout rates at the secondary school level. The scheme provides financial assistance for maintenance and fees during the critical pre-matric stage to prevent exclusion of underprivileged students.",
+  "eligibility": "Students from SC/ST/OBC/Minority communities studying in Classes 9 and 10 at recognized schools. Annual family income criteria: OBC Pre-Matric — below Rs 1 lakh; SC/ST Pre-Matric — below Rs 2.5 lakh; Minority Pre-Matric — below Rs 1 lakh. Minimum 50% marks in previous class (for renewal). Students whose parents are engaged in unclean occupations are given priority.",
+  "benefits": [
+    "Maintenance allowance for hostellers: Rs 750–1,000 per month depending on category (Class 9 and 10).",
+    "Maintenance allowance for day scholars: Rs 150–250 per month.",
+    "Reimbursement of mandatory school fees: tuition, exam, library, sports fees.",
+    "Disability allowance for students with PwD status.",
+    "Separate scholarships available under Minority Pre-Matric (Ministry of Minority Affairs) for Muslim, Christian, Sikh, Buddhist, Jain, and Zoroastrian communities."
+  ],
+  "application_process": "Apply online at the National Scholarship Portal (scholarships.gov.in) before the deadline (typically August–October each year). Students register on NSP, select the appropriate pre-matric scholarship scheme, and fill in personal, family income, and academic details. Applications are verified by school and district authorities before disbursement.",
+  "documents_required": [
+    "Aadhaar Card of student",
+    "Caste/category certificate issued by competent authority",
+    "Income certificate of parent/guardian",
+    "Mark sheet of previous class examination",
+    "School enrollment/bonafide certificate",
+    "Bank account details in the student's or parent's name",
+    "Photograph"
+  ],
+  "provider": "Ministry of Social Justice & Empowerment, Ministry of Tribal Affairs, Ministry of Minority Affairs, Government of India",
+  "official_source": "National Scholarship Portal",
+  "official_source_url": "https://scholarships.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Available only for Classes 9 and 10 — students in Classes 1–8 are covered under state scholarship or Samagra Shiksha.",
+    "Only one scholarship at a time — students must not simultaneously receive other central scholarships.",
+    "Annual income limits differ by community — verify the exact threshold for your category on NSP.",
+    "Application deadlines are strictly enforced on NSP; late applications are not entertained."
+  ]
+}

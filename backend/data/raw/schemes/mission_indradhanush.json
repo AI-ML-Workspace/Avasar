@@ -1,0 +1,28 @@
+{
+  "scheme_name": "Mission Indradhanush",
+  "category": "Health & Child Welfare",
+  "description": "Mission Indradhanush, launched in 2014, aims to ensure full immunization of all children under 2 years and pregnant women who are either unvaccinated or partially vaccinated, targeting the missed and left-out children. It covers 12 vaccine-preventable diseases: Diphtheria, Whooping Cough, Tetanus, Polio, Tuberculosis, Hepatitis B, Meningitis & Pneumonia (due to Haemophilus influenzae type b), Japanese Encephalitis (in select districts), Rotavirus Diarrhea, Rubella, and Pneumococcal Pneumonia. The Intensified Mission Indradhanush (IMI) targets harder-to-reach areas.",
+  "eligibility": "All children aged 0–2 years (up to 23 months) who have missed any dose of vaccines under the Universal Immunization Programme (UIP), and pregnant women who have not received Tetanus-Diphtheria (Td) vaccine. No income or registration criteria — available to all.",
+  "benefits": [
+    "Free vaccination against 12 vaccine-preventable diseases.",
+    "Protection covers: BCG (TB), OPV (Polio), Pentavalent (DPT-HepB-Hib), IPV, Measles-Rubella, PCV (Pneumococcal), Rotavirus, and JE (select districts).",
+    "Door-to-door mobilization and outreach sessions in underserved areas, migration sites, and high-risk populations.",
+    "Maintenance of vaccination records in the Mother and Child Tracking System (MCTS)."
+  ],
+  "application_process": "No formal application needed. Eligible children and pregnant women can access free immunization at nearest government health sub-centres, PHCs, CHCs, District Hospitals, or through outreach sessions during Mission Indradhanush rounds. ASHA workers and ANMs conduct mobilization and can guide families to nearest vaccination sessions. Track vaccination at cowin.gov.in or by visiting nearest health facility.",
+  "documents_required": [
+    "Mother and Child Protection (MCP) Card / Immunization Card",
+    "Aadhaar Card (helpful but not mandatory for immunization)",
+    "No other documents required"
+  ],
+  "provider": "Ministry of Health and Family Welfare, Government of India",
+  "official_source": "Ministry of Health and Family Welfare",
+  "official_source_url": "https://nhm.gov.in/index4.php?lang=1&level=0&linkid=459&lid=3660",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Vaccination is voluntary but strongly recommended as the most effective public health intervention for child survival.",
+    "Follow the prescribed vaccination schedule on the MCP card — doses missed should be completed at the earliest.",
+    "Special Mission Indradhanush rounds are conducted periodically; watch for announcements at local health centres.",
+    "The scheme covers children missed under the routine UIP — regular UIP immunization at PHCs continues throughout the year."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "scheme_name": "Atal Innovation Mission (AIM)",
+  "category": "Innovation & Entrepreneurship Ecosystem (National Initiative)",
+  "description": "Atal Innovation Mission is a flagship initiative set up by NITI Aayog to promote a culture of innovation and entrepreneurship across schools, universities, research institutions, MSMEs, and industry sectors in India.",
+  "eligibility": "Schools, higher educational institutions, research organizations, startups, incubators, and individual innovators who participate in specific AIM initiatives (e.g., Atal Tinkering Labs, Atal Incubation Centres, AIM Challenges).",
+  "benefits": [
+    "Grant-in-aid support of up to ₹20 lakh for schools to establish Atal Tinkering Labs (ATL) for fostering STEM problem-solving skills among students.",
+    "Financial assistance of up to ₹10 crore to establish or scale world-class Atal Incubation Centres (AICs) for supporting startups.",
+    "Seed funding and prototyping opportunities through Atal New India Challenges (ANIC) and ARISE challenges for MSMEs/startups."
+  ],
+  "application_process": "Institutions, schools, incubators, and startups submit online proposals/applications through specific call for applications hosted on the official AIM portal (aim.gov.in) during active application windows.",
+  "documents_required": [
+    "Institutional Registration Certificate / UDISE Code (for schools/colleges)",
+    "PAN and GST registration details (for startups/incubators)",
+    "Audited financial statements and infrastructure availability proof",
+    "Detailed proposal outlining innovation roadmap and objectives"
+  ],
+  "provider": "NITI Aayog, Government of India",
+  "official_source": "Atal Innovation Mission Portal",
+  "official_source_url": "https://aim.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "AIM is an umbrella institutional initiative; individual benefits are disbursed only to qualified institutions, startups, or challenge winners, not as general citizen cash grants.",
+    "Grants-in-aid are milestone-based and monitored strictly through evaluation committees."
+  ]
+}

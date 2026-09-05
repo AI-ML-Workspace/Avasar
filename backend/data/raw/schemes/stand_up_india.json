@@ -1,0 +1,30 @@
+{
+  "scheme_name": "Stand-Up India Scheme",
+  "category": "Entrepreneurship & Credit Support",
+  "description": "Stand-Up India Scheme facilitates bank loans to Scheduled Caste (SC), Scheduled Tribe (ST), and Women borrowers for setting up greenfield enterprises in manufacturing, services, trading, or agriculture-allied activities.",
+  "eligibility": "SC/ST and/or woman entrepreneurs above 18 years of age setting up a greenfield project. In non-individual enterprises, at least 51% of shareholding and controlling stake must be held by an SC/ST or woman entrepreneur.",
+  "benefits": [
+    "Bank loans between ₹10 lakh and ₹1 crore for setting up greenfield businesses.",
+    "Composite loan covering term loan and working capital requirement.",
+    "Credit Guarantee coverage under the Credit Guarantee Scheme for Stand-Up India (CGSSI).",
+    "Handholding support via Stand-Up India portal, SIDBI, and NABARD."
+  ],
+  "application_process": "Borrowers can apply online through the Stand-Up India portal (standupmitra.in / myscheme.gov.in) or directly at commercial bank branches across the country.",
+  "documents_required": [
+    "Identity proof (Aadhaar Card, Voter ID, PAN Card, Passport)",
+    "Proof of SC/ST category (Caste Certificate, if applicable)",
+    "Address proof of applicant and business unit",
+    "Project report / Business plan detailing capital layout and financial projections",
+    "Partnership deed / Memorandum & Articles of Association (for non-individual units showing >= 51% SC/ST/Woman ownership)",
+    "Bank account statements for last 6 months"
+  ],
+  "provider": "Small Industries Development Bank of India (SIDBI) & Department of Financial Services, Ministry of Finance",
+  "official_source": "myScheme / Stand-Up India Portal",
+  "official_source_url": "https://www.myscheme.gov.in/schemes/sui",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Loan is strictly for greenfield projects (first-time venture in manufacturing, services, trading, or agriculture-allied sector).",
+    "Borrower must not be in default to any bank or financial institution.",
+    "Margin money required is up to 15% (which can be converged with eligible central/state subsidy schemes)."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "scheme_name": "INSPIRE Scholarship (Innovation in Science Pursuit for Inspired Research)",
+  "category": "Education & Scholarship",
+  "description": "INSPIRE is a flagship national science programme launched by the Department of Science & Technology (DST) to attract talented youth to study science and pursue a career in research and development. The Scholarship for Higher Education (SHE) component provides scholarships to meritorious students to study natural and basic sciences at the BSc, BS, MSc, and integrated MSc/BS level, fostering a culture of research in India.",
+  "eligibility": "Students who have secured admission to BSc, BS, or Integrated MSc/BS programs in natural and basic sciences (Physics, Chemistry, Mathematics, Biology, Statistics, Geology, Astrophysics, Earth Sciences, Atmospheric Sciences, Oceanography, Biochemistry, Bioinformatics, Neuroscience, and allied subjects). Must be in the top 1% of Class 12 Board examination results (state or CBSE/ICSE), or must be a qualifier/ranker in national competitive exams (JEE Advanced, NEET, KVPY, JBNSTS, NTSE, or state-level Olympiads).",
+  "benefits": [
+    "Rs 80,000 per year scholarship (payable at Rs 6,667 per month) during BSc/BS/MSc studies.",
+    "Additional summer research attachment to INSPIRE Faculty or IISc/IIT/National Laboratories worth Rs 20,000 per attachment.",
+    "Scholarship is tenable for up to 5 years (full BSc/BS/MSc or Integrated MSc/BS duration).",
+    "Renewal annually based on satisfactory academic performance (minimum CGPA requirement varies by institute)."
+  ],
+  "application_process": "Apply online at the INSPIRE portal (online-inspire.gov.in) during the open application window (typically July–September each year). Students must submit proof of Class 12 marks/qualifying exam rank and institute admission letter. Applications are verified and screened by DST. Shortlisted students receive scholarship letters.",
+  "documents_required": [
+    "Class 12 mark sheet (Board examination)",
+    "Proof of eligibility (rank certificate for JEE/NEET/KVPY/NTSE/Olympiad qualifiers)",
+    "Bonafide student certificate from recognized institution",
+    "Aadhaar Card",
+    "Bank account details",
+    "Photograph",
+    "Institution admission letter"
+  ],
+  "provider": "Department of Science & Technology (DST), Government of India",
+  "official_source": "INSPIRE Portal (DST)",
+  "official_source_url": "https://online-inspire.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Applicable only for natural and basic science programs at BSc/BS/Integrated MSc/BS level — engineering, medicine, and social science programs are not eligible.",
+    "Annual renewal requires maintaining minimum academic performance as specified in the scholarship terms.",
+    "Only students at recognized Indian institutions are eligible.",
+    "Application window typically closes in September — check the INSPIRE portal for exact dates each year.",
+    "INSPIRE also has a Mentorship Programme (for Classes 6–10) and the AORC/Fellowship for PhD — these are separate components."
+  ]
+}

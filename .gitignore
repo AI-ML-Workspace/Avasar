@@ -63,19 +63,27 @@ frontend/.vite/
 vector_store/*.index
 vector_store/*.pkl
 vector_store/*.bin
-vector_store/*.faiss
-vector_store/*.json
-*.faiss
 *.npy
+
+# Whitelist canonical vector store files for production deployment
+!vector_store/index.faiss
+!vector_store/index.meta.json
+!backend/vector_store/index.faiss
+!backend/vector_store/index.meta.json
 
 # ─── Data (large raw files) ───────────────────────────────────────────────────
 data/raw/*.pdf
 data/raw/*.csv
-data/raw/*.json
 data/processed/*.pkl
 data/processed/*.bin
-data/processed/*.json
-data/processed/*.jsonl
+
+# Whitelist processed scheme corpus and health data
+!data/processed/documents.jsonl
+!data/processed/corpus_manifest.json
+!backend/data/processed/documents.jsonl
+!backend/data/processed/corpus_manifest.json
+!data/source_health.json
+!backend/data/source_health.json
 
 # ─── IDE & Editor ─────────────────────────────────────────────────────────────
 .vscode/settings.json

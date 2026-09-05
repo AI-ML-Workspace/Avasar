@@ -1,0 +1,36 @@
+{
+  "scheme_name": "Deen Dayal Upadhyaya Grameen Kaushalya Yojana (DDU-GKY)",
+  "category": "Rural Employment & Skill Development",
+  "description": "DDU-GKY (also called Aajeevika Skills) is a placement-linked skill development programme under the Ministry of Rural Development for rural poor youth aged 15–35 years. It aims to diversify the income sources of rural families and create pathways for sustainable livelihoods through skills training, placement in wage employment, and post-placement support.",
+  "eligibility": "Rural youth aged 15–35 years from poor rural families (BPL or SECC-identified). Upper age limit is relaxed to 45 years for SC/ST, Minorities, PwD, women, and ex-servicemen. Priority is given to MGNREGA beneficiaries, SHG members and their children, and families below poverty line.",
+  "benefits": [
+    "Free residential skills training of minimum 576 hours (around 3 months) across 250+ trades such as retail, construction, healthcare, apparel, IT, and hospitality.",
+    "Training includes English language skills, computer literacy, and soft skills.",
+    "Mandatory minimum 70% placement in formal sector jobs after training.",
+    "Minimum wage guaranteed at Rs 6,000 per month (Rs 8,500 in urban areas and overseas).",
+    "Post-placement support and tracking for 6 months to ensure retention.",
+    "Accommodation, meals, and transport arranged during residential training.",
+    "Overseas placement support for eligible candidates."
+  ],
+  "application_process": "Interested candidates can apply through Project Implementing Agencies (PIAs) empanelled by the state. Applications can also be made at block-level Rural Development offices or state SRLM (State Rural Livelihood Mission) offices. The AAJEEVIKA portal and state helplines provide information on ongoing training batches.",
+  "documents_required": [
+    "Aadhaar Card",
+    "Age proof (birth certificate, school certificate, Aadhaar)",
+    "BPL certificate / SECC data verification",
+    "Caste certificate (if applicable for age relaxation)",
+    "Bank account details",
+    "Photograph",
+    "Educational qualification documents"
+  ],
+  "provider": "Ministry of Rural Development, Government of India (implemented via State Rural Livelihood Missions)",
+  "official_source": "DDU-GKY Portal",
+  "official_source_url": "https://ddugky.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "The programme is placement-linked; training providers are paid only if trainees are placed in jobs.",
+    "Candidates must complete the full training programme and pass the assessment to receive placement assistance.",
+    "Post-placement salary must be at least the notified minimum wage; DDU-GKY will not count placements below this threshold.",
+    "Overseas placement candidates undergo additional documentation and health checks.",
+    "Training is residential and free, including boarding, lodging, and food."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "scheme_name": "One Stop Centre Scheme (Sakhi)",
+  "category": "Women & Child Development",
+  "description": "The One Stop Centre (OSC) scheme, popularly known as 'Sakhi', is a centrally sponsored initiative under the Ministry of Women and Child Development. It facilitates access to an integrated range of services including medical aid, police assistance, legal aid/counseling, psycho-social counseling, and temporary shelter to women affected by violence, both in private and public spaces.",
+  "eligibility": "Any woman or girl facing violence, harassment, domestic abuse, sexual assault, dowry harassment, trafficking, or discrimination. Available to women irrespective of age, caste, religion, marital status, or socioeconomic background. Girls below 18 years of age are linked to relevant authorities under the POCSO Act and Juvenile Justice Act.",
+  "benefits": [
+    "Immediate emergency rescue and medical assistance for women in distress.",
+    "Assistance in filing First Information Report (FIR) or Non-Cognizable Report (NCR) through police facilitation desks.",
+    "Psycho-social support and trauma counseling by professional counselors.",
+    "Free legal aid, advice, and advocacy through empanelled lawyers or District Legal Services Authority (DLSA).",
+    "Temporary shelter for up to 5 days with food, clothing, and basic necessities."
+  ],
+  "application_process": "Women can access a One Stop Centre directly by visiting the nearest Sakhi centre (typically located near district hospitals), calling the 181 Women Helpline, contacting the local police, or through referrals from NGOs, hospitals, or local authorities. No prior formal application is required.",
+  "documents_required": [
+    "No mandatory documentation required to access emergency aid or support services.",
+    "Identity proof (Aadhaar Card, Voter ID, etc.) if available, but not a barrier for emergency care."
+  ],
+  "provider": "Ministry of Women and Child Development, Government of India",
+  "official_source": "Ministry of Women and Child Development (MWCD) / Sambal Sub-scheme under Mission Shakti",
+  "official_source_url": "https://wcd.nic.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Temporary shelter at the centre is strictly short-term (up to 5 days); longer-term shelter is arranged via Swadhar Greh or Ujjawala homes.",
+    "Services are provided free of cost to any aggrieved woman.",
+    "Minors are coordinated through Child Welfare Committees (CWC) in accordance with the law.",
+    "Strict confidentiality of victim records and identity is maintained."
+  ]
+}

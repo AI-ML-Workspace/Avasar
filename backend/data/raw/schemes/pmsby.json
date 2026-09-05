@@ -1,0 +1,28 @@
+{
+  "scheme_name": "Pradhan Mantri Suraksha Bima Yojana (PMSBY)",
+  "category": "Insurance & Social Security",
+  "description": "Pradhan Mantri Suraksha Bima Yojana is a government-sponsored annual accidental death and disability insurance scheme providing coverage against accidental death or permanent disability.",
+  "eligibility": "Indian citizens aged between 18 and 70 years having an active savings bank account or post office account who give auto-debit consent for the annual premium.",
+  "benefits": [
+    "Accidental death coverage of ₹2,00,000.",
+    "Total and irrecoverable loss of both eyes or loss of use of both hands or feet or loss of sight of one eye and loss of use of hand or foot coverage of ₹2,00,000.",
+    "Total and irrecoverable loss of sight of one eye or loss of use of one hand or foot coverage of ₹1,00,000.",
+    "Extremely low annual premium of ₹20 per annum (revised from ₹12)."
+  ],
+  "application_process": "Eligible bank/post office account holders can enroll by submitting the auto-debit consent form at their bank branch or activating it via netbanking / mobile banking app.",
+  "documents_required": [
+    "Savings Bank Account / Post Office Account details",
+    "Aadhaar Card",
+    "Nominee details",
+    "Auto-debit consent authorization"
+  ],
+  "provider": "Public Sector General Insurance Companies or other General Insurance Companies collaborating with banks / Department of Financial Services",
+  "official_source": "Department of Financial Services, Ministry of Finance",
+  "official_source_url": "https://financialservices.gov.in/pradhan-mantri-suraksha-bima-yojana-pmsby",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Annual premium of ₹20 is auto-debited from the subscriber's bank account every year before May 31.",
+    "Coverage period is from June 1 to May 31 of the succeeding year.",
+    "Cover terminates if the subscriber turns 70, closes the bank account, or maintains insufficient account balance for premium debit."
+  ]
+}

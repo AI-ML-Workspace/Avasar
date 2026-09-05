@@ -1,0 +1,28 @@
+{
+  "scheme_name": "National Apprenticeship Promotion Scheme (NAPS)",
+  "category": "Employment & Skill Development",
+  "description": "NAPS was launched by the Ministry of Skill Development and Entrepreneurship to promote apprenticeship training across the country by providing financial incentives to employers and direct stipend support to apprentices. It bridges the gap between formal education and industry requirements by incentivizing establishments to engage apprentices.",
+  "eligibility": "Candidates must be at least 14 years of age (18 years for hazardous industries) and meet minimum educational and physical fitness requirements for designated or optional trades (ITIs, graduates, diploma holders, 10th/12th pass). Employers registered with MCA/GSTN and having 30 or more employees are mandated, while smaller establishments can voluntarily participate.",
+  "benefits": [
+    "Government reimburses 25% of prescribed stipend up to a maximum of Rs 1,500 per month per apprentice directly to the apprentice's bank account via DBT.",
+    "Sharing of basic training cost up to Rs 7,500 per apprentice for non-ITI candidates with Basic Training Providers (BTP).",
+    "Extensive on-the-job industrial experience and formal National Apprenticeship Certificate upon completion.",
+    "Higher employability and industry-recognized qualifications."
+  ],
+  "application_process": "Apprentices register on the National Apprenticeship Portal (apprenticeshipindia.gov.in). Candidates search and apply for open apprenticeship opportunities posted by registered companies and accept contracts generated online.",
+  "documents_required": [
+    "Aadhaar Card",
+    "Educational qualification certificates (Class 10/12, ITI, Diploma, or Degree marksheet)",
+    "Bank account details seeded with Aadhaar for DBT stipend transfers",
+    "Passport size photograph"
+  ],
+  "provider": "Ministry of Skill Development and Entrepreneurship (MSDE), Government of India",
+  "official_source": "Apprenticeship India Portal (Directorate General of Training / MSDE)",
+  "official_source_url": "https://www.apprenticeshipindia.gov.in/",
+  "source_date": "Not specified on the official source.",
+  "important_conditions": [
+    "Apprenticeship contracts must be generated and signed electronically through the portal.",
+    "Candidates must not have previously undergone an apprenticeship training in the same trade.",
+    "DBT stipend transfer is processed only to Aadhaar-seeded bank accounts."
+  ]
+}
